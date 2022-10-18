@@ -1,1 +1,0 @@
-{"version":3,"file":"todoBundle0fab2bd1ea9ad0fb9959.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAG,CAAC,eAAe,CAAC,C","sources":["webpack://todo/./src/index.js"],"sourcesContent":["console.log('just todo it!')\r\n"],"names":["console","log"],"sourceRoot":""}
