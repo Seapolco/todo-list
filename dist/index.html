@@ -4,38 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./main.css" />
+    <!-- <link rel="stylesheet" href="./main.css" /> -->
     <title>Todo App</title>
-  <script defer src="todoBundleda3030d7bb36eeb477ba.js"></script></head>
+  <script defer src="todoBundle076f6f664f7793749abb.js"></script></head>
   <body>
-    <h1>Just toDo it!</h1>
+    <nav>
+      <h1>Just toDo it!</h1>
+      <div class="navEnd">
+        <button class="newTodoButton">+</button>
+        <img class="userIcon" src="seaCreature.png" alt="" />
+      </div>
+    </nav>
 
-    <button class="newTodoButton">+</button>
-
-    <form class="todoForm">
-      <div class="title">
-        <label for="titleInput">Title</label>
-        <input id="titleInput" type="text" />
+    <div class="sidebar"></div>
+    <main>
+      <div class="formContainer">
+        <form class="todoForm">
+          <div class="title">
+            <label for="titleInput">Title</label>
+            <input id="titleInput" type="text" />
+          </div>
+          <div class="description">
+            <label for="descriptionTextArea">Description</label>
+            <textarea
+              id="descriptionTextArea"
+              name="description"
+              rows="4"
+              cols="50"
+            >
+            </textarea>
+          </div>
+          <div class="priority">
+            <label for="prioritySelect">Priority</label>
+            <select name="priority" id="prioritySelect">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+          <button class="addTodoButton">Add</button>
+        </form>
       </div>
-      <div class="description">
-        <label for="descriptionTextArea">Description</label>
-        <textarea
-          id="descriptionTextArea"
-          name="description"
-          rows="4"
-          cols="50"
-        >
-        </textarea>
-      </div>
-      <div class="priority">
-        <label for="prioritySelect">Priority</label>
-        <select name="priority" id="prioritySelect">
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
-        </select>
-      </div>
-      <button class="addTodoButton">Add</button>
-    </form>
+    </main>
   </body>
 </html>
