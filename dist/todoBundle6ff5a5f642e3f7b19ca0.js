@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    height: 100vh;\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    position: relative;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    place-items:center;\r\n    height: 100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center;\r\n    background-color: lightslategray;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    \r\n}\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":";AAIA;IACI,sBAAsB;IACtB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,aAAa;IACb,4BAA4B;IAC5B,gCAAgC;IAChC,iCAAiC;AACrC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,WAAW;IACX,mBAAmB;IACnB,kBAAkB;IAClB,uCAAuC;AAC3C;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,QAAQ;AACZ;;AAEA;IACI,qCAAqC;IACrC,WAAW;IACX,gBAAgB;IAChB,+BAA+B;IAC/B,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,8BAA8B;IAC9B,gBAAgB;AACpB;;;AAGA;IACI,aAAa;IACb,oBAAoB;IACpB,WAAW;IACX,YAAY;IACZ,WAAW;IACX,sBAAsB;IACtB,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,sBAAsB;AAC1B;;;AAGA;IACI,aAAa;IACb,gBAAgB;IAChB,aAAa;IACb,mCAAmC;IACnC,YAAY;IACZ,WAAW;;AAEf;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,aAAa;IACb,gBAAgB;IAChB,kBAAkB;IAClB,YAAY;IACZ,WAAW;;AAEf;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,gCAAgC;AACpC;;AAEA;IACI,aAAa;IACb,kBAAkB;;AAEtB;;AAEA;IACI,aAAa;IACb,kBAAkB;AACtB","sourcesContent":["\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\r\n\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    height: 100vh;\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    position: relative;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    place-items:center;\r\n    height: 100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center;\r\n    background-color: lightslategray;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    \r\n}\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nhtml {\r\n    height: fit-content;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:fit-content;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    display:none;\r\n    min-width: 40%;\r\n    min-height: 40%;\r\n    position: relative;\r\n    justify-content: center;\r\n    background-color: pink;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    \r\n}\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: blue;\r\n    width: 60vw;\r\n    height: 60%;\r\n    border:solid black 4px\r\n}\r\n\r\n.todaysDate {\r\n    background-color: white;\r\n    border:solid black 4px\r\n}\r\n\r\n.todoListContainer {\r\n    border:solid black 4px\r\n}\r\n\r\n.todoList {\r\n    font-size: 1.25rem;\r\n    color:white;\r\n    list-style-type: none;\r\n}\r\n\r\n.todoListItem{ \r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n\r\n}\r\n\r\n.checkIcon {\r\n    grid-column: 1/2;\r\n}\r\n\r\n.todoTitle, .todoDescription, .todoPriority, .todoDate {\r\n    /* grid-column: 2/3; */\r\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":";AAIA;IACI,sBAAsB;IACtB,SAAS;AACb;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;IAClB,4BAA4B;IAC5B,gCAAgC;IAChC,iCAAiC;AACrC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,WAAW;IACX,mBAAmB;IACnB,kBAAkB;IAClB,uCAAuC;AAC3C;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,QAAQ;AACZ;;AAEA;IACI,qCAAqC;IACrC,WAAW;IACX,gBAAgB;IAChB,+BAA+B;IAC/B,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,8BAA8B;IAC9B,gBAAgB;AACpB;;;AAGA;IACI,aAAa;IACb,oBAAoB;IACpB,WAAW;IACX,YAAY;IACZ,WAAW;IACX,sBAAsB;IACtB,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,sBAAsB;AAC1B;;;AAGA;IACI,aAAa;IACb,gBAAgB;IAChB,aAAa;IACb,mCAAmC;IACnC,YAAY;IACZ,WAAW;;AAEf;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,aAAa;IACb,gBAAgB;IAChB,kBAAkB;IAClB,WAAW;;AAEf;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,cAAc;IACd,eAAe;IACf,kBAAkB;IAClB,uBAAuB;IACvB,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,kBAAkB;;AAEtB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,sBAAsB;IACtB,WAAW;IACX,WAAW;IACX;AACJ;;AAEA;IACI,uBAAuB;IACvB;AACJ;;AAEA;IACI;AACJ;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,qBAAqB;AACzB;;AAEA;IACI,aAAa;IACb,+BAA+B;;AAEnC;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,sBAAsB;AAC1B","sourcesContent":["\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\r\n\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nhtml {\r\n    height: fit-content;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:fit-content;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    display:none;\r\n    min-width: 40%;\r\n    min-height: 40%;\r\n    position: relative;\r\n    justify-content: center;\r\n    background-color: pink;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    \r\n}\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: blue;\r\n    width: 60vw;\r\n    height: 60%;\r\n    border:solid black 4px\r\n}\r\n\r\n.todaysDate {\r\n    background-color: white;\r\n    border:solid black 4px\r\n}\r\n\r\n.todoListContainer {\r\n    border:solid black 4px\r\n}\r\n\r\n.todoList {\r\n    font-size: 1.25rem;\r\n    color:white;\r\n    list-style-type: none;\r\n}\r\n\r\n.todoListItem{ \r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n\r\n}\r\n\r\n.checkIcon {\r\n    grid-column: 1/2;\r\n}\r\n\r\n.todoTitle, .todoDescription, .todoPriority, .todoDate {\r\n    /* grid-column: 2/3; */\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3543,6 +3543,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
 /* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/format/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 
 console.log('just todo it!');
@@ -3558,18 +3559,41 @@ var prioritySelect = document.querySelector('#prioritySelect');
 var addTodoBtn = document.querySelector('.addTodoButton');
 var displayTodos = document.querySelector('.displayTodos');
 var todoList = document.querySelector('.todoList');
+var formContainer = document.querySelector('.formContainer');
+var todaysDateDisplay = document.querySelector('.todaysDate');
 var dateSelect = document.querySelector('#dateSelect');
 console.log(dateSelect.value);
-var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__["default"])(new Date(), 'E-dd-MM-yyyy');
+var dateReturn = '2022 - 10 - 20';
+var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__["default"])(new Date(), 'E-do');
 console.log(today);
+function updateTodaysDate(today) {
+  var todayArr = today.split('-');
+  var todaysDate = "".concat(todayArr[0], " ").concat(todayArr[1]);
+  todaysDateDisplay.innerText = todaysDate;
+}
+function formatDate(date) {
+  var dateArr = date.split('-');
+  var year = Number(dateArr[0]);
+  var month = Number(dateArr[1]) - 1;
+  var day = Number(dateArr[2]);
+  var newDate = new Date(year, month, day);
+  var formattedDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__["default"])(newDate, 'E-dd-MM-yyyy');
+  //console.log(formattedDate)
+  return formattedDate;
+}
+updateTodaysDate(today);
+
+//console.log(today)
+
 console.log(todoList);
 console.log(todoForm);
 var allTodos = [];
 console.log(prioritySelect);
-function Todo(title, description, priority) {
+function Todo(title, description, priority, date) {
   this.title = title;
   this.description = description;
   this.priority = priority;
+  this.date = date;
 }
 function addTodo(todo) {
   allTodos.push(todo);
@@ -3592,6 +3616,9 @@ function elementFactory(todo, type, attributes, content) {
   for (var key in attributes) {
     element.setAttribute(key, attributes[key]);
   }
+
+  // add check to see if string, if so just append string as text node
+
   if (content) {
     element.appendChild(document.createTextNode(todo[content]));
   }
@@ -3613,21 +3640,24 @@ function createTodoListItem(todo) {
   var todoPriority = elementFactory(todo, 'p', {
     "class": 'todoPriority'
   }, 'priority');
+  var todoDate = elementFactory(todo, 'p', {
+    "class": 'todoDate'
+  }, 'date');
+  checkIcon.innerHTML = 'Icon';
   todoLi.appendChild(checkIcon);
   todoLi.appendChild(todoTitle);
   todoLi.appendChild(todoDescription);
   todoLi.appendChild(todoPriority);
+  todoLi.appendChild(todoDate);
   todoList.appendChild(todoLi);
 }
-var pullworkout = new Todo('Pull', 'Back, Biceps, Sqaut, Deadlift', 'High');
-var pushworkout = new Todo('Push', 'Chest, Triceps, Sqaut, Press', 'High');
+var pullworkout = new Todo('Pull', 'Back, Biceps, Sqaut, Deadlift', 'High', new Date());
+var pushworkout = new Todo('Push', 'Chest, Triceps, Sqaut, Press', 'High', new Date());
 addTodo(pullworkout);
 addTodo(pushworkout);
-
-// allTodos.forEach((e) => {
-//   createTodoListItem(e)
-// })
-
+allTodos.forEach(function (e) {
+  createTodoListItem(e);
+});
 var addAllTodos = function addAllTodos(todoArr) {
   todoArr.forEach(function (e) {
     createTodoListItem(e);
@@ -3642,7 +3672,9 @@ addAllTodos(allTodos);
 
 newTodoBtn.addEventListener('click', function (e) {
   console.log(dateSelect.value);
+  dateSelect.value = '';
   todoForm.style.display = 'grid';
+  formContainer.style.display = 'grid';
   displayTodos.style.display = 'none';
 });
 addTodoBtn.addEventListener('click', function (e) {
@@ -3650,15 +3682,19 @@ addTodoBtn.addEventListener('click', function (e) {
   var title = titleInput.value;
   var description = descrTextArea.value;
   var priority = prioritySelect.value;
+  var date = formatDate(dateSelect.value);
   console.log('addddddd');
-  var todo = new Todo(title, description, priority);
+  var todo = new Todo(title, description, priority, date);
   addTodo(todo);
   console.log(allTodos);
   console.log(dateSelect.value);
+  console.log('format', formatDate(dateSelect.value));
+  console.log(_typeof(dateSelect.value));
   clearForm();
   clearTodos();
   addAllTodos(allTodos);
   todoForm.style.display = 'none';
+  formContainer.style.display = 'none';
   displayTodos.style.display = 'grid';
 });
 
@@ -3692,4 +3728,4 @@ addTodoBtn.addEventListener('click', function (e) {
 
 /******/ })()
 ;
-//# sourceMappingURL=todoBundle26738787d4fd03ecd26d.js.map
+//# sourceMappingURL=todoBundle6ff5a5f642e3f7b19ca0.js.map

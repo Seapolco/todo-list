@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="./main.css" /> -->
     <title>Todo App</title>
-  <script defer src="todoBundle26738787d4fd03ecd26d.js"></script></head>
+  <script defer src="todoBundle6ff5a5f642e3f7b19ca0.js"></script></head>
   <body>
     <nav>
       <div class="navStart">
@@ -21,6 +21,12 @@
 
     <div class="sidebar"></div>
     <main>
+      <div class="displayTodos">
+        <header class="todaysDate">Today : Date</header>
+        <section class="todoListContainer">
+          <ul class="todoList"></ul>
+        </section>
+      </div>
       <div class="formContainer">
         <form class="todoForm">
           <div class="title">
@@ -47,16 +53,10 @@
           </div>
           <div class="date">
             <label for="dateSelect">Date</label>
-            <input type="date" id="dateSelect" placeholder="" />
+            <input type="date" id="dateSelect" format="dd-MMM-yyyy" />
           </div>
           <button class="addTodoButton">Add</button>
         </form>
-        <div class="displayTodos">
-          <header>Today : Date</header>
-          <section class="todoListContainer">
-            <ul class="todoList"></ul>
-          </section>
-        </div>
       </div>
     </main>
   </body>

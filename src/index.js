@@ -62,7 +62,7 @@ console.log(prioritySelect)
 function Todo(title, description, priority, date) {
   this.title = title
   this.description = description
-  this.priority = priority
+  this.priority = `Priority: ${priority}`
   this.date = date
 }
 
@@ -91,6 +91,8 @@ function elementFactory(todo, type, attributes, content) {
     element.setAttribute(key, attributes[key])
   }
 
+  // add check to see if string, if so just append string as text node
+
   if (content) {
     element.appendChild(document.createTextNode(todo[content]))
   }
@@ -116,6 +118,8 @@ function createTodoListItem(todo) {
   )
   let todoDate = elementFactory(todo, 'p', { class: 'todoDate' }, 'date')
 
+  // checkIcon.innerHTML = 'Icon'
+
   todoLi.appendChild(checkIcon)
   todoLi.appendChild(todoTitle)
   todoLi.appendChild(todoDescription)
@@ -125,24 +129,25 @@ function createTodoListItem(todo) {
   todoList.appendChild(todoLi)
 }
 
-// let pullworkout = new Todo(
-//   'Pull',
-//   'Back, Biceps, Sqaut, Deadlift',
-//   'High',
-//   new Date()
-// )
-// let pushworkout = new Todo(
-//   'Push',
-//   'Chest, Triceps, Sqaut, Press',
-//   'High',
-// )
+let pullworkout = new Todo(
+  'Pull',
+  'Back, Biceps, Sqaut, Deadlift',
+  'High',
+  new Date()
+)
+let pushworkout = new Todo(
+  'Push',
+  'Chest, Triceps, Sqaut, Press',
+  'High',
+  new Date()
+)
 
-// addTodo(pullworkout)
-// addTodo(pushworkout)
+addTodo(pullworkout)
+addTodo(pushworkout)
 
-// allTodos.forEach((e) => {
-//   createTodoListItem(e)
-// })
+allTodos.forEach((e) => {
+  createTodoListItem(e)
+})
 
 const addAllTodos = (todoArr) => {
   todoArr.forEach((e) => {
