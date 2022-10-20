@@ -7,6 +7,12 @@ console.log('just todo it!')
 // create factory function for generating to-do
 //      title, description, date, priority, (notes & checklist)
 
+// Add projects (object or array)
+// add project option to addTodoForm
+
+// show projects in sidebar
+//add fs storage
+
 const newTodoBtn = document.querySelector('.newTodoButton')
 const todoForm = document.querySelector('.todoForm')
 const titleInput = document.querySelector('#titleInput')
@@ -24,6 +30,12 @@ const formContainer = document.querySelector('.formContainer')
 const todaysDateDisplay = document.querySelector('.todaysDate')
 
 const dateSelect = document.querySelector('#dateSelect')
+
+//Projects sidbar
+
+const projectList = document.querySelector('.projectsList')
+const addProjectButton = document.querySelector('.addProjectButton')
+const showHideProject = document.querySelector('.showHideProjects')
 
 console.log(dateSelect.value)
 
@@ -59,6 +71,7 @@ console.log(todoList)
 console.log(todoForm)
 
 let allTodos = []
+const allProjects = []
 
 console.log(prioritySelect)
 
@@ -69,9 +82,37 @@ function Todo(title, description, priority, date) {
   this.date = date
 }
 
+function Project(title) {
+  this.title = title
+
+  this.tasks = []
+}
+
 function addTodo(todo) {
   allTodos.push(todo)
 }
+
+function addProject(project) {
+  allProjects.push(project)
+}
+
+const getFit = new Project('Get Fit')
+const readBooks = new Project('Read Books')
+
+getFit.tasks.push({ title: 'Push', description: 'Chest', priority: 'High' })
+readBooks.tasks.push({
+  title: 'Gormenghast',
+  description: 'Mervyn Peake, 1700 pages',
+  priority: 'High',
+})
+
+addProject(getFit)
+addProject(readBooks)
+
+allProjects.forEach((e) => {
+  console.log(e)
+  console.log(...e.tasks)
+})
 
 function clearForm() {
   titleInput.value = ''
@@ -176,6 +217,9 @@ newTodoBtn.addEventListener('click', (e) => {
 cancelTodoButton.addEventListener('click', (e) => {
   e.preventDefault()
   console.log('cancel')
+  clearForm()
+  todoForm.style.display = 'none'
+  formContainer.style.display = 'none'
 })
 
 addTodoBtn.addEventListener('click', (e) => {
