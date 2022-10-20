@@ -12,7 +12,10 @@ const todoForm = document.querySelector('.todoForm')
 const titleInput = document.querySelector('#titleInput')
 const descrTextArea = document.querySelector('#descriptionTextArea')
 const prioritySelect = document.querySelector('#prioritySelect')
+
 const addTodoBtn = document.querySelector('.addTodoButton')
+const cancelTodoButton = document.querySelector('.cancelTodoButton')
+
 const displayTodos = document.querySelector('.displayTodos')
 const todoList = document.querySelector('.todoList')
 
@@ -167,7 +170,12 @@ newTodoBtn.addEventListener('click', (e) => {
   dateSelect.value = ''
   todoForm.style.display = 'grid'
   formContainer.style.display = 'grid'
-  displayTodos.style.display = 'none'
+  // displayTodos.style.display = 'none'
+})
+
+cancelTodoButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  console.log('cancel')
 })
 
 addTodoBtn.addEventListener('click', (e) => {
