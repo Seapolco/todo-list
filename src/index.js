@@ -33,7 +33,7 @@ const dateSelect = document.querySelector('#dateSelect')
 
 //Projects sidbar
 
-const projectList = document.querySelector('.projectsList')
+const projectsList = document.querySelector('.projectsList')
 const addProjectButton = document.querySelector('.addProjectButton')
 const showHideProject = document.querySelector('.showHideProjects')
 
@@ -128,7 +128,7 @@ function clearTodos() {
 
 // need to split this function into multiple functions
 
-function elementFactory(todo, type, attributes, content) {
+function todoElementFactory(todo, type, attributes, content) {
   let element = document.createElement(type)
 
   for (let key in attributes) {
@@ -144,23 +144,46 @@ function elementFactory(todo, type, attributes, content) {
   return element
 }
 
+function projectElementFactory(project, attributes) {
+  let element = document.createElement('li')
+
+  for (let key in attributes) {
+    element.setAttribute(key, attributes[key])
+  }
+
+  // add check to see if string, if so just append string as text node
+
+  element.appendChild(document.createTextNode(project.title))
+
+  return element
+}
+
+function createProjectListItem(project) {
+  let projectLi = projectElementFactory(project, { class: 'project-li' })
+  projectsList.appendChild(projectLi)
+}
+
+allProjects.forEach((e) => {
+  createProjectListItem(e)
+})
+
 function createTodoListItem(todo) {
-  let todoLi = elementFactory(todo, 'li', { class: 'todoListItem' })
-  let checkIcon = elementFactory(todo, 'div', { class: 'checkIcon' })
-  let todoTitle = elementFactory(todo, 'p', { class: 'todoTitle' }, 'title')
-  let todoDescription = elementFactory(
+  let todoLi = todoElementFactory(todo, 'li', { class: 'todoListItem' })
+  let checkIcon = todoElementFactory(todo, 'div', { class: 'checkIcon' })
+  let todoTitle = todoElementFactory(todo, 'p', { class: 'todoTitle' }, 'title')
+  let todoDescription = todoElementFactory(
     todo,
     'p',
     { class: 'todoDescription' },
     'description'
   )
-  let todoPriority = elementFactory(
+  let todoPriority = todoElementFactory(
     todo,
     'p',
     { class: 'todoPriority' },
     'priority'
   )
-  let todoDate = elementFactory(todo, 'p', { class: 'todoDate' }, 'date')
+  let todoDate = todoElementFactory(todo, 'p', { class: 'todoDate' }, 'date')
 
   // checkIcon.innerHTML = 'Icon'
 
