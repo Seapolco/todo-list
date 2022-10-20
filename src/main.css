@@ -9,6 +9,7 @@
 
 body {
     display: grid;
+    position: relative;
     place-items:center; 
     height: 100vh;
     grid-template-rows: 70px 1fr;
@@ -36,8 +37,8 @@ nav {
 }
 
 h1 {
-    -webkit-text-stroke: .5px white;
-    color:aqua;
+    /* -webkit-text-stroke: .5px white; */
+    color:white;
     grid-column: 2/3;
     font-family: 'Roboto Condensed';
     font-weight:lighter;
@@ -83,19 +84,29 @@ h1 {
 
 main {
     display: grid;
-    grid-row: 3/4;
+    position: relative;
+    grid-row: 2/4;
     grid-column: 2/3;
     place-items:center;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     
 }
 
 .formContainer {
     display: grid;
+    position: relative;
     place-items:center;
     background-color: lightslategray;
 }
 
 .todoForm {
     display: none;
+    position: relative;
+    
+}
+
+.displayTodos {
+    display: grid;
+    position: relative;
 }

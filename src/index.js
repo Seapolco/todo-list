@@ -11,6 +11,10 @@ const titleInput = document.querySelector('#titleInput')
 const descrTextArea = document.querySelector('#descriptionTextArea')
 const prioritySelect = document.querySelector('#prioritySelect')
 const addTodoBtn = document.querySelector('.addTodoButton')
+const displayTodos = document.querySelector('.displayTodos')
+const todoList = document.querySelector('.todoList')
+
+console.log(todoList)
 
 console.log(todoForm)
 
@@ -34,12 +38,76 @@ function clearForm() {
   prioritySelect.value = ''
 }
 
-let workout = new Todo('Pull', 'Back, Biceps, Sqaut, Deadlift', 'High')
+function clearTodos() {
+  while (todoList.lastChild) {
+    todoList.removeChild(todoList.lastChild)
+  }
+}
 
-addTodo(workout)
+// need to split this function into multiple functions
+
+function elementFactory(todo, type, attributes, content) {
+  let element = document.createElement(type)
+
+  for (let key in attributes) {
+    element.setAttribute(key, attributes[key])
+  }
+
+  if (content) {
+    element.appendChild(document.createTextNode(todo[content]))
+  }
+
+  return element
+}
+
+function createTodoListItem(todo) {
+  let todoLi = elementFactory(todo, 'li', { class: 'todoListItem' })
+  let checkIcon = elementFactory(todo, 'div', { class: 'checkIcon' })
+  let todoTitle = elementFactory(todo, 'p', { class: 'todoTitle' }, 'title')
+  let todoDescription = elementFactory(
+    todo,
+    'p',
+    { class: 'todoDescription' },
+    'description'
+  )
+  let todoPriority = elementFactory(
+    todo,
+    'p',
+    { class: 'todoPriority' },
+    'priority'
+  )
+
+  todoLi.appendChild(checkIcon)
+  todoLi.appendChild(todoTitle)
+  todoLi.appendChild(todoDescription)
+  todoLi.appendChild(todoPriority)
+
+  todoList.appendChild(todoLi)
+}
+
+let pullworkout = new Todo('Pull', 'Back, Biceps, Sqaut, Deadlift', 'High')
+let pushworkout = new Todo('Push', 'Chest, Triceps, Sqaut, Press', 'High')
+
+addTodo(pullworkout)
+addTodo(pushworkout)
+
+// allTodos.forEach((e) => {
+//   createTodoListItem(e)
+// })
+
+const addAllTodos = (todoArr) => {
+  todoArr.forEach((e) => {
+    createTodoListItem(e)
+  })
+}
+
+//addAllTodos(allTodos)
+
+//createTodoListItem(workout)
 
 newTodoBtn.addEventListener('click', (e) => {
   todoForm.style.display = 'grid'
+  displayTodos.style.display = 'none'
 })
 
 addTodoBtn.addEventListener('click', (e) => {
@@ -54,10 +122,14 @@ addTodoBtn.addEventListener('click', (e) => {
   addTodo(todo)
   console.log(allTodos)
   clearForm()
+  clearTodos()
+  addAllTodos(allTodos)
+  todoForm.style.display = 'none'
+  displayTodos.style.display = 'grid'
 })
 
-console.log(workout)
-console.log(...allTodos)
+// console.log(workout.title)
+//console.log(...allTodos)
 
 //create function for adding creating to-do element
 
@@ -74,3 +146,11 @@ console.log(...allTodos)
 // styling
 
 //
+
+{
+  /* <li class="todoListItem">
+<div class="checkIcon">Icon</div>
+<p class="todoTitle">Title</p>
+<p class="todoDescription">Description</p>
+<p class="todoPriority">Priority</p> */
+}

@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    place-items:center; \r\n    height: 100vh;\r\n    grid-template-rows: 60px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    height: 60px;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\nh1 {\r\n    -webkit-text-stroke: .5px white;\r\n    color: limegreen;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    width: 25px;\r\n    height: 25px;\r\n    color: limegreen;\r\n    border: limegreen 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 50%;\r\n    border: solid limegreen 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(6, 48, 6);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    grid-row: 3/4;\r\n    grid-column: 2/3;\r\n    place-items:center;\r\n    height: 100vh;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    place-items:center;\r\n    background-color: lightslategray;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":";AAIA;IACI,sBAAsB;IACtB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,aAAa;IACb,4BAA4B;IAC5B,gCAAgC;IAChC,iCAAiC;AACrC;;AAEA;IACI,aAAa;IACb,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,WAAW;IACX,YAAY;IACZ,mBAAmB;IACnB,kBAAkB;IAClB,uCAAuC;AAC3C;;AAEA;IACI,+BAA+B;IAC/B,gBAAgB;IAChB,gBAAgB;IAChB,+BAA+B;IAC/B,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,8BAA8B;IAC9B,gBAAgB;AACpB;;;AAGA;IACI,aAAa;IACb,WAAW;IACX,YAAY;IACZ,gBAAgB;IAChB,2BAA2B;IAC3B,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,2BAA2B;AAC/B;;;AAGA;IACI,aAAa;IACb,gBAAgB;IAChB,aAAa;IACb,+BAA+B;IAC/B,YAAY;IACZ,WAAW;;AAEf;;AAEA;IACI,aAAa;IACb,aAAa;IACb,gBAAgB;IAChB,kBAAkB;IAClB,aAAa;;AAEjB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,gCAAgC;AACpC;;AAEA;IACI,aAAa;AACjB","sourcesContent":["\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\r\n\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    place-items:center; \r\n    height: 100vh;\r\n    grid-template-rows: 60px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    height: 60px;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\nh1 {\r\n    -webkit-text-stroke: .5px white;\r\n    color: limegreen;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    width: 25px;\r\n    height: 25px;\r\n    color: limegreen;\r\n    border: limegreen 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 50%;\r\n    border: solid limegreen 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(6, 48, 6);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    grid-row: 3/4;\r\n    grid-column: 2/3;\r\n    place-items:center;\r\n    height: 100vh;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    place-items:center;\r\n    background-color: lightslategray;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    height: 100vh;\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    position: relative;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    place-items:center;\r\n    height: 100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center;\r\n    background-color: lightslategray;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    \r\n}\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":";AAIA;IACI,sBAAsB;IACtB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,aAAa;IACb,4BAA4B;IAC5B,gCAAgC;IAChC,iCAAiC;AACrC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,WAAW;IACX,mBAAmB;IACnB,kBAAkB;IAClB,uCAAuC;AAC3C;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,QAAQ;AACZ;;AAEA;IACI,qCAAqC;IACrC,WAAW;IACX,gBAAgB;IAChB,+BAA+B;IAC/B,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,8BAA8B;IAC9B,gBAAgB;AACpB;;;AAGA;IACI,aAAa;IACb,oBAAoB;IACpB,WAAW;IACX,YAAY;IACZ,WAAW;IACX,sBAAsB;IACtB,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,sBAAsB;AAC1B;;;AAGA;IACI,aAAa;IACb,gBAAgB;IAChB,aAAa;IACb,mCAAmC;IACnC,YAAY;IACZ,WAAW;;AAEf;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,aAAa;IACb,gBAAgB;IAChB,kBAAkB;IAClB,YAAY;IACZ,WAAW;;AAEf;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,gCAAgC;AACpC;;AAEA;IACI,aAAa;IACb,kBAAkB;;AAEtB;;AAEA;IACI,aAAa;IACb,kBAAkB;AACtB","sourcesContent":["\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\r\n\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    height: 100vh;\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    position: relative;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    place-items:center;\r\n    height: 100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center;\r\n    background-color: lightslategray;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    \r\n}\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -625,6 +625,9 @@ var titleInput = document.querySelector('#titleInput');
 var descrTextArea = document.querySelector('#descriptionTextArea');
 var prioritySelect = document.querySelector('#prioritySelect');
 var addTodoBtn = document.querySelector('.addTodoButton');
+var displayTodos = document.querySelector('.displayTodos');
+var todoList = document.querySelector('.todoList');
+console.log(todoList);
 console.log(todoForm);
 var allTodos = [];
 console.log(prioritySelect);
@@ -641,10 +644,56 @@ function clearForm() {
   descrTextArea.value = '';
   prioritySelect.value = '';
 }
-var workout = new Todo('Pull', 'Back, Biceps, Sqaut, Deadlift', 'High');
-addTodo(workout);
+
+// need to split this function into multiple functions
+
+function elementFactory(todo, type, attributes, content) {
+  var element = document.createElement(type);
+  for (var key in attributes) {
+    element.setAttribute(key, attributes[key]);
+  }
+  if (content) {
+    element.appendChild(document.createTextNode(todo[content]));
+  }
+  return element;
+}
+function createTodoListItem(todo) {
+  var todoLi = elementFactory(todo, 'li', {
+    "class": 'todoListItem'
+  });
+  var checkIcon = elementFactory(todo, 'div', {
+    "class": 'checkIcon'
+  });
+  var todoTitle = elementFactory(todo, 'p', {
+    "class": 'todoTitle'
+  }, 'title');
+  var todoDescription = elementFactory(todo, 'p', {
+    "class": 'todoDescription'
+  }, 'description');
+  var todoPriority = elementFactory(todo, 'p', {
+    "class": 'todoPriority'
+  }, 'priority');
+  todoLi.appendChild(checkIcon);
+  todoLi.appendChild(todoTitle);
+  todoLi.appendChild(todoDescription);
+  todoLi.appendChild(todoPriority);
+  todoList.appendChild(todoLi);
+}
+function addAllTodoItems(todosArray) {
+  todosArray.forEach(function (e) {
+    return createTodoListItem(e);
+  });
+}
+addAllTodoItems(allTodos);
+var pullworkout = new Todo('Pull', 'Back, Biceps, Sqaut, Deadlift', 'High');
+var pushworkout = new Todo('Pull', 'Back, Biceps, Sqaut, Deadlift', 'High');
+addTodo(pullworkout, pushworkout);
+
+//createTodoListItem(workout)
+
 newTodoBtn.addEventListener('click', function (e) {
   todoForm.style.display = 'grid';
+  displayTodos.style.display = 'none';
 });
 addTodoBtn.addEventListener('click', function (e) {
   e.preventDefault();
@@ -657,7 +706,8 @@ addTodoBtn.addEventListener('click', function (e) {
   console.log(allTodos);
   clearForm();
 });
-console.log(workout);
+
+// console.log(workout.title)
 (_console = console).log.apply(_console, allTodos);
 
 //create function for adding creating to-do element
@@ -679,4 +729,4 @@ console.log(workout);
 
 /******/ })()
 ;
-//# sourceMappingURL=todoBundle597c156f9b3a4f6b0dc2.js.map
+//# sourceMappingURL=todoBundle62ab3d8b431479cdb416.js.map
