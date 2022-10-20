@@ -85,9 +85,9 @@ h1 {
 main {
     display: grid;
     position: relative;
+    place-items:center;
     grid-row: 2/4;
     grid-column: 2/3;
-    place-items:center;
     height: 100%;
     width: 100%;
     
@@ -95,9 +95,12 @@ main {
 
 .formContainer {
     display: grid;
+    display:none;
+    min-width: 40%;
+    min-height: 40%;
     position: relative;
-    place-items:center;
-    background-color: lightslategray;
+    justify-content: center;
+    background-color: pink;
 }
 
 .todoForm {
@@ -109,4 +112,17 @@ main {
 .displayTodos {
     display: grid;
     position: relative;
+    background-color: blue;
+    width: 60vw;
+    height: 60%;
+    border:solid black 4px
+}
+
+.todaysDate {
+    background-color: white;
+    border:solid black 4px
+}
+
+.todoListContainer {
+    border:solid black 4px
 }

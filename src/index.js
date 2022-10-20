@@ -16,15 +16,24 @@ const addTodoBtn = document.querySelector('.addTodoButton')
 const displayTodos = document.querySelector('.displayTodos')
 const todoList = document.querySelector('.todoList')
 
+const formContainer = document.querySelector('.formContainer')
+
+const todaysDateDisplay = document.querySelector('.todaysDate')
+
 const dateSelect = document.querySelector('#dateSelect')
 
 console.log(dateSelect.value)
 
 let dateReturn = '2022 - 10 - 20'
 
-let today = new Date(2022, 9, 20)
+let today = format(new Date(), 'E-do')
+console.log(today)
 
-today = format(today, 'E-dd-MM-yyyy')
+function updateTodaysDate(today) {
+  let todayArr = today.split('-')
+  let todaysDate = `${todayArr[0]} ${todayArr[1]}`
+  todaysDateDisplay.innerText = todaysDate
+}
 
 function formatDate(date) {
   let dateArr = date.split('-')
@@ -37,6 +46,8 @@ function formatDate(date) {
   //console.log(formattedDate)
   return formattedDate
 }
+
+updateTodaysDate(today)
 
 //console.log(today)
 
@@ -150,6 +161,7 @@ newTodoBtn.addEventListener('click', (e) => {
 
   dateSelect.value = ''
   todoForm.style.display = 'grid'
+  formContainer.style.display = 'grid'
   displayTodos.style.display = 'none'
 })
 
@@ -172,6 +184,7 @@ addTodoBtn.addEventListener('click', (e) => {
   clearTodos()
   addAllTodos(allTodos)
   todoForm.style.display = 'none'
+  formContainer.style.display = 'none'
   displayTodos.style.display = 'grid'
 })
 
