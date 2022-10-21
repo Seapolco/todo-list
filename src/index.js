@@ -100,6 +100,8 @@ let dateReturn = '2022 - 10 - 20'
 let today = format(new Date(), 'E-do')
 console.log(today)
 
+//DATE and DATE FORMATING ---------------------------------------------
+
 function updateTodaysDate(today) {
   let todayArr = today.split('-')
   let todaysDate = `${todayArr[0]} ${todayArr[1]}`
@@ -118,6 +120,17 @@ function formatDate(date) {
   return formattedDate
 }
 
+// LOCAL STORAGE ------------------------------------------------
+
+function variableToString(varKey) {
+  return Object.keys(varKey)[0]
+}
+
+// function storeToLocalStorage(variable) {
+
+//   localStorage.setItem(, JSON.stringify(variable));
+// }
+
 updateTodaysDate(today)
 
 //console.log(today)
@@ -126,8 +139,12 @@ console.log(todoList)
 
 console.log(todoForm)
 
+// Arrays ===========================================
+
 let allTodos = []
 const allProjects = []
+
+let allLocalStorageTodos = JSON.parse(localStorage.getItem('allTodos'));
 
 
 
@@ -257,46 +274,52 @@ function createTodoListItem(todo) {
   todoList.appendChild(todoLi)
 }
 
-let pullworkout = new Todo(
-  'Pull',
-  'Back, Biceps, Sqaut, Deadlift',
-  'High',
-  new Date(),
-  'Get Fit'
-)
-let pushworkout = new Todo(
-  'Push',
-  'Chest, Triceps, Sqaut, Press',
-  'Medium',
-  new Date(),
-  'Get Fit'
-)
-let legworkout = new Todo(
-  'Legs',
-  'Chest, Triceps, Sqaut, Press',
-  'Low',
-  new Date(),
-  'Get Fit'
-)
+// let pullworkout = new Todo(
+//   'Pull',
+//   'Back, Biceps, Sqaut, Deadlift',
+//   'High',
+//   new Date(),
+//   'Get Fit'
+// )
+// let pushworkout = new Todo(
+//   'Push',
+//   'Chest, Triceps, Sqaut, Press',
+//   'Medium',
+//   new Date(),
+//   'Get Fit'
+// )
+// let legworkout = new Todo(
+//   'Legs',
+//   'Chest, Triceps, Sqaut, Press',
+//   'Low',
+//   new Date(),
+//   'Get Fit'
+// )
 
 
-addTodo(pullworkout)
-addTodo(pushworkout)
-addTodo(legworkout)
+// addTodo(pullworkout)
+// addTodo(pushworkout)
+// addTodo(legworkout)
 
 // allTodos.forEach((e) => {
 //   createTodoListItem(e)
 // })
 
 const addAllTodos = (todoArr) => {
+  localStorage.removeItem('allTodos');
   todoArr.forEach((e) => {
     createTodoListItem(e)
   })
+  localStorage.setItem('allTodos', JSON.stringify(todoArr));
 }
 
 //addAllTodos(allTodos)
 
-addAllTodos(allTodos)
+if(allLocalStorageTodos !== null) {
+  addAllTodos(allLocalStorageTodos)
+}
+
+
 
 console.log(allTodos)
 
@@ -373,6 +396,15 @@ allTodoPrioritys.forEach((e) => {
 
 addTodoIds();
 
+console.log(JSON.stringify(allTodos))
+console.log(JSON.stringify(allProjects))
+
+// localStorage.setItem('allTodos', JSON.stringify(allTodos))
+
+// let localTodos = JSON.parse(localStorage.getItem('allTodos'))
+// console.log('local', localTodos)
+
+// localStorage.removeItem('allTodos');
 // console.log(workout.title)
 //console.log(...allTodos)
 

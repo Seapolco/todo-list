@@ -133,7 +133,7 @@ main {
 
 
 
- @keyframes popup {
+ /* @keyframes popup {
     0%{
       transform: scale(0.4);
       filter: blur(10px);
@@ -157,7 +157,7 @@ main {
     100%{
         transform: scale(1); 
       }
-  } 
+  }  */
 
 .todoForm {
     display: none;
