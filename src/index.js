@@ -2,6 +2,8 @@ import './main.css'
 
 import { format } from 'date-fns'
 
+
+
 console.log('just todo it!')
 
 // TO DO -------------------------------------------------------------------------------
@@ -50,6 +52,8 @@ const titleInput = document.querySelector('#titleInput')
 const descrInput = document.querySelector('#descriptionInput')
 const prioritySelect = document.querySelector('#prioritySelect')
 
+const sidebar = document.querySelector('.sidebar');
+
 // Priority options
 
   // const lowPriority = document.querySelector('.low');
@@ -74,6 +78,26 @@ const todaysDateDisplay = document.querySelector('.todaysDate')
 
 const dateSelect = document.querySelector('#dateSelect')
 const projectSelect = document.querySelector('#projectsFormSelect');
+
+// Icons =================
+
+const homeIcon = document.querySelector('.homeIcon');
+const hamIcon = document.querySelector('.hamIcon')
+
+homeIcon.addEventListener('click', (e) => {
+  console.log('home!!!!!!!!!')
+})
+
+hamIcon.addEventListener('click', (e) => {
+  console.log(sidebar.style.visibility);
+  if(sidebar.style.visibility === 'visible') {
+    sidebar.style.visibility = 'hidden';
+  } else {
+    sidebar.style.visibility = 'visible';
+  }
+  console.log('ham!!!!!!!!!');
+  
+})
 
 console.log(projectSelect)
 
