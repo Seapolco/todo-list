@@ -79,10 +79,33 @@ const todaysDateDisplay = document.querySelector('.todaysDate')
 const dateSelect = document.querySelector('#dateSelect')
 const projectSelect = document.querySelector('#projectsFormSelect');
 
+//Projects sidbar
+
+const projectsList = document.querySelector('.projectsList')
+const addProjectButton = document.querySelector('.addProjectButton')
+const showHideProject = document.querySelector('.showHideProjects')
+
 // Icons =================
 
 const homeIcon = document.querySelector('.homeIcon');
 const hamIcon = document.querySelector('.hamIcon')
+const expandIcon = document.querySelector('.expandIcon')
+const addIcon = document.querySelector('.addIcon')
+
+
+
+
+showHideProject.addEventListener('click', (e) => {
+  console.log('expand!!!!')
+  e.preventDefault();
+  if(projectsList.style.display === 'none') {
+    projectsList.style.display = 'grid';
+  } else {
+    projectsList.style.display = 'none'
+  }
+  
+
+})
 
 homeIcon.addEventListener('click', (e) => {
   console.log('home!!!!!!!!!')
@@ -111,11 +134,7 @@ function addProjectOption(project) {
 
 
 
-//Projects sidbar
 
-const projectsList = document.querySelector('.projectsList')
-const addProjectButton = document.querySelector('.addProjectButton')
-const showHideProject = document.querySelector('.showHideProjects')
 
 console.log(dateSelect.value)
 

@@ -23,7 +23,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap);"]);
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    font-family: 'Roboto'\r\n}\r\n\r\nhtml {\r\n    height: 100%;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n    min-height: 100%;\r\n    max-height: fit-content;\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;  \r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n    border-bottom: solid rgb(53, 52, 52) 2px; \r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.newTodoButton:hover {\r\n    cursor:pointer;\r\n    transform: scale(0.95);\r\n}\r\n\r\n.newTodoButton:active {\r\n    cursor:pointer;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-right: solid rgb(32, 119, 119) 2px;\r\n\r\n}\r\n\r\nmain {\r\n    padding: 30px;\r\n    display: grid;\r\n    position: relative;\r\n    justify-items: center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    animation:  popup 30ms;\r\n    /* transition: 1s;\r\n    transition-timing-function: linear;  */\r\n    display: grid;\r\n    position:absolute; \r\n    top: 60px; \r\n    display:none;\r\n    min-width: 30%;\r\n    min-height: 20%;\r\n    /* justify-content: center; */\r\n    background-color: rgb(34, 33, 33);\r\n    border: solid slategrey 2px;\r\n    border-radius: 20px;\r\n    padding: 10px;\r\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\r\n}\r\n\r\n\r\n\r\n @keyframes popup {\r\n    0%{\r\n      transform: scale(0.4);\r\n      filter: blur(10px);\r\n    }\r\n    50%{\r\n      transform: scale(0.4);\r\n       filter: blur(10px); \r\n    }\r\n    60%{\r\n      transform: scale(0.4); \r\n       filter: blur(10px);\r\n    }\r\n    70%{\r\n      transform: scale(0.6); \r\n       filter: blur(10px); \r\n    }\r\n     80%{\r\n      transform: scale(0.8); \r\n      filter: blur(5px); \r\n    }\r\n    100%{\r\n        transform: scale(1); \r\n      }\r\n  } \r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    grid-template-rows: 2fr 1fr .5fr;\r\n    grid-template-columns: 1fr 1fr;\r\n    padding: 10px;\r\n    \r\n}\r\n\r\n\r\n.titleDescriptionWrapper {\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    \r\n}\r\n\r\n#titleInput {\r\n  padding-bottom: 10px;\r\n}\r\n\r\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\r\n    background-color: rgb(34, 33, 33);\r\n    color: white;\r\n    border: none;\r\n}\r\n\r\n#titleInput:focus, #descriptionInput:focus {\r\n    outline: none;\r\n}\r\n\r\n\r\n#dateSelect::-webkit-calendar-picker-indicator {\r\n    filter: invert(1);  \r\n}\r\n\r\n.datePriorityWrapper {\r\n    display:flex;\r\n    grid-column: 1/3;\r\n    justify-content: space-between;\r\n    grid-row: 2/3;\r\n}\r\n\r\n/* .title, .description, .priority, .date{\r\n    display: flex;\r\n    flex-direction: column;\r\n} */\r\n\r\n.addTodoWrapper {\r\n    display:flex;\r\n    align-items: center;\r\n    justify-content: end;\r\n    gap:7px;\r\n    grid-row:3/4;\r\n    grid-column: 1/3;\r\n}\r\n\r\n.addTodoButton {\r\n    color: whitesmoke;\r\n    border: solid 2px aqua;\r\n    background-color: black;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton {\r\n    color: whitesmoke;\r\n    background-color: black;\r\n    border: solid 2px firebrick;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton,.addTodoButton {\r\n    font-weight: 300;\r\n    width: 20%;\r\n} \r\n.cancelTodoButton:hover ,.addTodoButton:hover {\r\n    transform: scale(0.98);\r\n    cursor: pointer;\r\n}  \r\n.cancelTodoButton:active ,.addTodoButton:active {\r\n    transform: scale(0.9);\r\n    cursor: pointer;\r\n} \r\n\r\n\r\n\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: rgb(34, 33, 33);\r\n    width: 40vw;\r\n    height: fit-content;\r\n    /* border:solid black 4px; */\r\n    grid-template-rows: 60px 1fr;\r\n}\r\n\r\n.todayDateContainer {\r\n    \r\n    display: grid;\r\n    align-items:center;\r\n    grid-template-columns: 1fr 2fr 4fr;\r\n}\r\n\r\n.today {\r\n    color:white;\r\n    font-size: 1.75rem;\r\n    font-weight: bold;\r\n    display:grid;\r\n    justify-content: end;\r\n    align-items: center;\r\n    /* border:solid black 4px */\r\n}\r\n\r\n.todaysDate {\r\n    color:rgb(107, 107, 119);\r\n    display:grid;\r\n    padding-left: 10px;\r\n    /* border:solid black 4px; */\r\n    justify-content: start;\r\n    align-items: center;\r\n}\r\n\r\n.todoListContainer {\r\n    /* border:solid black 4px; */\r\n    height: 100%;\r\n    padding: 20px;\r\n}\r\n\r\n.todoList {\r\n    position:relative;\r\n    font-size: 1rem;\r\n    color:white;\r\n    list-style-type: none;\r\n    border-top: solid slategrey 2px;\r\n}\r\n\r\n.todoListItem{ \r\n    position: relative;\r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n    padding: 5px;\r\n    /* border-top:solid black 2px; */\r\n    border-bottom:solid slategrey 2px;\r\n\r\n}\r\n\r\n.checkIcon {\r\n    display: grid;\r\n    top: 25px;\r\n    left: 10px;\r\n    position: relative;\r\n    align-items: center;\r\n    grid-column: 1/2;\r\n    border: solid aqua 2px;\r\n    background-color: black;\r\n    height: 15px;\r\n    width: 15px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.checkIcon:hover {\r\n    cursor: pointer;\r\n    background-color: green;\r\n}\r\n\r\n\r\n.checkIcon:active {\r\n    cursor: pointer;\r\n    background-color: green;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.todoTitle, .todoDescription, .todoPriority, .todoDate {\r\n    grid-column: 2/3;\r\n    /* disable above for vertical stretch */\r\n}\r\n\r\n.priority > label {\r\n    padding-right: 5px;\r\n    color: whitesmoke;\r\n}\r\n\r\n.todoDate{\r\n    color: firebrick;\r\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":"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","sourcesContent":["\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    font-family: 'Roboto'\r\n}\r\n\r\nhtml {\r\n    height: 100%;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n    min-height: 100%;\r\n    max-height: fit-content;\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;  \r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n    border-bottom: solid rgb(53, 52, 52) 2px; \r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.newTodoButton:hover {\r\n    cursor:pointer;\r\n    transform: scale(0.95);\r\n}\r\n\r\n.newTodoButton:active {\r\n    cursor:pointer;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-right: solid rgb(32, 119, 119) 2px;\r\n\r\n}\r\n\r\nmain {\r\n    padding: 30px;\r\n    display: grid;\r\n    position: relative;\r\n    justify-items: center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    animation:  popup 30ms;\r\n    /* transition: 1s;\r\n    transition-timing-function: linear;  */\r\n    display: grid;\r\n    position:absolute; \r\n    top: 60px; \r\n    display:none;\r\n    min-width: 30%;\r\n    min-height: 20%;\r\n    /* justify-content: center; */\r\n    background-color: rgb(34, 33, 33);\r\n    border: solid slategrey 2px;\r\n    border-radius: 20px;\r\n    padding: 10px;\r\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\r\n}\r\n\r\n\r\n\r\n @keyframes popup {\r\n    0%{\r\n      transform: scale(0.4);\r\n      filter: blur(10px);\r\n    }\r\n    50%{\r\n      transform: scale(0.4);\r\n       filter: blur(10px); \r\n    }\r\n    60%{\r\n      transform: scale(0.4); \r\n       filter: blur(10px);\r\n    }\r\n    70%{\r\n      transform: scale(0.6); \r\n       filter: blur(10px); \r\n    }\r\n     80%{\r\n      transform: scale(0.8); \r\n      filter: blur(5px); \r\n    }\r\n    100%{\r\n        transform: scale(1); \r\n      }\r\n  } \r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    grid-template-rows: 2fr 1fr .5fr;\r\n    grid-template-columns: 1fr 1fr;\r\n    padding: 10px;\r\n    \r\n}\r\n\r\n\r\n.titleDescriptionWrapper {\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    \r\n}\r\n\r\n#titleInput {\r\n  padding-bottom: 10px;\r\n}\r\n\r\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\r\n    background-color: rgb(34, 33, 33);\r\n    color: white;\r\n    border: none;\r\n}\r\n\r\n#titleInput:focus, #descriptionInput:focus {\r\n    outline: none;\r\n}\r\n\r\n\r\n#dateSelect::-webkit-calendar-picker-indicator {\r\n    filter: invert(1);  \r\n}\r\n\r\n.datePriorityWrapper {\r\n    display:flex;\r\n    grid-column: 1/3;\r\n    justify-content: space-between;\r\n    grid-row: 2/3;\r\n}\r\n\r\n/* .title, .description, .priority, .date{\r\n    display: flex;\r\n    flex-direction: column;\r\n} */\r\n\r\n.addTodoWrapper {\r\n    display:flex;\r\n    align-items: center;\r\n    justify-content: end;\r\n    gap:7px;\r\n    grid-row:3/4;\r\n    grid-column: 1/3;\r\n}\r\n\r\n.addTodoButton {\r\n    color: whitesmoke;\r\n    border: solid 2px aqua;\r\n    background-color: black;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton {\r\n    color: whitesmoke;\r\n    background-color: black;\r\n    border: solid 2px firebrick;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton,.addTodoButton {\r\n    font-weight: 300;\r\n    width: 20%;\r\n} \r\n.cancelTodoButton:hover ,.addTodoButton:hover {\r\n    transform: scale(0.98);\r\n    cursor: pointer;\r\n}  \r\n.cancelTodoButton:active ,.addTodoButton:active {\r\n    transform: scale(0.9);\r\n    cursor: pointer;\r\n} \r\n\r\n\r\n\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: rgb(34, 33, 33);\r\n    width: 40vw;\r\n    height: fit-content;\r\n    /* border:solid black 4px; */\r\n    grid-template-rows: 60px 1fr;\r\n}\r\n\r\n.todayDateContainer {\r\n    \r\n    display: grid;\r\n    align-items:center;\r\n    grid-template-columns: 1fr 2fr 4fr;\r\n}\r\n\r\n.today {\r\n    color:white;\r\n    font-size: 1.75rem;\r\n    font-weight: bold;\r\n    display:grid;\r\n    justify-content: end;\r\n    align-items: center;\r\n    /* border:solid black 4px */\r\n}\r\n\r\n.todaysDate {\r\n    color:rgb(107, 107, 119);\r\n    display:grid;\r\n    padding-left: 10px;\r\n    /* border:solid black 4px; */\r\n    justify-content: start;\r\n    align-items: center;\r\n}\r\n\r\n.todoListContainer {\r\n    /* border:solid black 4px; */\r\n    height: 100%;\r\n    padding: 20px;\r\n}\r\n\r\n.todoList {\r\n    position:relative;\r\n    font-size: 1rem;\r\n    color:white;\r\n    list-style-type: none;\r\n    border-top: solid slategrey 2px;\r\n}\r\n\r\n.todoListItem{ \r\n    position: relative;\r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n    padding: 5px;\r\n    /* border-top:solid black 2px; */\r\n    border-bottom:solid slategrey 2px;\r\n\r\n}\r\n\r\n.checkIcon {\r\n    display: grid;\r\n    top: 25px;\r\n    left: 10px;\r\n    position: relative;\r\n    align-items: center;\r\n    grid-column: 1/2;\r\n    border: solid aqua 2px;\r\n    background-color: black;\r\n    height: 15px;\r\n    width: 15px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.checkIcon:hover {\r\n    cursor: pointer;\r\n    background-color: green;\r\n}\r\n\r\n\r\n.checkIcon:active {\r\n    cursor: pointer;\r\n    background-color: green;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.todoTitle, .todoDescription, .todoPriority, .todoDate {\r\n    grid-column: 2/3;\r\n    /* disable above for vertical stretch */\r\n}\r\n\r\n.priority > label {\r\n    padding-right: 5px;\r\n    color: whitesmoke;\r\n}\r\n\r\n.todoDate{\r\n    color: firebrick;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    font-family: 'Roboto'\r\n}\r\n\r\nhtml {\r\n    height: 100%;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 230px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n    min-height: 100%;\r\n    max-height: fit-content;\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;  \r\n    padding-left: 20px;\r\n    grid-template-columns: 70px 200px  1fr 200px;\r\n    border-bottom: solid rgb(53, 52, 52) 2px; \r\n}\r\n\r\n.navStart {\r\n    display:flex;\r\n    flex-direction: row;\r\n    padding-top: 20px;\r\n    /* gap: 10px; */\r\n}\r\n\r\n\r\n\r\n.hamIcon, .homeIcon {\r\n    padding: 4px;\r\n    user-select: none;\r\n}\r\n\r\n.hamIcon:hover, .homeIcon:hover {\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n    background-color: slategrey;\r\n}\r\n\r\n.navStart div {\r\n    color:white;\r\n}\r\n\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:rgb(219, 219, 219);\r\n    grid-column: 3/4;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 4/5;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: rgb(42, 190, 190);\r\n    border: rgb(219, 219, 219) 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.newTodoButton:hover {\r\n    cursor:pointer;\r\n    transform: scale(0.95);\r\n}\r\n\r\n.newTodoButton:active {\r\n    cursor:pointer;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid rgb(42, 190, 190) 2px;\r\n}\r\n\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    visibility: visible;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-right: solid rgb(32, 119, 119) 2px;\r\n    padding: 50px 10px 0px 10px;\r\n    \r\n\r\n}\r\n\r\n\r\n\r\n.projectsHeaderContainer {\r\n    display: grid;\r\n    grid-template-columns: 30px 1fr;\r\n    background-color: rgb(41, 179, 179);\r\n    border-radius: 4px;\r\n    padding: 4px;\r\n    \r\n}\r\n\r\n.projectsHeader {\r\n    font-size: 1.2rem;\r\n    font-weight: 600;\r\n    grid-column: 1/2;\r\n    padding-left: 5px;\r\n}\r\n\r\n.projectButtonsContainer {\r\n    display:flex;\r\n    flex-direction: row;\r\n    grid-column: 2/3;\r\n    justify-content: end;\r\n}\r\n\r\n.addIcon, .expandIcon {\r\n    height: 10px;\r\n    width: 10px;\r\n    font-size: 12px;\r\n\r\n}\r\n\r\n.projectsList {\r\n    visibility: hidden;\r\n}\r\n\r\n\r\nmain {\r\n    padding: 30px;\r\n    display: grid;\r\n    position: relative;\r\n    justify-items: center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    animation:  popup 30ms;\r\n    /* transition: 1s;\r\n    transition-timing-function: linear;  */\r\n    display: grid;\r\n    position:absolute; \r\n    top: 60px; \r\n    display:none;\r\n    min-width: 30%;\r\n    min-height: 20%;\r\n    /* justify-content: center; */\r\n    background-color: rgb(34, 33, 33);\r\n    border: solid slategrey 2px;\r\n    border-radius: 20px;\r\n    padding: 10px;\r\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\r\n}\r\n\r\n\r\n\r\n /* @keyframes popup {\r\n    0%{\r\n      transform: scale(0.4);\r\n      filter: blur(10px);\r\n    }\r\n    50%{\r\n      transform: scale(0.4);\r\n       filter: blur(10px); \r\n    }\r\n    60%{\r\n      transform: scale(0.4); \r\n       filter: blur(10px);\r\n    }\r\n    70%{\r\n      transform: scale(0.6); \r\n       filter: blur(10px); \r\n    }\r\n     80%{\r\n      transform: scale(0.8); \r\n      filter: blur(5px); \r\n    }\r\n    100%{\r\n        transform: scale(1); \r\n      }\r\n  }  */\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    grid-template-rows: 2fr 1fr .5fr;\r\n    grid-template-columns: 1fr 1fr;\r\n    padding: 10px;\r\n    \r\n}\r\n\r\n\r\n.titleDescriptionWrapper {\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    \r\n}\r\n\r\n#titleInput {\r\n  padding-bottom: 10px;\r\n}\r\n\r\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\r\n    background-color: rgb(34, 33, 33);\r\n    color: white;\r\n    border: none;\r\n}\r\n\r\n#titleInput:focus, #descriptionInput:focus {\r\n    outline: none;\r\n}\r\n\r\n\r\n#dateSelect::-webkit-calendar-picker-indicator {\r\n    filter: invert(1);  \r\n}\r\n\r\n.datePriorityWrapper {\r\n    display:flex;\r\n    grid-column: 1/3;\r\n    justify-content: space-between;\r\n    grid-row: 2/3;\r\n}\r\n\r\n/* .title, .description, .priority, .date{\r\n    display: flex;\r\n    flex-direction: column;\r\n} */\r\n\r\n.addTodoWrapper {\r\n    display:flex;\r\n    align-items: center;\r\n    justify-content: end;\r\n    gap:7px;\r\n    grid-row:3/4;\r\n    grid-column: 1/3;\r\n}\r\n\r\n.addTodoButton {\r\n    color: whitesmoke;\r\n    border: solid 2px aqua;\r\n    background-color: black;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton {\r\n    color: whitesmoke;\r\n    background-color: black;\r\n    border: solid 2px firebrick;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton,.addTodoButton {\r\n    font-weight: 300;\r\n    width: 20%;\r\n} \r\n.cancelTodoButton:hover ,.addTodoButton:hover {\r\n    transform: scale(0.98);\r\n    cursor: pointer;\r\n}  \r\n.cancelTodoButton:active ,.addTodoButton:active {\r\n    transform: scale(0.9);\r\n    cursor: pointer;\r\n} \r\n\r\n\r\n\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: rgb(34, 33, 33);\r\n    width: 40vw;\r\n    height: fit-content;\r\n    /* border:solid black 4px; */\r\n    grid-template-rows: 60px 1fr;\r\n}\r\n\r\n.todayDateContainer {\r\n    \r\n    display: grid;\r\n    align-items:center;\r\n    grid-template-columns: 1fr 2fr 4fr;\r\n}\r\n\r\n.today {\r\n    color:white;\r\n    font-size: 1.75rem;\r\n    font-weight: bold;\r\n    display:grid;\r\n    justify-content: end;\r\n    align-items: center;\r\n    /* border:solid black 4px */\r\n}\r\n\r\n.todaysDate {\r\n    color:rgb(107, 107, 119);\r\n    display:grid;\r\n    padding-left: 10px;\r\n    /* border:solid black 4px; */\r\n    justify-content: start;\r\n    align-items: center;\r\n}\r\n\r\n.todoListContainer {\r\n    /* border:solid black 4px; */\r\n    height: 100%;\r\n    padding: 20px;\r\n}\r\n\r\n.todoList {\r\n    position:relative;\r\n    font-size: 1rem;\r\n    color:white;\r\n    list-style-type: none;\r\n    border-top: solid slategrey 1px;\r\n}\r\n\r\n.todoListItem{ \r\n    position: relative;\r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n    padding: 5px;\r\n    /* border-top:solid black 2px; */\r\n    border-bottom:solid slategrey 1px;\r\n\r\n}\r\n\r\n.todoProject {\r\n    grid-column: 2/3;\r\n}\r\n\r\n.checkIcon {\r\n    display: grid;\r\n    top: 25px;\r\n    left: 10px;\r\n    position: relative;\r\n    align-items: center;\r\n    grid-column: 1/2;\r\n    border: solid aqua 2px;\r\n    background-color: black;\r\n    height: 15px;\r\n    width: 15px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.checkIcon:hover {\r\n    cursor: pointer;\r\n    background-color: green;\r\n}\r\n\r\n\r\n.checkIcon:active {\r\n    cursor: pointer;\r\n    background-color: green;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.todoListItem p  {\r\n    grid-column: 2/3;\r\n}\r\n\r\n.High {\r\n    color:red;\r\n}\r\n.Medium {\r\n    color: orange;\r\n}\r\n.Low {\r\n    color:cornflowerblue;   \r\n}\r\n\r\n/*.todoTitle, .todoDescription, .todoPriority, .priority .todoDate {\r\n    grid-column: 2/3;\r\n    /* disable above for vertical stretch \r\n}*/\r\n\r\n\r\n.prioritySelectWrapper > label {\r\n    padding-right: 5px;\r\n    color: whitesmoke;\r\n}\r\n\r\n.todoDate{\r\n    color: greenyellow;\r\n}\r\n\r\n.todoTitle {\r\n    font-size: 1.1rem;\r\n}\r\n\r\n.todoDescription {\r\n    color: rgb(107, 107, 119);  \r\n    font-size: .9rem;\r\n}\r\n\r\n.todoProject {\r\n    font-size: .9rem;\r\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":";AAIA;IACI,sBAAsB;IACtB,SAAS;IACT;AACJ;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;IAClB,4BAA4B;IAC5B,gCAAgC;IAChC,iCAAiC;IACjC,gBAAgB;IAChB,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,WAAW;IACX,mBAAmB;IACnB,kBAAkB;IAClB,4CAA4C;IAC5C,wCAAwC;AAC5C;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,iBAAiB;IACjB,eAAe;AACnB;;;;AAIA;IACI,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,eAAe;IACf,2BAA2B;AAC/B;;AAEA;IACI,WAAW;AACf;;;AAGA;IACI,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,QAAQ;AACZ;;AAEA;IACI,qCAAqC;IACrC,wBAAwB;IACxB,gBAAgB;IAChB,+BAA+B;IAC/B,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,8BAA8B;IAC9B,gBAAgB;AACpB;;;AAGA;IACI,aAAa;IACb,oBAAoB;IACpB,WAAW;IACX,YAAY;IACZ,wBAAwB;IACxB,oCAAoC;IACpC,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,cAAc;IACd,sBAAsB;AAC1B;;AAEA;IACI,cAAc;IACd,qBAAqB;AACzB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,mCAAmC;AACvC;;;;AAIA;IACI,aAAa;IACb,mBAAmB;IACnB,gBAAgB;IAChB,aAAa;IACb,mCAAmC;IACnC,YAAY;IACZ,WAAW;IACX,yCAAyC;IACzC,2BAA2B;;;AAG/B;;;;AAIA;IACI,aAAa;IACb,+BAA+B;IAC/B,mCAAmC;IACnC,kBAAkB;IAClB,YAAY;;AAEhB;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;IAChB,gBAAgB;IAChB,iBAAiB;AACrB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,gBAAgB;IAChB,oBAAoB;AACxB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,eAAe;;AAEnB;;AAEA;IACI,kBAAkB;AACtB;;;AAGA;IACI,aAAa;IACb,aAAa;IACb,kBAAkB;IAClB,qBAAqB;IACrB,aAAa;IACb,gBAAgB;IAChB,WAAW;IACX,WAAW;;AAEf;;AAEA;IACI,sBAAsB;IACtB;0CACsC;IACtC,aAAa;IACb,iBAAiB;IACjB,SAAS;IACT,YAAY;IACZ,cAAc;IACd,eAAe;IACf,6BAA6B;IAC7B,iCAAiC;IACjC,2BAA2B;IAC3B,mBAAmB;IACnB,aAAa;IACb,6CAA6C;AACjD;;;;CAIC;;;;;;;;;;;;;;;;;;;;;;;;MAwBK;;AAEN;IACI,aAAa;IACb,kBAAkB;IAClB,gCAAgC;IAChC,8BAA8B;IAC9B,aAAa;;AAEjB;;;AAGA;IACI,aAAa;IACb,gBAAgB;;AAEpB;;AAEA;EACE,oBAAoB;AACtB;;AAEA;IACI,iCAAiC;IACjC,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;;AAGA;IACI,iBAAiB;AACrB;;AAEA;IACI,YAAY;IACZ,gBAAgB;IAChB,8BAA8B;IAC9B,aAAa;AACjB;;AAEA;;;GAGG;;AAEH;IACI,YAAY;IACZ,mBAAmB;IACnB,oBAAoB;IACpB,OAAO;IACP,YAAY;IACZ,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,sBAAsB;IACtB,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,uBAAuB;IACvB,2BAA2B;IAC3B,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;IAChB,UAAU;AACd;AACA;IACI,sBAAsB;IACtB,eAAe;AACnB;AACA;IACI,qBAAqB;IACrB,eAAe;AACnB;;;;;AAKA;IACI,aAAa;IACb,kBAAkB;IAClB,iCAAiC;IACjC,WAAW;IACX,mBAAmB;IACnB,4BAA4B;IAC5B,4BAA4B;AAChC;;AAEA;;IAEI,aAAa;IACb,kBAAkB;IAClB,kCAAkC;AACtC;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,iBAAiB;IACjB,YAAY;IACZ,oBAAoB;IACpB,mBAAmB;IACnB,2BAA2B;AAC/B;;AAEA;IACI,wBAAwB;IACxB,YAAY;IACZ,kBAAkB;IAClB,4BAA4B;IAC5B,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,4BAA4B;IAC5B,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,iBAAiB;IACjB,eAAe;IACf,WAAW;IACX,qBAAqB;IACrB,+BAA+B;AACnC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,+BAA+B;IAC/B,YAAY;IACZ,gCAAgC;IAChC,iCAAiC;;AAErC;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,SAAS;IACT,UAAU;IACV,kBAAkB;IAClB,mBAAmB;IACnB,gBAAgB;IAChB,sBAAsB;IACtB,uBAAuB;IACvB,YAAY;IACZ,WAAW;IACX,kBAAkB;AACtB;;AAEA;IACI,eAAe;IACf,uBAAuB;AAC3B;;;AAGA;IACI,eAAe;IACf,uBAAuB;IACvB,qBAAqB;AACzB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,SAAS;AACb;AACA;IACI,aAAa;AACjB;AACA;IACI,oBAAoB;AACxB;;AAEA;;;EAGE;;;AAGF;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,yBAAyB;IACzB,gBAAgB;AACpB;;AAEA;IACI,gBAAgB;AACpB","sourcesContent":["\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    font-family: 'Roboto'\r\n}\r\n\r\nhtml {\r\n    height: 100%;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 230px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n    min-height: 100%;\r\n    max-height: fit-content;\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;  \r\n    padding-left: 20px;\r\n    grid-template-columns: 70px 200px  1fr 200px;\r\n    border-bottom: solid rgb(53, 52, 52) 2px; \r\n}\r\n\r\n.navStart {\r\n    display:flex;\r\n    flex-direction: row;\r\n    padding-top: 20px;\r\n    /* gap: 10px; */\r\n}\r\n\r\n\r\n\r\n.hamIcon, .homeIcon {\r\n    padding: 4px;\r\n    user-select: none;\r\n}\r\n\r\n.hamIcon:hover, .homeIcon:hover {\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n    background-color: slategrey;\r\n}\r\n\r\n.navStart div {\r\n    color:white;\r\n}\r\n\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:rgb(219, 219, 219);\r\n    grid-column: 3/4;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 4/5;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: rgb(42, 190, 190);\r\n    border: rgb(219, 219, 219) 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.newTodoButton:hover {\r\n    cursor:pointer;\r\n    transform: scale(0.95);\r\n}\r\n\r\n.newTodoButton:active {\r\n    cursor:pointer;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid rgb(42, 190, 190) 2px;\r\n}\r\n\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    visibility: visible;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-right: solid rgb(32, 119, 119) 2px;\r\n    padding: 50px 10px 0px 10px;\r\n    \r\n\r\n}\r\n\r\n\r\n\r\n.projectsHeaderContainer {\r\n    display: grid;\r\n    grid-template-columns: 30px 1fr;\r\n    background-color: rgb(41, 179, 179);\r\n    border-radius: 4px;\r\n    padding: 4px;\r\n    \r\n}\r\n\r\n.projectsHeader {\r\n    font-size: 1.2rem;\r\n    font-weight: 600;\r\n    grid-column: 1/2;\r\n    padding-left: 5px;\r\n}\r\n\r\n.projectButtonsContainer {\r\n    display:flex;\r\n    flex-direction: row;\r\n    grid-column: 2/3;\r\n    justify-content: end;\r\n}\r\n\r\n.addIcon, .expandIcon {\r\n    height: 10px;\r\n    width: 10px;\r\n    font-size: 12px;\r\n\r\n}\r\n\r\n.projectsList {\r\n    visibility: hidden;\r\n}\r\n\r\n\r\nmain {\r\n    padding: 30px;\r\n    display: grid;\r\n    position: relative;\r\n    justify-items: center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    animation:  popup 30ms;\r\n    /* transition: 1s;\r\n    transition-timing-function: linear;  */\r\n    display: grid;\r\n    position:absolute; \r\n    top: 60px; \r\n    display:none;\r\n    min-width: 30%;\r\n    min-height: 20%;\r\n    /* justify-content: center; */\r\n    background-color: rgb(34, 33, 33);\r\n    border: solid slategrey 2px;\r\n    border-radius: 20px;\r\n    padding: 10px;\r\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\r\n}\r\n\r\n\r\n\r\n /* @keyframes popup {\r\n    0%{\r\n      transform: scale(0.4);\r\n      filter: blur(10px);\r\n    }\r\n    50%{\r\n      transform: scale(0.4);\r\n       filter: blur(10px); \r\n    }\r\n    60%{\r\n      transform: scale(0.4); \r\n       filter: blur(10px);\r\n    }\r\n    70%{\r\n      transform: scale(0.6); \r\n       filter: blur(10px); \r\n    }\r\n     80%{\r\n      transform: scale(0.8); \r\n      filter: blur(5px); \r\n    }\r\n    100%{\r\n        transform: scale(1); \r\n      }\r\n  }  */\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    grid-template-rows: 2fr 1fr .5fr;\r\n    grid-template-columns: 1fr 1fr;\r\n    padding: 10px;\r\n    \r\n}\r\n\r\n\r\n.titleDescriptionWrapper {\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    \r\n}\r\n\r\n#titleInput {\r\n  padding-bottom: 10px;\r\n}\r\n\r\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\r\n    background-color: rgb(34, 33, 33);\r\n    color: white;\r\n    border: none;\r\n}\r\n\r\n#titleInput:focus, #descriptionInput:focus {\r\n    outline: none;\r\n}\r\n\r\n\r\n#dateSelect::-webkit-calendar-picker-indicator {\r\n    filter: invert(1);  \r\n}\r\n\r\n.datePriorityWrapper {\r\n    display:flex;\r\n    grid-column: 1/3;\r\n    justify-content: space-between;\r\n    grid-row: 2/3;\r\n}\r\n\r\n/* .title, .description, .priority, .date{\r\n    display: flex;\r\n    flex-direction: column;\r\n} */\r\n\r\n.addTodoWrapper {\r\n    display:flex;\r\n    align-items: center;\r\n    justify-content: end;\r\n    gap:7px;\r\n    grid-row:3/4;\r\n    grid-column: 1/3;\r\n}\r\n\r\n.addTodoButton {\r\n    color: whitesmoke;\r\n    border: solid 2px aqua;\r\n    background-color: black;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton {\r\n    color: whitesmoke;\r\n    background-color: black;\r\n    border: solid 2px firebrick;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton,.addTodoButton {\r\n    font-weight: 300;\r\n    width: 20%;\r\n} \r\n.cancelTodoButton:hover ,.addTodoButton:hover {\r\n    transform: scale(0.98);\r\n    cursor: pointer;\r\n}  \r\n.cancelTodoButton:active ,.addTodoButton:active {\r\n    transform: scale(0.9);\r\n    cursor: pointer;\r\n} \r\n\r\n\r\n\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: rgb(34, 33, 33);\r\n    width: 40vw;\r\n    height: fit-content;\r\n    /* border:solid black 4px; */\r\n    grid-template-rows: 60px 1fr;\r\n}\r\n\r\n.todayDateContainer {\r\n    \r\n    display: grid;\r\n    align-items:center;\r\n    grid-template-columns: 1fr 2fr 4fr;\r\n}\r\n\r\n.today {\r\n    color:white;\r\n    font-size: 1.75rem;\r\n    font-weight: bold;\r\n    display:grid;\r\n    justify-content: end;\r\n    align-items: center;\r\n    /* border:solid black 4px */\r\n}\r\n\r\n.todaysDate {\r\n    color:rgb(107, 107, 119);\r\n    display:grid;\r\n    padding-left: 10px;\r\n    /* border:solid black 4px; */\r\n    justify-content: start;\r\n    align-items: center;\r\n}\r\n\r\n.todoListContainer {\r\n    /* border:solid black 4px; */\r\n    height: 100%;\r\n    padding: 20px;\r\n}\r\n\r\n.todoList {\r\n    position:relative;\r\n    font-size: 1rem;\r\n    color:white;\r\n    list-style-type: none;\r\n    border-top: solid slategrey 1px;\r\n}\r\n\r\n.todoListItem{ \r\n    position: relative;\r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n    padding: 5px;\r\n    /* border-top:solid black 2px; */\r\n    border-bottom:solid slategrey 1px;\r\n\r\n}\r\n\r\n.todoProject {\r\n    grid-column: 2/3;\r\n}\r\n\r\n.checkIcon {\r\n    display: grid;\r\n    top: 25px;\r\n    left: 10px;\r\n    position: relative;\r\n    align-items: center;\r\n    grid-column: 1/2;\r\n    border: solid aqua 2px;\r\n    background-color: black;\r\n    height: 15px;\r\n    width: 15px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.checkIcon:hover {\r\n    cursor: pointer;\r\n    background-color: green;\r\n}\r\n\r\n\r\n.checkIcon:active {\r\n    cursor: pointer;\r\n    background-color: green;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.todoListItem p  {\r\n    grid-column: 2/3;\r\n}\r\n\r\n.High {\r\n    color:red;\r\n}\r\n.Medium {\r\n    color: orange;\r\n}\r\n.Low {\r\n    color:cornflowerblue;   \r\n}\r\n\r\n/*.todoTitle, .todoDescription, .todoPriority, .priority .todoDate {\r\n    grid-column: 2/3;\r\n    /* disable above for vertical stretch \r\n}*/\r\n\r\n\r\n.prioritySelectWrapper > label {\r\n    padding-right: 5px;\r\n    color: whitesmoke;\r\n}\r\n\r\n.todoDate{\r\n    color: greenyellow;\r\n}\r\n\r\n.todoTitle {\r\n    font-size: 1.1rem;\r\n}\r\n\r\n.todoDescription {\r\n    color: rgb(107, 107, 119);  \r\n    font-size: .9rem;\r\n}\r\n\r\n.todoProject {\r\n    font-size: .9rem;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3545,6 +3545,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
 /* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/format/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -3589,6 +3590,7 @@ console.log('just todo it!');
 
 // add more complex date functionality
 // make the date red only if it is todays date
+// maybe change color from orange to green depending on impending it is
 //add some overdue functionality
 //otherwise make the date green.
 
@@ -3599,6 +3601,15 @@ var todoForm = document.querySelector('.todoForm');
 var titleInput = document.querySelector('#titleInput');
 var descrInput = document.querySelector('#descriptionInput');
 var prioritySelect = document.querySelector('#prioritySelect');
+var sidebar = document.querySelector('.sidebar');
+
+// Priority options
+
+// const lowPriority = document.querySelector('.low');
+// const mediumPriority = document.querySelector('.medium');
+// const highPriority = document.querySelector('.high');
+
+var allTodoPrioritys = document.querySelectorAll('.todoPriority');
 var addTodoBtn = document.querySelector('.addTodoButton');
 var cancelTodoButton = document.querySelector('.cancelTodoButton');
 var displayTodos = document.querySelector('.displayTodos');
@@ -3607,6 +3618,40 @@ var formContainer = document.querySelector('.formContainer');
 var todaysDateDisplay = document.querySelector('.todaysDate');
 var dateSelect = document.querySelector('#dateSelect');
 var projectSelect = document.querySelector('#projectsFormSelect');
+
+//Projects sidbar
+
+var projectsList = document.querySelector('.projectsList');
+var addProjectButton = document.querySelector('.addProjectButton');
+var showHideProject = document.querySelector('.showHideProjects');
+
+// Icons =================
+
+var homeIcon = document.querySelector('.homeIcon');
+var hamIcon = document.querySelector('.hamIcon');
+var expandIcon = document.querySelector('.expandIcon');
+var addIcon = document.querySelector('.addIcon');
+expandIcon.addEventListener('click', function (e) {
+  console.log('expand!!!!');
+  console.log(projectsList.style.visibility);
+  if (projectsList.style.visiblity === 'hidden') {
+    projectsList.style.visibility = 'visible';
+  } else {
+    projectsList.style.visibility = 'hidden';
+  }
+});
+homeIcon.addEventListener('click', function (e) {
+  console.log('home!!!!!!!!!');
+});
+hamIcon.addEventListener('click', function (e) {
+  console.log(sidebar.style.visibility);
+  if (sidebar.style.visibility === 'visible') {
+    sidebar.style.visibility = 'hidden';
+  } else {
+    sidebar.style.visibility = 'visible';
+  }
+  console.log('ham!!!!!!!!!');
+});
 console.log(projectSelect);
 function addProjectOption(project) {
   var option = document.createElement('option');
@@ -3614,19 +3659,12 @@ function addProjectOption(project) {
   option.appendChild(document.createTextNode(project.title));
   projectSelect.appendChild(option);
 }
-
-//Projects sidbar
-
-var projectsList = document.querySelector('.projectsList');
-var addProjectButton = document.querySelector('.addProjectButton');
-var showHideProject = document.querySelector('.showHideProjects');
-var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__["default"])(new Date(), 'MM-dd-yyyy');
-console.log(today);
 console.log(dateSelect.value);
-dateSelect.setAttribute('value', today);
 var dateReturn = '2022 - 10 - 20';
+var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__["default"])(new Date(), 'E-do');
+console.log(today);
 
-// let today = format(new Date(), 'E-do')
+//DATE and DATE FORMATING ---------------------------------------------
 
 function updateTodaysDate(today) {
   var todayArr = today.split('-');
@@ -3643,20 +3681,37 @@ function formatDate(date) {
   //console.log(formattedDate)
   return formattedDate;
 }
+
+// LOCAL STORAGE ------------------------------------------------
+
+function variableToString(varKey) {
+  return Object.keys(varKey)[0];
+}
+
+// function storeToLocalStorage(variable) {
+
+//   localStorage.setItem(, JSON.stringify(variable));
+// }
+
 updateTodaysDate(today);
 
 //console.log(today)
 
 console.log(todoList);
 console.log(todoForm);
+
+// Arrays ===========================================
+
 var allTodos = [];
 var allProjects = [];
+var allLocalStorageTodos = JSON.parse(localStorage.getItem('allTodos'));
 console.log(prioritySelect);
-function Todo(title, description, priority, date) {
+function Todo(title, description, priority, date, project) {
   this.title = title;
   this.description = description;
   this.priority = "Priority: ".concat(priority);
   this.date = date;
+  this.project = "Project: ".concat(project);
 }
 function Project(title) {
   this.title = title;
@@ -3746,12 +3801,15 @@ function createTodoListItem(todo) {
   var todoDescription = todoElementFactory(todo, 'p', {
     "class": 'todoDescription'
   }, 'description');
-  var todoPriority = todoElementFactory(todo, 'p', {
+  var todoPriority = todoElementFactory(todo, 'p', _defineProperty({
     "class": 'todoPriority'
-  }, 'priority');
+  }, "class", "".concat(todo.priority.split(': ')[1])), 'priority');
   var todoDate = todoElementFactory(todo, 'p', {
     "class": 'todoDate'
   }, 'date');
+  var todoProject = todoElementFactory(todo, 'p', {
+    "class": 'todoProject'
+  }, 'project');
 
   // checkIcon.innerHTML = 'Icon'
 
@@ -3760,25 +3818,65 @@ function createTodoListItem(todo) {
   todoLi.appendChild(todoDescription);
   todoLi.appendChild(todoPriority);
   todoLi.appendChild(todoDate);
+  todoLi.appendChild(todoProject);
   todoList.appendChild(todoLi);
 }
-var pullworkout = new Todo('Pull', 'Back, Biceps, Sqaut, Deadlift', 'High', new Date());
-var pushworkout = new Todo('Push', 'Chest, Triceps, Sqaut, Press', 'High', new Date());
-addTodo(pullworkout);
-addTodo(pushworkout);
-allTodos.forEach(function (e) {
-  createTodoListItem(e);
-});
+
+// let pullworkout = new Todo(
+//   'Pull',
+//   'Back, Biceps, Sqaut, Deadlift',
+//   'High',
+//   new Date(),
+//   'Get Fit'
+// )
+// let pushworkout = new Todo(
+//   'Push',
+//   'Chest, Triceps, Sqaut, Press',
+//   'Medium',
+//   new Date(),
+//   'Get Fit'
+// )
+// let legworkout = new Todo(
+//   'Legs',
+//   'Chest, Triceps, Sqaut, Press',
+//   'Low',
+//   new Date(),
+//   'Get Fit'
+// )
+
+// addTodo(pullworkout)
+// addTodo(pushworkout)
+// addTodo(legworkout)
+
+// allTodos.forEach((e) => {
+//   createTodoListItem(e)
+// })
+
 var addAllTodos = function addAllTodos(todoArr) {
+  localStorage.removeItem('allTodos');
   todoArr.forEach(function (e) {
     createTodoListItem(e);
   });
+  localStorage.setItem('allTodos', JSON.stringify(todoArr));
 };
 
 //addAllTodos(allTodos)
 
-addAllTodos(allTodos);
+if (allLocalStorageTodos !== null) {
+  addAllTodos(allLocalStorageTodos);
+}
+console.log(allTodos);
 
+//add id's to todoListItems
+
+function addTodoIds() {
+  var todoListItems = document.querySelectorAll('.todoListItem');
+  todoListItems.forEach(function (e, i) {
+    e.setAttribute('id', "".concat(i));
+  });
+}
+
+// todoListItems.forEach((e,i) => e.setAttribute('id', `${i}`))
 //createTodoListItem(workout)
 
 newTodoBtn.addEventListener('click', function (e) {
@@ -3802,8 +3900,10 @@ addTodoBtn.addEventListener('click', function (e) {
   var description = descrInput.value;
   var priority = prioritySelect.value;
   var date = formatDate(dateSelect.value);
+  var project = projectSelect.value;
+  console.log();
   console.log('addddddd');
-  var todo = new Todo(title, description, priority, date);
+  var todo = new Todo(title, description, priority, date, project);
   addTodo(todo);
   console.log(allTodos);
   console.log(dateSelect.value);
@@ -3812,6 +3912,13 @@ addTodoBtn.addEventListener('click', function (e) {
   clearForm();
   clearTodos();
   addAllTodos(allTodos);
+  // if(priority === 'High') {
+  //   highPriority.style.color = 'red';
+  // } else if(priority === 'Medium') {
+  //   mediumPriority.style.color = 'orange';
+  // } else {
+  //   lowPriority.style.color = 'slategrey'
+  // }
   todoForm.style.display = 'none';
   formContainer.style.display = 'none';
   displayTodos.style.display = 'grid';
@@ -3819,7 +3926,19 @@ addTodoBtn.addEventListener('click', function (e) {
 allProjects.forEach(function (project) {
   addProjectOption(project);
 });
+allTodoPrioritys.forEach(function (e) {
+  console.log(e);
+});
+addTodoIds();
+console.log(JSON.stringify(allTodos));
+console.log(JSON.stringify(allProjects));
 
+// localStorage.setItem('allTodos', JSON.stringify(allTodos))
+
+// let localTodos = JSON.parse(localStorage.getItem('allTodos'))
+// console.log('local', localTodos)
+
+// localStorage.removeItem('allTodos');
 // console.log(workout.title)
 //console.log(...allTodos)
 
@@ -3850,4 +3969,4 @@ allProjects.forEach(function (project) {
 
 /******/ })()
 ;
-//# sourceMappingURL=todoBundleb9ee43494a4003250b34.js.map
+//# sourceMappingURL=todoBundle4bc2934ea059abcfd35f.js.map

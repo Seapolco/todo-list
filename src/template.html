@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Home Icon, Menu Icon -->
+    <!-- Home Icon, Menu Icon, expandDown icon, add icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Todo App</title>
@@ -33,11 +35,18 @@
       <section class="projectsContainer">
         <div class="projectsHeaderContainer">
           <header class="projectsHeader">Projects</header>
-          <button class="addProjectButton">Add</button>
-          <button class="showHideProjects">V</button>
+          <div class="projectButtonsContainer">
+            <button class="addProjectButton"><span class="material-symbols-outlined addIcon">
+              add
+              </span></button>
+            <button class="showHideProjects"><span class="material-symbols-outlined expandIcon">
+              expand_more
+              </span></button>
+          </div>
+
         </div>
         <div class="projectsListContainer">
-          <ul class="projectsList">
+          <ul class="projectsList" style="display:none;" >
             <li class="project-li">Training</li>
           </ul>
         </div>
