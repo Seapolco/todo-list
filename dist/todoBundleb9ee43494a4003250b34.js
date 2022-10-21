@@ -21,8 +21,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nhtml {\r\n    height: fit-content;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:fit-content;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    display:none;\r\n    min-width: 40%;\r\n    min-height: 40%;\r\n    position: relative;\r\n    justify-content: center;\r\n    background-color: pink;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    \r\n}\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: blue;\r\n    width: 60vw;\r\n    height: 60%;\r\n    border:solid black 4px\r\n}\r\n\r\n.todaysDate {\r\n    background-color: white;\r\n    border:solid black 4px\r\n}\r\n\r\n.todoListContainer {\r\n    border:solid black 4px\r\n}\r\n\r\n.todoList {\r\n    font-size: 1.25rem;\r\n    color:white;\r\n    list-style-type: none;\r\n}\r\n\r\n.todoListItem{ \r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n\r\n}\r\n\r\n.checkIcon {\r\n    grid-column: 1/2;\r\n}\r\n\r\n.todoTitle, .todoDescription, .todoPriority, .todoDate {\r\n    /* grid-column: 2/3; */\r\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":";AAIA;IACI,sBAAsB;IACtB,SAAS;AACb;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;IAClB,4BAA4B;IAC5B,gCAAgC;IAChC,iCAAiC;AACrC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,WAAW;IACX,mBAAmB;IACnB,kBAAkB;IAClB,uCAAuC;AAC3C;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,QAAQ;AACZ;;AAEA;IACI,qCAAqC;IACrC,WAAW;IACX,gBAAgB;IAChB,+BAA+B;IAC/B,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,8BAA8B;IAC9B,gBAAgB;AACpB;;;AAGA;IACI,aAAa;IACb,oBAAoB;IACpB,WAAW;IACX,YAAY;IACZ,WAAW;IACX,sBAAsB;IACtB,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,sBAAsB;AAC1B;;;AAGA;IACI,aAAa;IACb,gBAAgB;IAChB,aAAa;IACb,mCAAmC;IACnC,YAAY;IACZ,WAAW;;AAEf;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,aAAa;IACb,gBAAgB;IAChB,kBAAkB;IAClB,WAAW;;AAEf;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,cAAc;IACd,eAAe;IACf,kBAAkB;IAClB,uBAAuB;IACvB,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,kBAAkB;;AAEtB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,sBAAsB;IACtB,WAAW;IACX,WAAW;IACX;AACJ;;AAEA;IACI,uBAAuB;IACvB;AACJ;;AAEA;IACI;AACJ;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,qBAAqB;AACzB;;AAEA;IACI,aAAa;IACb,+BAA+B;;AAEnC;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,sBAAsB;AAC1B","sourcesContent":["\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\r\n\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n}\r\n\r\nhtml {\r\n    height: fit-content;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;\r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n}\r\n\r\nmain {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:fit-content;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    display: grid;\r\n    display:none;\r\n    min-width: 40%;\r\n    min-height: 40%;\r\n    position: relative;\r\n    justify-content: center;\r\n    background-color: pink;\r\n}\r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    \r\n}\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: blue;\r\n    width: 60vw;\r\n    height: 60%;\r\n    border:solid black 4px\r\n}\r\n\r\n.todaysDate {\r\n    background-color: white;\r\n    border:solid black 4px\r\n}\r\n\r\n.todoListContainer {\r\n    border:solid black 4px\r\n}\r\n\r\n.todoList {\r\n    font-size: 1.25rem;\r\n    color:white;\r\n    list-style-type: none;\r\n}\r\n\r\n.todoListItem{ \r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n\r\n}\r\n\r\n.checkIcon {\r\n    grid-column: 1/2;\r\n}\r\n\r\n.todoTitle, .todoDescription, .todoPriority, .todoDate {\r\n    /* grid-column: 2/3; */\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    font-family: 'Roboto'\r\n}\r\n\r\nhtml {\r\n    height: 100%;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n    min-height: 100%;\r\n    max-height: fit-content;\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;  \r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n    border-bottom: solid rgb(53, 52, 52) 2px; \r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.newTodoButton:hover {\r\n    cursor:pointer;\r\n    transform: scale(0.95);\r\n}\r\n\r\n.newTodoButton:active {\r\n    cursor:pointer;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-right: solid rgb(32, 119, 119) 2px;\r\n\r\n}\r\n\r\nmain {\r\n    padding: 30px;\r\n    display: grid;\r\n    position: relative;\r\n    justify-items: center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    animation:  popup 30ms;\r\n    /* transition: 1s;\r\n    transition-timing-function: linear;  */\r\n    display: grid;\r\n    position:absolute; \r\n    top: 60px; \r\n    display:none;\r\n    min-width: 30%;\r\n    min-height: 20%;\r\n    /* justify-content: center; */\r\n    background-color: rgb(34, 33, 33);\r\n    border: solid slategrey 2px;\r\n    border-radius: 20px;\r\n    padding: 10px;\r\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\r\n}\r\n\r\n\r\n\r\n @keyframes popup {\r\n    0%{\r\n      transform: scale(0.4);\r\n      filter: blur(10px);\r\n    }\r\n    50%{\r\n      transform: scale(0.4);\r\n       filter: blur(10px); \r\n    }\r\n    60%{\r\n      transform: scale(0.4); \r\n       filter: blur(10px);\r\n    }\r\n    70%{\r\n      transform: scale(0.6); \r\n       filter: blur(10px); \r\n    }\r\n     80%{\r\n      transform: scale(0.8); \r\n      filter: blur(5px); \r\n    }\r\n    100%{\r\n        transform: scale(1); \r\n      }\r\n  } \r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    grid-template-rows: 2fr 1fr .5fr;\r\n    grid-template-columns: 1fr 1fr;\r\n    padding: 10px;\r\n    \r\n}\r\n\r\n\r\n.titleDescriptionWrapper {\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    \r\n}\r\n\r\n#titleInput {\r\n  padding-bottom: 10px;\r\n}\r\n\r\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\r\n    background-color: rgb(34, 33, 33);\r\n    color: white;\r\n    border: none;\r\n}\r\n\r\n#titleInput:focus, #descriptionInput:focus {\r\n    outline: none;\r\n}\r\n\r\n\r\n#dateSelect::-webkit-calendar-picker-indicator {\r\n    filter: invert(1);  \r\n}\r\n\r\n.datePriorityWrapper {\r\n    display:flex;\r\n    grid-column: 1/3;\r\n    justify-content: space-between;\r\n    grid-row: 2/3;\r\n}\r\n\r\n/* .title, .description, .priority, .date{\r\n    display: flex;\r\n    flex-direction: column;\r\n} */\r\n\r\n.addTodoWrapper {\r\n    display:flex;\r\n    align-items: center;\r\n    justify-content: end;\r\n    gap:7px;\r\n    grid-row:3/4;\r\n    grid-column: 1/3;\r\n}\r\n\r\n.addTodoButton {\r\n    color: whitesmoke;\r\n    border: solid 2px aqua;\r\n    background-color: black;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton {\r\n    color: whitesmoke;\r\n    background-color: black;\r\n    border: solid 2px firebrick;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton,.addTodoButton {\r\n    font-weight: 300;\r\n    width: 20%;\r\n} \r\n.cancelTodoButton:hover ,.addTodoButton:hover {\r\n    transform: scale(0.98);\r\n    cursor: pointer;\r\n}  \r\n.cancelTodoButton:active ,.addTodoButton:active {\r\n    transform: scale(0.9);\r\n    cursor: pointer;\r\n} \r\n\r\n\r\n\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: rgb(34, 33, 33);\r\n    width: 40vw;\r\n    height: fit-content;\r\n    /* border:solid black 4px; */\r\n    grid-template-rows: 60px 1fr;\r\n}\r\n\r\n.todayDateContainer {\r\n    \r\n    display: grid;\r\n    align-items:center;\r\n    grid-template-columns: 1fr 2fr 4fr;\r\n}\r\n\r\n.today {\r\n    color:white;\r\n    font-size: 1.75rem;\r\n    font-weight: bold;\r\n    display:grid;\r\n    justify-content: end;\r\n    align-items: center;\r\n    /* border:solid black 4px */\r\n}\r\n\r\n.todaysDate {\r\n    color:rgb(107, 107, 119);\r\n    display:grid;\r\n    padding-left: 10px;\r\n    /* border:solid black 4px; */\r\n    justify-content: start;\r\n    align-items: center;\r\n}\r\n\r\n.todoListContainer {\r\n    /* border:solid black 4px; */\r\n    height: 100%;\r\n    padding: 20px;\r\n}\r\n\r\n.todoList {\r\n    position:relative;\r\n    font-size: 1rem;\r\n    color:white;\r\n    list-style-type: none;\r\n    border-top: solid slategrey 2px;\r\n}\r\n\r\n.todoListItem{ \r\n    position: relative;\r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n    padding: 5px;\r\n    /* border-top:solid black 2px; */\r\n    border-bottom:solid slategrey 2px;\r\n\r\n}\r\n\r\n.checkIcon {\r\n    display: grid;\r\n    top: 25px;\r\n    left: 10px;\r\n    position: relative;\r\n    align-items: center;\r\n    grid-column: 1/2;\r\n    border: solid aqua 2px;\r\n    background-color: black;\r\n    height: 15px;\r\n    width: 15px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.checkIcon:hover {\r\n    cursor: pointer;\r\n    background-color: green;\r\n}\r\n\r\n\r\n.checkIcon:active {\r\n    cursor: pointer;\r\n    background-color: green;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.todoTitle, .todoDescription, .todoPriority, .todoDate {\r\n    grid-column: 2/3;\r\n    /* disable above for vertical stretch */\r\n}\r\n\r\n.priority > label {\r\n    padding-right: 5px;\r\n    color: whitesmoke;\r\n}\r\n\r\n.todoDate{\r\n    color: firebrick;\r\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":"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","sourcesContent":["\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\r\n@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    font-family: 'Roboto'\r\n}\r\n\r\nhtml {\r\n    height: 100%;\r\n}\r\n\r\nbody {\r\n    display: grid;\r\n    position: relative;\r\n    place-items:center; \r\n    /* height: 100%; */\r\n    grid-template-rows: 70px 1fr;\r\n    grid-template-columns: 200px 1fr;\r\n    background-color: rgb(34, 33, 33);\r\n    min-height: 100%;\r\n    max-height: fit-content;\r\n}\r\n\r\nnav {\r\n    position: relative;\r\n    display: grid;\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    background-color: black;\r\n    width: 100%;\r\n    align-items: center;  \r\n    padding-left: 20px;\r\n    grid-template-columns: 200px  1fr 200px;\r\n    border-bottom: solid rgb(53, 52, 52) 2px; \r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    width: auto;\r\n    height: 65px;\r\n    top: 7px; \r\n}\r\n\r\nh1 {\r\n    /* -webkit-text-stroke: .5px white; */\r\n    color:white;\r\n    grid-column: 2/3;\r\n    font-family: 'Roboto Condensed';\r\n    font-weight:lighter;\r\n}\r\n\r\n.navEnd {\r\n    display:grid;\r\n    align-items: center;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-column: 3/4;\r\n}\r\n\r\n\r\n.newTodoButton {\r\n    display: grid;\r\n    align-content:center;\r\n    width: 30px;\r\n    height: 30px;\r\n    color: aqua;\r\n    border: aqua 2px solid;\r\n    background-color: black;\r\n    border-radius: 3px;\r\n}\r\n\r\n.newTodoButton:hover {\r\n    cursor:pointer;\r\n    transform: scale(0.95);\r\n}\r\n\r\n.newTodoButton:active {\r\n    cursor:pointer;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.userIcon {\r\n    align-self: center;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 50%;\r\n    border: solid aqua 2px;\r\n}\r\n\r\n\r\n.sidebar {\r\n    display: grid;\r\n    grid-column: 1/2;\r\n    grid-row: 2/4;\r\n    background-color: rgb(45, 204, 204);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-right: solid rgb(32, 119, 119) 2px;\r\n\r\n}\r\n\r\nmain {\r\n    padding: 30px;\r\n    display: grid;\r\n    position: relative;\r\n    justify-items: center;\r\n    grid-row: 2/4;\r\n    grid-column: 2/3;\r\n    height:100%;\r\n    width: 100%;\r\n    \r\n}\r\n\r\n.formContainer {\r\n    animation:  popup 30ms;\r\n    /* transition: 1s;\r\n    transition-timing-function: linear;  */\r\n    display: grid;\r\n    position:absolute; \r\n    top: 60px; \r\n    display:none;\r\n    min-width: 30%;\r\n    min-height: 20%;\r\n    /* justify-content: center; */\r\n    background-color: rgb(34, 33, 33);\r\n    border: solid slategrey 2px;\r\n    border-radius: 20px;\r\n    padding: 10px;\r\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\r\n}\r\n\r\n\r\n\r\n @keyframes popup {\r\n    0%{\r\n      transform: scale(0.4);\r\n      filter: blur(10px);\r\n    }\r\n    50%{\r\n      transform: scale(0.4);\r\n       filter: blur(10px); \r\n    }\r\n    60%{\r\n      transform: scale(0.4); \r\n       filter: blur(10px);\r\n    }\r\n    70%{\r\n      transform: scale(0.6); \r\n       filter: blur(10px); \r\n    }\r\n     80%{\r\n      transform: scale(0.8); \r\n      filter: blur(5px); \r\n    }\r\n    100%{\r\n        transform: scale(1); \r\n      }\r\n  } \r\n\r\n.todoForm {\r\n    display: none;\r\n    position: relative;\r\n    grid-template-rows: 2fr 1fr .5fr;\r\n    grid-template-columns: 1fr 1fr;\r\n    padding: 10px;\r\n    \r\n}\r\n\r\n\r\n.titleDescriptionWrapper {\r\n    grid-row: 1/2;\r\n    grid-column: 1/3;\r\n    \r\n}\r\n\r\n#titleInput {\r\n  padding-bottom: 10px;\r\n}\r\n\r\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\r\n    background-color: rgb(34, 33, 33);\r\n    color: white;\r\n    border: none;\r\n}\r\n\r\n#titleInput:focus, #descriptionInput:focus {\r\n    outline: none;\r\n}\r\n\r\n\r\n#dateSelect::-webkit-calendar-picker-indicator {\r\n    filter: invert(1);  \r\n}\r\n\r\n.datePriorityWrapper {\r\n    display:flex;\r\n    grid-column: 1/3;\r\n    justify-content: space-between;\r\n    grid-row: 2/3;\r\n}\r\n\r\n/* .title, .description, .priority, .date{\r\n    display: flex;\r\n    flex-direction: column;\r\n} */\r\n\r\n.addTodoWrapper {\r\n    display:flex;\r\n    align-items: center;\r\n    justify-content: end;\r\n    gap:7px;\r\n    grid-row:3/4;\r\n    grid-column: 1/3;\r\n}\r\n\r\n.addTodoButton {\r\n    color: whitesmoke;\r\n    border: solid 2px aqua;\r\n    background-color: black;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton {\r\n    color: whitesmoke;\r\n    background-color: black;\r\n    border: solid 2px firebrick;\r\n    border-radius: 5px;\r\n}\r\n\r\n.cancelTodoButton,.addTodoButton {\r\n    font-weight: 300;\r\n    width: 20%;\r\n} \r\n.cancelTodoButton:hover ,.addTodoButton:hover {\r\n    transform: scale(0.98);\r\n    cursor: pointer;\r\n}  \r\n.cancelTodoButton:active ,.addTodoButton:active {\r\n    transform: scale(0.9);\r\n    cursor: pointer;\r\n} \r\n\r\n\r\n\r\n\r\n.displayTodos {\r\n    display: grid;\r\n    position: relative;\r\n    background-color: rgb(34, 33, 33);\r\n    width: 40vw;\r\n    height: fit-content;\r\n    /* border:solid black 4px; */\r\n    grid-template-rows: 60px 1fr;\r\n}\r\n\r\n.todayDateContainer {\r\n    \r\n    display: grid;\r\n    align-items:center;\r\n    grid-template-columns: 1fr 2fr 4fr;\r\n}\r\n\r\n.today {\r\n    color:white;\r\n    font-size: 1.75rem;\r\n    font-weight: bold;\r\n    display:grid;\r\n    justify-content: end;\r\n    align-items: center;\r\n    /* border:solid black 4px */\r\n}\r\n\r\n.todaysDate {\r\n    color:rgb(107, 107, 119);\r\n    display:grid;\r\n    padding-left: 10px;\r\n    /* border:solid black 4px; */\r\n    justify-content: start;\r\n    align-items: center;\r\n}\r\n\r\n.todoListContainer {\r\n    /* border:solid black 4px; */\r\n    height: 100%;\r\n    padding: 20px;\r\n}\r\n\r\n.todoList {\r\n    position:relative;\r\n    font-size: 1rem;\r\n    color:white;\r\n    list-style-type: none;\r\n    border-top: solid slategrey 2px;\r\n}\r\n\r\n.todoListItem{ \r\n    position: relative;\r\n    display: grid;\r\n    grid-template-columns: 50px 1fr;\r\n    padding: 5px;\r\n    /* border-top:solid black 2px; */\r\n    border-bottom:solid slategrey 2px;\r\n\r\n}\r\n\r\n.checkIcon {\r\n    display: grid;\r\n    top: 25px;\r\n    left: 10px;\r\n    position: relative;\r\n    align-items: center;\r\n    grid-column: 1/2;\r\n    border: solid aqua 2px;\r\n    background-color: black;\r\n    height: 15px;\r\n    width: 15px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.checkIcon:hover {\r\n    cursor: pointer;\r\n    background-color: green;\r\n}\r\n\r\n\r\n.checkIcon:active {\r\n    cursor: pointer;\r\n    background-color: green;\r\n    transform: scale(0.8);\r\n}\r\n\r\n.todoTitle, .todoDescription, .todoPriority, .todoDate {\r\n    grid-column: 2/3;\r\n    /* disable above for vertical stretch */\r\n}\r\n\r\n.priority > label {\r\n    padding-right: 5px;\r\n    color: whitesmoke;\r\n}\r\n\r\n.todoDate{\r\n    color: firebrick;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3544,28 +3545,89 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
 /* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/format/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
 console.log('just todo it!');
 
+// TO DO -------------------------------------------------------------------------------
+
+//refactor
+// pages folder for page modules
+//modules for helper functions
+//genberally clear out the index page
+
+//General
+
+// DELETE TODOS!!!!!!
+
+// show hide sidebar button
+
+//homepage button
+
 // create factory function for generating to-do
 //      title, description, date, priority, (notes & checklist)
+
+// Add projects (object or array)
+
+// add project option to addTodoForm!!!
+//select drop down populated with the list items of project list
+
+// show projects in sidebar
+
+// add project page
+// dynmically create html for pages
+//load homepage on load and load project page when required -- see restaurant app.
+//add fs storage
+
+// DATE AND TIME
+
+// add more complex date functionality
+// make the date red only if it is todays date
+//add some overdue functionality
+//otherwise make the date green.
+
+//have some sort of calendar where you can see what todos are coming up
 
 var newTodoBtn = document.querySelector('.newTodoButton');
 var todoForm = document.querySelector('.todoForm');
 var titleInput = document.querySelector('#titleInput');
-var descrTextArea = document.querySelector('#descriptionTextArea');
+var descrInput = document.querySelector('#descriptionInput');
 var prioritySelect = document.querySelector('#prioritySelect');
 var addTodoBtn = document.querySelector('.addTodoButton');
+var cancelTodoButton = document.querySelector('.cancelTodoButton');
 var displayTodos = document.querySelector('.displayTodos');
 var todoList = document.querySelector('.todoList');
 var formContainer = document.querySelector('.formContainer');
 var todaysDateDisplay = document.querySelector('.todaysDate');
 var dateSelect = document.querySelector('#dateSelect');
-console.log(dateSelect.value);
-var dateReturn = '2022 - 10 - 20';
-var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__["default"])(new Date(), 'E-do');
+var projectSelect = document.querySelector('#projectsFormSelect');
+console.log(projectSelect);
+function addProjectOption(project) {
+  var option = document.createElement('option');
+  option.setAttribute('value', project.title);
+  option.appendChild(document.createTextNode(project.title));
+  projectSelect.appendChild(option);
+}
+
+//Projects sidbar
+
+var projectsList = document.querySelector('.projectsList');
+var addProjectButton = document.querySelector('.addProjectButton');
+var showHideProject = document.querySelector('.showHideProjects');
+var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__["default"])(new Date(), 'MM-dd-yyyy');
 console.log(today);
+console.log(dateSelect.value);
+dateSelect.setAttribute('value', today);
+var dateReturn = '2022 - 10 - 20';
+
+// let today = format(new Date(), 'E-do')
+
 function updateTodaysDate(today) {
   var todayArr = today.split('-');
   var todaysDate = "".concat(todayArr[0], " ").concat(todayArr[1]);
@@ -3588,19 +3650,46 @@ updateTodaysDate(today);
 console.log(todoList);
 console.log(todoForm);
 var allTodos = [];
+var allProjects = [];
 console.log(prioritySelect);
 function Todo(title, description, priority, date) {
   this.title = title;
   this.description = description;
-  this.priority = priority;
+  this.priority = "Priority: ".concat(priority);
   this.date = date;
+}
+function Project(title) {
+  this.title = title;
+  this.tasks = [];
 }
 function addTodo(todo) {
   allTodos.push(todo);
 }
+function addProject(project) {
+  allProjects.push(project);
+}
+var getFit = new Project('Get Fit');
+var readBooks = new Project('Read Books');
+getFit.tasks.push({
+  title: 'Push',
+  description: 'Chest',
+  priority: 'High'
+});
+readBooks.tasks.push({
+  title: 'Gormenghast',
+  description: 'Mervyn Peake, 1700 pages',
+  priority: 'High'
+});
+addProject(getFit);
+addProject(readBooks);
+allProjects.forEach(function (e) {
+  var _console;
+  console.log(e);
+  (_console = console).log.apply(_console, _toConsumableArray(e.tasks));
+});
 function clearForm() {
   titleInput.value = '';
-  descrTextArea.value = '';
+  descrInput.value = '';
   prioritySelect.value = '';
 }
 function clearTodos() {
@@ -3611,7 +3700,7 @@ function clearTodos() {
 
 // need to split this function into multiple functions
 
-function elementFactory(todo, type, attributes, content) {
+function todoElementFactory(todo, type, attributes, content) {
   var element = document.createElement(type);
   for (var key in attributes) {
     element.setAttribute(key, attributes[key]);
@@ -3624,26 +3713,48 @@ function elementFactory(todo, type, attributes, content) {
   }
   return element;
 }
+function projectElementFactory(project, attributes) {
+  var element = document.createElement('li');
+  for (var key in attributes) {
+    element.setAttribute(key, attributes[key]);
+  }
+
+  // add check to see if string, if so just append string as text node
+
+  element.appendChild(document.createTextNode(project.title));
+  return element;
+}
+function createProjectListItem(project) {
+  var projectLi = projectElementFactory(project, {
+    "class": 'project-li'
+  });
+  projectsList.appendChild(projectLi);
+}
+allProjects.forEach(function (e) {
+  createProjectListItem(e);
+});
 function createTodoListItem(todo) {
-  var todoLi = elementFactory(todo, 'li', {
+  var todoLi = todoElementFactory(todo, 'li', {
     "class": 'todoListItem'
   });
-  var checkIcon = elementFactory(todo, 'div', {
+  var checkIcon = todoElementFactory(todo, 'div', {
     "class": 'checkIcon'
   });
-  var todoTitle = elementFactory(todo, 'p', {
+  var todoTitle = todoElementFactory(todo, 'p', {
     "class": 'todoTitle'
   }, 'title');
-  var todoDescription = elementFactory(todo, 'p', {
+  var todoDescription = todoElementFactory(todo, 'p', {
     "class": 'todoDescription'
   }, 'description');
-  var todoPriority = elementFactory(todo, 'p', {
+  var todoPriority = todoElementFactory(todo, 'p', {
     "class": 'todoPriority'
   }, 'priority');
-  var todoDate = elementFactory(todo, 'p', {
+  var todoDate = todoElementFactory(todo, 'p', {
     "class": 'todoDate'
   }, 'date');
-  checkIcon.innerHTML = 'Icon';
+
+  // checkIcon.innerHTML = 'Icon'
+
   todoLi.appendChild(checkIcon);
   todoLi.appendChild(todoTitle);
   todoLi.appendChild(todoDescription);
@@ -3675,12 +3786,20 @@ newTodoBtn.addEventListener('click', function (e) {
   dateSelect.value = '';
   todoForm.style.display = 'grid';
   formContainer.style.display = 'grid';
-  displayTodos.style.display = 'none';
+  // displayTodos.style.display = 'none'
+});
+
+cancelTodoButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('cancel');
+  clearForm();
+  todoForm.style.display = 'none';
+  formContainer.style.display = 'none';
 });
 addTodoBtn.addEventListener('click', function (e) {
   e.preventDefault();
   var title = titleInput.value;
-  var description = descrTextArea.value;
+  var description = descrInput.value;
   var priority = prioritySelect.value;
   var date = formatDate(dateSelect.value);
   console.log('addddddd');
@@ -3696,6 +3815,9 @@ addTodoBtn.addEventListener('click', function (e) {
   todoForm.style.display = 'none';
   formContainer.style.display = 'none';
   displayTodos.style.display = 'grid';
+});
+allProjects.forEach(function (project) {
+  addProjectOption(project);
 });
 
 // console.log(workout.title)
@@ -3728,4 +3850,4 @@ addTodoBtn.addEventListener('click', function (e) {
 
 /******/ })()
 ;
-//# sourceMappingURL=todoBundle6ff5a5f642e3f7b19ca0.js.map
+//# sourceMappingURL=todoBundleb9ee43494a4003250b34.js.map

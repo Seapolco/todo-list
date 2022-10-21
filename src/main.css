@@ -114,6 +114,9 @@ main {
 }
 
 .formContainer {
+    animation:  popup 30ms;
+    /* transition: 1s;
+    transition-timing-function: linear;  */
     display: grid;
     position:absolute; 
     top: 60px; 
@@ -127,6 +130,34 @@ main {
     padding: 10px;
     box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);
 }
+
+
+
+ @keyframes popup {
+    0%{
+      transform: scale(0.4);
+      filter: blur(10px);
+    }
+    50%{
+      transform: scale(0.4);
+       filter: blur(10px); 
+    }
+    60%{
+      transform: scale(0.4); 
+       filter: blur(10px);
+    }
+    70%{
+      transform: scale(0.6); 
+       filter: blur(10px); 
+    }
+     80%{
+      transform: scale(0.8); 
+      filter: blur(5px); 
+    }
+    100%{
+        transform: scale(1); 
+      }
+  } 
 
 .todoForm {
     display: none;
@@ -274,6 +305,10 @@ main {
 
 }
 
+.todoProject {
+    grid-column: 2/3;
+}
+
 .checkIcon {
     display: grid;
     top: 25px;
@@ -300,16 +335,44 @@ main {
     transform: scale(0.8);
 }
 
-.todoTitle, .todoDescription, .todoPriority, .todoDate {
+.todoListItem p  {
     grid-column: 2/3;
-    /* disable above for vertical stretch */
 }
 
-.priority > label {
+.High {
+    color:red;
+}
+.Medium {
+    color: orange;
+}
+.Low {
+    color:cornflowerblue;   
+}
+
+/*.todoTitle, .todoDescription, .todoPriority, .priority .todoDate {
+    grid-column: 2/3;
+    /* disable above for vertical stretch 
+}*/
+
+
+.prioritySelectWrapper > label {
     padding-right: 5px;
     color: whitesmoke;
 }
 
 .todoDate{
-    color: firebrick;
+    color: greenyellow;
+}
+
+.todoTitle {
+    font-size: 1.1rem;
+}
+
+.todoDescription {
+    color: rgb(107, 107, 119);  
+    font-size: .9rem;
+}
+
+.todoProject {
+    font-size: .9rem;
 }

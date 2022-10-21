@@ -38,6 +38,7 @@ console.log('just todo it!')
 
 // add more complex date functionality
 // make the date red only if it is todays date
+// maybe change color from orange to green depending on impending it is
 //add some overdue functionality
 //otherwise make the date green.
 
@@ -49,11 +50,23 @@ const titleInput = document.querySelector('#titleInput')
 const descrInput = document.querySelector('#descriptionInput')
 const prioritySelect = document.querySelector('#prioritySelect')
 
+// Priority options
+
+  // const lowPriority = document.querySelector('.low');
+  // const mediumPriority = document.querySelector('.medium');
+  // const highPriority = document.querySelector('.high');
+
+const allTodoPrioritys = document.querySelectorAll('.todoPriority')
+
+
+
 const addTodoBtn = document.querySelector('.addTodoButton')
 const cancelTodoButton = document.querySelector('.cancelTodoButton')
 
 const displayTodos = document.querySelector('.displayTodos')
 const todoList = document.querySelector('.todoList')
+
+
 
 const formContainer = document.querySelector('.formContainer')
 
@@ -120,11 +133,12 @@ const allProjects = []
 
 console.log(prioritySelect)
 
-function Todo(title, description, priority, date) {
+function Todo(title, description, priority, date, project) {
   this.title = title
   this.description = description
   this.priority = `Priority: ${priority}`
   this.date = date
+  this.project = `Project: ${project}`
 }
 
 function Project(title) {
@@ -225,10 +239,11 @@ function createTodoListItem(todo) {
   let todoPriority = todoElementFactory(
     todo,
     'p',
-    { class: 'todoPriority' },
+    { class: 'todoPriority', class: `${todo.priority.split(': ')[1]}` },
     'priority'
   )
   let todoDate = todoElementFactory(todo, 'p', { class: 'todoDate' }, 'date')
+  let todoProject = todoElementFactory(todo, 'p', {class: 'todoProject'}, 'project')
 
   // checkIcon.innerHTML = 'Icon'
 
@@ -237,6 +252,7 @@ function createTodoListItem(todo) {
   todoLi.appendChild(todoDescription)
   todoLi.appendChild(todoPriority)
   todoLi.appendChild(todoDate)
+  todoLi.appendChild(todoProject)
 
   todoList.appendChild(todoLi)
 }
@@ -245,21 +261,32 @@ let pullworkout = new Todo(
   'Pull',
   'Back, Biceps, Sqaut, Deadlift',
   'High',
-  new Date()
+  new Date(),
+  'Get Fit'
 )
 let pushworkout = new Todo(
   'Push',
   'Chest, Triceps, Sqaut, Press',
-  'High',
-  new Date()
+  'Medium',
+  new Date(),
+  'Get Fit'
 )
+let legworkout = new Todo(
+  'Legs',
+  'Chest, Triceps, Sqaut, Press',
+  'Low',
+  new Date(),
+  'Get Fit'
+)
+
 
 addTodo(pullworkout)
 addTodo(pushworkout)
+addTodo(legworkout)
 
-allTodos.forEach((e) => {
-  createTodoListItem(e)
-})
+// allTodos.forEach((e) => {
+//   createTodoListItem(e)
+// })
 
 const addAllTodos = (todoArr) => {
   todoArr.forEach((e) => {
@@ -271,6 +298,19 @@ const addAllTodos = (todoArr) => {
 
 addAllTodos(allTodos)
 
+console.log(allTodos)
+
+//add id's to todoListItems
+
+function addTodoIds() {
+  const todoListItems = document.querySelectorAll('.todoListItem');
+
+  todoListItems.forEach((e,i) => {
+    e.setAttribute('id', `${i}`)
+  })
+}
+
+// todoListItems.forEach((e,i) => e.setAttribute('id', `${i}`))
 //createTodoListItem(workout)
 
 newTodoBtn.addEventListener('click', (e) => {
@@ -297,9 +337,12 @@ addTodoBtn.addEventListener('click', (e) => {
   let description = descrInput.value
   let priority = prioritySelect.value
   let date = formatDate(dateSelect.value)
+  let project = projectSelect.value
 
+
+  console.log()
   console.log('addddddd')
-  let todo = new Todo(title, description, priority, date)
+  let todo = new Todo(title, description, priority, date, project)
   addTodo(todo)
   console.log(allTodos)
   console.log(dateSelect.value)
@@ -308,6 +351,13 @@ addTodoBtn.addEventListener('click', (e) => {
   clearForm()
   clearTodos()
   addAllTodos(allTodos)
+  // if(priority === 'High') {
+  //   highPriority.style.color = 'red';
+  // } else if(priority === 'Medium') {
+  //   mediumPriority.style.color = 'orange';
+  // } else {
+  //   lowPriority.style.color = 'slategrey'
+  // }
   todoForm.style.display = 'none'
   formContainer.style.display = 'none'
   displayTodos.style.display = 'grid'
@@ -316,6 +366,12 @@ addTodoBtn.addEventListener('click', (e) => {
 allProjects.forEach((project) => {
   addProjectOption(project)
 })
+
+allTodoPrioritys.forEach((e) => {
+  console.log(e);
+})
+
+addTodoIds();
 
 // console.log(workout.title)
 //console.log(...allTodos)
