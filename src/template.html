@@ -50,12 +50,11 @@
               <input id="titleInput" type="text" placeholder="Task" />
             </div>
             <div class="description">
-              <textarea
-                id="descriptionTextArea"
+              <input
+                id="descriptionInput"
                 name="description"
-                cols="50"
                 placeholder="Description"
-              ></textarea>
+              ></input>
             </div>
           </div>
           <div class="datePriorityWrapper">
@@ -70,6 +69,10 @@
                 <option value="High">High</option>
               </select>
             </div>
+          </div>
+          <div class="projectsFormWrapper">
+              <label for="projectsFormSelect">Project</label>
+              <select name="projects" id="projectsFormSelect"></select>
           </div>
           <div class="addTodoWrapper">
             <button class="cancelTodoButton">Cancel</button>

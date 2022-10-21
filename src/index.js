@@ -4,19 +4,49 @@ import { format } from 'date-fns'
 
 console.log('just todo it!')
 
+// TO DO -------------------------------------------------------------------------------
+
+//refactor
+// pages folder for page modules
+//modules for helper functions
+//genberally clear out the index page
+
+//General
+
+// DELETE TODOS!!!!!!
+
+// show hide sidebar button
+
+//homepage button
+
 // create factory function for generating to-do
 //      title, description, date, priority, (notes & checklist)
 
 // Add projects (object or array)
-// add project option to addTodoForm
+
+// add project option to addTodoForm!!!
+//select drop down populated with the list items of project list
 
 // show projects in sidebar
+
+// add project page
+// dynmically create html for pages
+//load homepage on load and load project page when required -- see restaurant app.
 //add fs storage
+
+// DATE AND TIME
+
+// add more complex date functionality
+// make the date red only if it is todays date
+//add some overdue functionality
+//otherwise make the date green.
+
+//have some sort of calendar where you can see what todos are coming up
 
 const newTodoBtn = document.querySelector('.newTodoButton')
 const todoForm = document.querySelector('.todoForm')
 const titleInput = document.querySelector('#titleInput')
-const descrTextArea = document.querySelector('#descriptionTextArea')
+const descrInput = document.querySelector('#descriptionInput')
 const prioritySelect = document.querySelector('#prioritySelect')
 
 const addTodoBtn = document.querySelector('.addTodoButton')
@@ -30,6 +60,19 @@ const formContainer = document.querySelector('.formContainer')
 const todaysDateDisplay = document.querySelector('.todaysDate')
 
 const dateSelect = document.querySelector('#dateSelect')
+const projectSelect = document.querySelector('#projectsFormSelect');
+
+console.log(projectSelect)
+
+function addProjectOption(project) {
+  let option = document.createElement('option');
+  option.setAttribute('value', project.title);
+  option.appendChild(document.createTextNode(project.title));
+
+  projectSelect.appendChild(option)
+}
+
+
 
 //Projects sidbar
 
@@ -72,6 +115,8 @@ console.log(todoForm)
 
 let allTodos = []
 const allProjects = []
+
+
 
 console.log(prioritySelect)
 
@@ -116,7 +161,7 @@ allProjects.forEach((e) => {
 
 function clearForm() {
   titleInput.value = ''
-  descrTextArea.value = ''
+  descrInput.value = ''
   prioritySelect.value = ''
 }
 
@@ -249,7 +294,7 @@ addTodoBtn.addEventListener('click', (e) => {
   e.preventDefault()
 
   let title = titleInput.value
-  let description = descrTextArea.value
+  let description = descrInput.value
   let priority = prioritySelect.value
   let date = formatDate(dateSelect.value)
 
@@ -266,6 +311,10 @@ addTodoBtn.addEventListener('click', (e) => {
   todoForm.style.display = 'none'
   formContainer.style.display = 'none'
   displayTodos.style.display = 'grid'
+})
+
+allProjects.forEach((project) => {
+  addProjectOption(project)
 })
 
 // console.log(workout.title)

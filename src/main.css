@@ -31,9 +31,10 @@ nav {
     grid-column: 1/3;
     background-color: black;
     width: 100%;
-    align-items: center;
+    align-items: center;  
     padding-left: 20px;
     grid-template-columns: 200px  1fr 200px;
+    border-bottom: solid rgb(53, 52, 52) 2px; 
 }
 
 .logo {
@@ -96,6 +97,7 @@ h1 {
     background-color: rgb(45, 204, 204);
     height: 100%;
     width: 100%;
+    border-right: solid rgb(32, 119, 119) 2px;
 
 }
 
@@ -116,9 +118,9 @@ main {
     position:absolute; 
     top: 60px; 
     display:none;
-    min-width: 40%;
+    min-width: 30%;
     min-height: 20%;
-    justify-content: center;
+    /* justify-content: center; */
     background-color: rgb(34, 33, 33);
     border: solid slategrey 2px;
     border-radius: 20px;
@@ -131,12 +133,34 @@ main {
     position: relative;
     grid-template-rows: 2fr 1fr .5fr;
     grid-template-columns: 1fr 1fr;
+    padding: 10px;
     
 }
+
 
 .titleDescriptionWrapper {
     grid-row: 1/2;
     grid-column: 1/3;
+    
+}
+
+#titleInput {
+  padding-bottom: 10px;
+}
+
+#titleInput, #descriptionInput, #prioritySelect, #dateSelect {
+    background-color: rgb(34, 33, 33);
+    color: white;
+    border: none;
+}
+
+#titleInput:focus, #descriptionInput:focus {
+    outline: none;
+}
+
+
+#dateSelect::-webkit-calendar-picker-indicator {
+    filter: invert(1);  
 }
 
 .datePriorityWrapper {
@@ -220,7 +244,7 @@ main {
 .todaysDate {
     color:rgb(107, 107, 119);
     display:grid;
-    padding-left: 5px;
+    padding-left: 10px;
     /* border:solid black 4px; */
     justify-content: start;
     align-items: center;
