@@ -92,6 +92,8 @@ const hamIcon = document.querySelector('.hamIcon')
 const expandIcon = document.querySelector('.expandIcon')
 const addIcon = document.querySelector('.addIcon')
 
+// expandIcon.innerText = 'chevron_left'
+
 
 
 
@@ -100,8 +102,10 @@ showHideProject.addEventListener('click', (e) => {
   e.preventDefault();
   if(projectsList.style.display === 'none') {
     projectsList.style.display = 'grid';
+    expandIcon.innerText = 'expand_more'
   } else {
     projectsList.style.display = 'none'
+    expandIcon.innerText = 'chevron_left'
   }
   
 
@@ -201,8 +205,9 @@ function Todo(title, description, priority, date, project) {
   this.project = `Project: ${project}`
 }
 
-function Project(title) {
+function Project(title, color) {
   this.title = title
+  this.color = color
 
   this.tasks = []
 }
@@ -215,8 +220,8 @@ function addProject(project) {
   allProjects.push(project)
 }
 
-const getFit = new Project('Get Fit')
-const readBooks = new Project('Read Books')
+const getFit = new Project('Get Fit', 'blue')
+const readBooks = new Project('Read Books', 'yellow')
 
 getFit.tasks.push({ title: 'Push', description: 'Chest', priority: 'High' })
 readBooks.tasks.push({
@@ -266,11 +271,15 @@ function todoElementFactory(todo, type, attributes, content) {
 function projectElementFactory(project, attributes) {
   let element = document.createElement('li')
 
+  let colorIcon = document.createElement('div');
+  colorIcon.style.backgroundColor = project.color;
+
   for (let key in attributes) {
     element.setAttribute(key, attributes[key])
   }
 
   // add check to see if string, if so just append string as text node
+  element.appendChild(colorIcon)
 
   element.appendChild(document.createTextNode(project.title))
 
@@ -382,7 +391,7 @@ function addTodoIds() {
 newTodoBtn.addEventListener('click', (e) => {
   console.log(dateSelect.value)
 
-  dateSelect.value = ''
+  // dateSelect.value = ''
   todoForm.style.display = 'grid'
   formContainer.style.display = 'grid'
   // displayTodos.style.display = 'none'
