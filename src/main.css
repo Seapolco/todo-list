@@ -436,6 +436,7 @@ main {
     top: 25px;
     left: 10px;
     position: relative;
+    place-items:center;
     align-items: center;
     grid-column: 1/2;
     border: solid aqua 2px;
@@ -446,7 +447,9 @@ main {
 }
 
 .tick {
-    font-size: 10px;
+    position:absolute;
+    left:1.5px;
+    font-size: 9px;
 }
 
 .checkIcon:hover {

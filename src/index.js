@@ -159,6 +159,15 @@ const allLocalStorageTodos = JSON.parse(localStorage.getItem('allTodos'));
 
 
 
+if(allLocalStorageTodos === null) {
+  let arr = [];
+  localStorage.setItem('allTodos',JSON.stringify(arr));
+}
+
+console.log(allLocalStorageTodos)
+
+
+
 // console.log(prioritySelect)
 
 function Todo(title, description, priority, date, project) {
@@ -269,11 +278,19 @@ allProjects.forEach((e) => {
   createProjectListItem(e)
 })
 
+function storeTodo (todo) {
+
+    allLocalStorageTodos.push(todo);
+    // localStorage.removeItem('allTodos');
+    localStorage.setItem('allTodos', JSON.stringify(allLocalStorageTodos));
+}
+
 
 const storeAllTodos = (todoArr) => {
   localStorage.removeItem('allTodos');
   localStorage.setItem('allTodos', JSON.stringify(todoArr));
 }
+console.log(allLocalStorageTodos)
 
 const displayAllTodos = (todoArr) => {
   todoArr.forEach((e) => {
@@ -333,7 +350,7 @@ addTodoWrapper.addEventListener('click', (e) => {
   let date = formatDate(dateSelect.value)
   let project = projectSelect.value
 
-  let storedTodos = JSON.parse(localStorage.getItem('allTodos'));
+  //let storedTodos = JSON.parse(localStorage.getItem('allTodos'));
   // console.log()
   // console.log('addddddd')
   let todo = new Todo(title, description, priority, date, project)
@@ -344,7 +361,11 @@ addTodoWrapper.addEventListener('click', (e) => {
   // console.log(typeof dateSelect.value)
   clearForm()
   clearTodos()
-  storeAllTodos(allTodos)
+  // storeAllTodos(allTodos)
+  storeTodo(todo)
+  const allLocalStorageTodos = JSON.parse(localStorage.getItem('allTodos'));
+  console.log('ALL TODOS',allLocalStorageTodos)
+
   displayAllTodos(allLocalStorageTodos)
 
   todoForm.style.display = 'none'
@@ -361,6 +382,8 @@ allProjects.forEach((project) => {
 // })
 
 addTodoIds();
+
+console.log('ALL TODOS',allLocalStorageTodos)
 
 // console.log(JSON.stringify(allTodos))
 // console.log(JSON.stringify(allProjects))
