@@ -47,6 +47,9 @@ console.log('just todo it!')
 //have some sort of calendar where you can see what todos are coming up
 
 const newTodoBtn = document.querySelector('.newTodoButton')
+const newTodoWrapper = document.querySelector('.newTodoWrapper');
+
+
 const todoForm = document.querySelector('.todoForm')
 const titleInput = document.querySelector('#titleInput')
 const descrInput = document.querySelector('#descriptionInput')
@@ -66,6 +69,9 @@ const allTodoPrioritys = document.querySelectorAll('.todoPriority')
 
 const addTodoBtn = document.querySelector('.addTodoButton')
 const cancelTodoButton = document.querySelector('.cancelTodoButton')
+
+const addTodoWrapper = document.querySelector('.addTodoWrapper');
+const cancelTodoWrapper = document.querySelector('.cancelTodoWrapper');
 
 const displayTodos = document.querySelector('.displayTodos')
 const todoList = document.querySelector('.todoList')
@@ -355,20 +361,23 @@ function createTodoListItem(todo) {
 
 // allTodos.forEach((e) => {
 //   createTodoListItem(e)
-// })
+// }) 
 
-const addAllTodos = (todoArr) => {
+const storeAllTodos = (todoArr) => {
   localStorage.removeItem('allTodos');
+  localStorage.setItem('allTodos', JSON.stringify(todoArr));
+}
+
+const displayAllTodos = (todoArr) => {
   todoArr.forEach((e) => {
     createTodoListItem(e)
   })
-  localStorage.setItem('allTodos', JSON.stringify(todoArr));
 }
 
 //addAllTodos(allTodos)
 
 if(allLocalStorageTodos !== null) {
-  addAllTodos(allLocalStorageTodos)
+  displayAllTodos(allLocalStorageTodos)
 }
 
 
@@ -388,7 +397,7 @@ function addTodoIds() {
 // todoListItems.forEach((e,i) => e.setAttribute('id', `${i}`))
 //createTodoListItem(workout)
 
-newTodoBtn.addEventListener('click', (e) => {
+newTodoWrapper.addEventListener('click', (e) => {
   console.log(dateSelect.value)
 
   // dateSelect.value = ''
@@ -397,7 +406,7 @@ newTodoBtn.addEventListener('click', (e) => {
   // displayTodos.style.display = 'none'
 })
 
-cancelTodoButton.addEventListener('click', (e) => {
+cancelTodoWrapper.addEventListener('click', (e) => {
   e.preventDefault()
   console.log('cancel')
   clearForm()
@@ -405,7 +414,7 @@ cancelTodoButton.addEventListener('click', (e) => {
   formContainer.style.display = 'none'
 })
 
-addTodoBtn.addEventListener('click', (e) => {
+addTodoWrapper.addEventListener('click', (e) => {
   e.preventDefault()
 
   let title = titleInput.value
@@ -414,7 +423,7 @@ addTodoBtn.addEventListener('click', (e) => {
   let date = formatDate(dateSelect.value)
   let project = projectSelect.value
 
-
+  let storedTodos = JSON.parse(localStorage.getItem('allTodos'));
   console.log()
   console.log('addddddd')
   let todo = new Todo(title, description, priority, date, project)
@@ -425,7 +434,8 @@ addTodoBtn.addEventListener('click', (e) => {
   console.log(typeof dateSelect.value)
   clearForm()
   clearTodos()
-  addAllTodos(allTodos)
+  storeAllTodos(allTodos)
+  displayAllTodos(allLocalStorageTodos)
   // if(priority === 'High') {
   //   highPriority.style.color = 'red';
   // } else if(priority === 'Medium') {

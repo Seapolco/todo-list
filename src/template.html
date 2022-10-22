@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Home Icon, Menu Icon, expandDown icon, add icon -->
+    <!-- Home Icon, Menu Icon, expandDown icon, add icon, done icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -26,7 +27,10 @@
       </div>
       <h1>MUSTODOIT</h1>
       <div class="navEnd">
-        <button class="newTodoButton">+</button>
+        <div class="newTodoWrapper">
+          <button class="newTodoButton">+</button>
+        </div>
+        
         <img class="userIcon" src="./assets/images/seaCreature.png" alt="" />
       </div>
     </nav>
@@ -92,9 +96,12 @@
               <label for="projectsFormSelect">Project</label>
               <select name="projects" id="projectsFormSelect"></select>
           </div>
-          <div class="addTodoWrapper">
-            <button class="cancelTodoButton">Cancel</button>
-            <button class="addTodoButton">Add</button>
+          <div class="todoFormButtonWrapper">
+            <div class="cancelTodoWrapper"><button class="cancelTodoButton">Cancel</button></div>
+            <div class="addTodoWrapper"><button class="addTodoButton">Add</button></div>
+          </div>
+            
+            
           </div>
         </form>
       </div>
