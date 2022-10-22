@@ -219,9 +219,20 @@ function createTodoListItem(todo) {
 
   let tickIcon =elementFactory('span', {class: 'material-symbols-outlined tick'}, 'done');
 
-  checkIcon.addEventListener('mouseover', (e) => {
+
+
+
+  checkIcon.addEventListener('mouseenter', (e) => {
+    console.log('tickmouseeneter', e.relatedTarget)
       console.log('CHECKED!!!!!!!!!!!!')
       checkIcon.appendChild(tickIcon)
+  })
+  checkIcon.addEventListener('mouseout', (e) => {
+    console.log('tickmouseout', e.relatedTarget.className)
+    if(e.relatedTarget.className === 'todoListItem') {
+      checkIcon.removeChild(checkIcon.lastChild);
+    }
+    
   })
 
 //     <span class="material-symbols-outlined">

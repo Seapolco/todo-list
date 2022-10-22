@@ -440,14 +440,16 @@ main {
     align-items: center;
     grid-column: 1/2;
     border: solid aqua 2px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     height: 15px;
     width: 15px;
     border-radius: 50%;
+    z-index:2
 }
 
 .tick {
     position:absolute;
+    z-index:1;
     left:1.5px;
     font-size: 9px;
 }
