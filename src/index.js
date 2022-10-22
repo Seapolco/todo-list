@@ -1,6 +1,18 @@
 import './main.css'
-
 import { format } from 'date-fns'
+
+//Helper Functions
+
+import elementFactory from './helpers/factoryFunctions/elementFactory';
+import todoElementFactory from './helpers/factoryFunctions/todoElementFactory';
+import projectElementFactory from './helpers/factoryFunctions/projectElementFactory';
+// import createTodoListItem from './helpers/factoryFunctions/createTodoListItem';
+import createProjectListItem from './helpers/factoryFunctions/createProjectListItem';
+
+// Date Functions
+
+import {updateTodaysDate, formatDate} from './helpers/dates/dateHelpers';
+  
 
 
 
@@ -46,7 +58,7 @@ console.log('just todo it!')
 
 //have some sort of calendar where you can see what todos are coming up
 
-const newTodoBtn = document.querySelector('.newTodoButton')
+// const newTodoBtn = document.querySelector('.newTodoButton')
 const newTodoWrapper = document.querySelector('.newTodoWrapper');
 
 
@@ -54,6 +66,10 @@ const todoForm = document.querySelector('.todoForm')
 const titleInput = document.querySelector('#titleInput')
 const descrInput = document.querySelector('#descriptionInput')
 const prioritySelect = document.querySelector('#prioritySelect')
+
+//Date
+
+let today = format(new Date(), 'E-do')
 
 const sidebar = document.querySelector('.sidebar');
 
@@ -67,8 +83,8 @@ const allTodoPrioritys = document.querySelectorAll('.todoPriority')
 
 
 
-const addTodoBtn = document.querySelector('.addTodoButton')
-const cancelTodoButton = document.querySelector('.cancelTodoButton')
+// const addTodoBtn = document.querySelector('.addTodoButton')
+// const cancelTodoButton = document.querySelector('.cancelTodoButton')
 
 const addTodoWrapper = document.querySelector('.addTodoWrapper');
 const cancelTodoWrapper = document.querySelector('.cancelTodoWrapper');
@@ -80,15 +96,13 @@ const todoList = document.querySelector('.todoList')
 
 const formContainer = document.querySelector('.formContainer')
 
-const todaysDateDisplay = document.querySelector('.todaysDate')
-
 const dateSelect = document.querySelector('#dateSelect')
 const projectSelect = document.querySelector('#projectsFormSelect');
 
 //Projects sidbar
 
 const projectsList = document.querySelector('.projectsList')
-const addProjectButton = document.querySelector('.addProjectButton')
+// const addProjectButton = document.querySelector('.addProjectButton')
 const showHideProject = document.querySelector('.showHideProjects')
 
 // Icons =================
@@ -96,41 +110,10 @@ const showHideProject = document.querySelector('.showHideProjects')
 const homeIcon = document.querySelector('.homeIcon');
 const hamIcon = document.querySelector('.hamIcon')
 const expandIcon = document.querySelector('.expandIcon')
-const addIcon = document.querySelector('.addIcon')
+// const addIcon = document.querySelector('.addIcon')
 
 // expandIcon.innerText = 'chevron_left'
 
-
-
-
-showHideProject.addEventListener('click', (e) => {
-  console.log('expand!!!!')
-  e.preventDefault();
-  if(projectsList.style.display === 'none') {
-    projectsList.style.display = 'grid';
-    expandIcon.innerText = 'expand_more'
-  } else {
-    projectsList.style.display = 'none'
-    expandIcon.innerText = 'chevron_left'
-  }
-  
-
-})
-
-homeIcon.addEventListener('click', (e) => {
-  console.log('home!!!!!!!!!')
-})
-
-hamIcon.addEventListener('click', (e) => {
-  console.log(sidebar.style.visibility);
-  if(sidebar.style.visibility === 'visible') {
-    sidebar.style.visibility = 'hidden';
-  } else {
-    sidebar.style.visibility = 'visible';
-  }
-  console.log('ham!!!!!!!!!');
-  
-})
 
 console.log(projectSelect)
 
@@ -142,42 +125,15 @@ function addProjectOption(project) {
   projectSelect.appendChild(option)
 }
 
-
-
-
-
-console.log(dateSelect.value)
-
 let dateReturn = '2022 - 10 - 20'
-
-let today = format(new Date(), 'E-do')
-console.log(today)
-
-//DATE and DATE FORMATING ---------------------------------------------
-
-function updateTodaysDate(today) {
-  let todayArr = today.split('-')
-  let todaysDate = `${todayArr[0]} ${todayArr[1]}`
-  todaysDateDisplay.innerText = todaysDate
-}
-
-function formatDate(date) {
-  let dateArr = date.split('-')
-  let year = Number(dateArr[0])
-  let month = Number(dateArr[1]) - 1
-  let day = Number(dateArr[2])
-
-  let newDate = new Date(year, month, day)
-  let formattedDate = format(newDate, 'E-dd-MM-yyyy')
-  //console.log(formattedDate)
-  return formattedDate
-}
 
 // LOCAL STORAGE ------------------------------------------------
 
-function variableToString(varKey) {
-  return Object.keys(varKey)[0]
-}
+//Variable to string coverter
+
+// function variableToString(varKey) {
+//   return Object.keys(varKey)[0]
+// }
 
 // function storeToLocalStorage(variable) {
 
@@ -188,20 +144,22 @@ updateTodaysDate(today)
 
 //console.log(today)
 
-console.log(todoList)
+// console.log(todoList)
 
-console.log(todoForm)
+// console.log(todoForm)
 
 // Arrays ===========================================
 
-let allTodos = []
+const allTodos = []
 const allProjects = []
 
-let allLocalStorageTodos = JSON.parse(localStorage.getItem('allTodos'));
+// MAY HAVE TO CHANGE CONST TO LET ------------------------------------
+
+const allLocalStorageTodos = JSON.parse(localStorage.getItem('allTodos'));
 
 
 
-console.log(prioritySelect)
+// console.log(prioritySelect)
 
 function Todo(title, description, priority, date, project) {
   this.title = title
@@ -226,82 +184,10 @@ function addProject(project) {
   allProjects.push(project)
 }
 
-const getFit = new Project('Get Fit', 'blue')
-const readBooks = new Project('Read Books', 'yellow')
-
-getFit.tasks.push({ title: 'Push', description: 'Chest', priority: 'High' })
-readBooks.tasks.push({
-  title: 'Gormenghast',
-  description: 'Mervyn Peake, 1700 pages',
-  priority: 'High',
-})
-
-addProject(getFit)
-addProject(readBooks)
-
-allProjects.forEach((e) => {
-  console.log(e)
-  console.log(...e.tasks)
-})
-
-function clearForm() {
-  titleInput.value = ''
-  descrInput.value = ''
-  prioritySelect.value = ''
-}
-
-function clearTodos() {
-  while (todoList.lastChild) {
-    todoList.removeChild(todoList.lastChild)
-  }
-}
-
-// need to split this function into multiple functions
-
-function todoElementFactory(todo, type, attributes, content) {
-  let element = document.createElement(type)
-
-  for (let key in attributes) {
-    element.setAttribute(key, attributes[key])
-  }
-
-  // add check to see if string, if so just append string as text node
-
-  if (content) {
-    element.appendChild(document.createTextNode(todo[content]))
-  }
-
-  return element
-}
-
-function projectElementFactory(project, attributes) {
-  let element = document.createElement('li')
-
-  let colorIcon = document.createElement('div');
-  colorIcon.style.backgroundColor = project.color;
-
-  for (let key in attributes) {
-    element.setAttribute(key, attributes[key])
-  }
-
-  // add check to see if string, if so just append string as text node
-  element.appendChild(colorIcon)
-
-  element.appendChild(document.createTextNode(project.title))
-
-  return element
-}
-
-function createProjectListItem(project) {
-  let projectLi = projectElementFactory(project, { class: 'project-li' })
-  projectsList.appendChild(projectLi)
-}
-
-allProjects.forEach((e) => {
-  createProjectListItem(e)
-})
-
 function createTodoListItem(todo) {
+
+  const todoList = document.querySelector('.todoList')
+
   let todoLi = todoElementFactory(todo, 'li', { class: 'todoListItem' })
   let checkIcon = todoElementFactory(todo, 'div', { class: 'checkIcon' })
   let todoTitle = todoElementFactory(todo, 'p', { class: 'todoTitle' }, 'title')
@@ -322,6 +208,17 @@ function createTodoListItem(todo) {
 
   // checkIcon.innerHTML = 'Icon'
 
+  let tickIcon =elementFactory('span', {class: 'material-symbols-outlined tick'}, 'done');
+
+  checkIcon.addEventListener('mouseover', (e) => {
+      console.log('CHECKED!!!!!!!!!!!!')
+      checkIcon.appendChild(tickIcon)
+  })
+
+//     <span class="material-symbols-outlined">
+// done
+// </span>
+
   todoLi.appendChild(checkIcon)
   todoLi.appendChild(todoTitle)
   todoLi.appendChild(todoDescription)
@@ -332,36 +229,46 @@ function createTodoListItem(todo) {
   todoList.appendChild(todoLi)
 }
 
-// let pullworkout = new Todo(
-//   'Pull',
-//   'Back, Biceps, Sqaut, Deadlift',
-//   'High',
-//   new Date(),
-//   'Get Fit'
-// )
-// let pushworkout = new Todo(
-//   'Push',
-//   'Chest, Triceps, Sqaut, Press',
-//   'Medium',
-//   new Date(),
-//   'Get Fit'
-// )
-// let legworkout = new Todo(
-//   'Legs',
-//   'Chest, Triceps, Sqaut, Press',
-//   'Low',
-//   new Date(),
-//   'Get Fit'
-// )
+const getFit = new Project('Get Fit', 'blue')
+const readBooks = new Project('Read Books', 'yellow')
+
+getFit.tasks.push({ title: 'Push', description: 'Chest', priority: 'High' })
+readBooks.tasks.push({
+  title: 'Gormenghast',
+  description: 'Mervyn Peake, 1700 pages',
+  priority: 'High',
+})
+
+addProject(getFit)
+addProject(readBooks)
+
+// allProjects.forEach((e) => {
+//   console.log(e)
+//   console.log(...e.tasks)
+// })
+
+function clearForm() {
+  titleInput.value = ''
+  descrInput.value = ''
+  prioritySelect.value = ''
+}
+
+function clearTodos() {
+  while (todoList.lastChild) {
+    todoList.removeChild(todoList.lastChild)
+  }
+}
 
 
-// addTodo(pullworkout)
-// addTodo(pushworkout)
-// addTodo(legworkout)
+// function createProjectListItem(project) {
+//   let projectLi = projectElementFactory(project, { class: 'project-li' })
+//   projectsList.appendChild(projectLi)
+// }
 
-// allTodos.forEach((e) => {
-//   createTodoListItem(e)
-// }) 
+allProjects.forEach((e) => {
+  createProjectListItem(e)
+})
+
 
 const storeAllTodos = (todoArr) => {
   localStorage.removeItem('allTodos');
@@ -382,7 +289,7 @@ if(allLocalStorageTodos !== null) {
 
 
 
-console.log(allTodos)
+// console.log(allTodos)
 
 //add id's to todoListItems
 
@@ -397,8 +304,11 @@ function addTodoIds() {
 // todoListItems.forEach((e,i) => e.setAttribute('id', `${i}`))
 //createTodoListItem(workout)
 
+
+//------------------- EVENT LISTENERS -----------------------------------------------------------------------
+
 newTodoWrapper.addEventListener('click', (e) => {
-  console.log(dateSelect.value)
+  // console.log(dateSelect.value)
 
   // dateSelect.value = ''
   todoForm.style.display = 'grid'
@@ -408,7 +318,7 @@ newTodoWrapper.addEventListener('click', (e) => {
 
 cancelTodoWrapper.addEventListener('click', (e) => {
   e.preventDefault()
-  console.log('cancel')
+  // console.log('cancel')
   clearForm()
   todoForm.style.display = 'none'
   formContainer.style.display = 'none'
@@ -424,25 +334,19 @@ addTodoWrapper.addEventListener('click', (e) => {
   let project = projectSelect.value
 
   let storedTodos = JSON.parse(localStorage.getItem('allTodos'));
-  console.log()
-  console.log('addddddd')
+  // console.log()
+  // console.log('addddddd')
   let todo = new Todo(title, description, priority, date, project)
   addTodo(todo)
-  console.log(allTodos)
-  console.log(dateSelect.value)
-  console.log('format', formatDate(dateSelect.value))
-  console.log(typeof dateSelect.value)
+  // console.log(allTodos)
+  // console.log(dateSelect.value)
+  // console.log('format', formatDate(dateSelect.value))
+  // console.log(typeof dateSelect.value)
   clearForm()
   clearTodos()
   storeAllTodos(allTodos)
   displayAllTodos(allLocalStorageTodos)
-  // if(priority === 'High') {
-  //   highPriority.style.color = 'red';
-  // } else if(priority === 'Medium') {
-  //   mediumPriority.style.color = 'orange';
-  // } else {
-  //   lowPriority.style.color = 'slategrey'
-  // }
+
   todoForm.style.display = 'none'
   formContainer.style.display = 'none'
   displayTodos.style.display = 'grid'
@@ -452,14 +356,48 @@ allProjects.forEach((project) => {
   addProjectOption(project)
 })
 
-allTodoPrioritys.forEach((e) => {
-  console.log(e);
-})
+// allTodoPrioritys.forEach((e) => {
+//   console.log(e);
+// })
 
 addTodoIds();
 
-console.log(JSON.stringify(allTodos))
-console.log(JSON.stringify(allProjects))
+// console.log(JSON.stringify(allTodos))
+// console.log(JSON.stringify(allProjects))
+
+
+showHideProject.addEventListener('click', (e) => {
+  // console.log('expand!!!!')
+  e.preventDefault();
+  if(projectsList.style.display === 'none') {
+    projectsList.style.display = 'grid';
+    expandIcon.innerText = 'expand_more'
+  } else {
+    projectsList.style.display = 'none'
+    expandIcon.innerText = 'chevron_left'
+  }
+  
+
+})
+
+homeIcon.addEventListener('click', (e) => {
+  // console.log('home!!!!!!!!!')
+})
+
+hamIcon.addEventListener('click', (e) => {
+  // console.log(sidebar.style.visibility);
+  if(sidebar.style.visibility === 'visible') {
+    sidebar.style.visibility = 'hidden';
+  } else {
+    sidebar.style.visibility = 'visible';
+  }
+  // console.log('ham!!!!!!!!!');
+  
+})
+
+
+
+// export default createTodoListItem
 
 // localStorage.setItem('allTodos', JSON.stringify(allTodos))
 

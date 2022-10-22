@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Home Icon, Menu Icon, expandDown icon, add icon -->
+    <!-- Home Icon, Menu Icon, expandDown icon, add icon, done icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Todo App</title>
-  <script defer src="todoBundle4bc2934ea059abcfd35f.js"></script></head>
+  <script defer src="todoBundle204fefef9cf455a6d069.js"></script></head>
   <body>
     <nav>
       <div class="navStart">
@@ -26,7 +27,10 @@
       </div>
       <h1>MUSTODOIT</h1>
       <div class="navEnd">
-        <button class="newTodoButton">+</button>
+        <div class="newTodoWrapper">
+          <button class="newTodoButton">+</button>
+        </div>
+        
         <img class="userIcon" src="seaCreature.png" alt="" />
       </div>
     </nav>
@@ -40,14 +44,13 @@
               add
               </span></button>
             <button class="showHideProjects"><span class="material-symbols-outlined expandIcon">
-              expand_more
+              chevron_left
               </span></button>
           </div>
 
         </div>
         <div class="projectsListContainer">
-          <ul class="projectsList">
-            <li class="project-li">Training</li>
+          <ul class="projectsList" style="display:none;" >
           </ul>
         </div>
       </section>
@@ -62,8 +65,8 @@
           <ul class="todoList"></ul>
         </section>
       </div>
-      <div class="formContainer">
-        <form class="todoForm">
+      <div class="formContainer" style="display:none;">
+        <form class="todoForm" style="display:none;">
           <div class="titleDescriptionWrapper">
             <div class="title">
               <input id="titleInput" type="text" placeholder="Task" />
@@ -93,9 +96,12 @@
               <label for="projectsFormSelect">Project</label>
               <select name="projects" id="projectsFormSelect"></select>
           </div>
-          <div class="addTodoWrapper">
-            <button class="cancelTodoButton">Cancel</button>
-            <button class="addTodoButton">Add</button>
+          <div class="todoFormButtonWrapper">
+            <div class="cancelTodoWrapper"><button class="cancelTodoButton">Cancel</button></div>
+            <div class="addTodoWrapper"><button class="addTodoButton">Add</button></div>
+          </div>
+            
+            
           </div>
         </form>
       </div>

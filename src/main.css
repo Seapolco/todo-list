@@ -445,6 +445,10 @@ main {
     border-radius: 50%;
 }
 
+.tick {
+    font-size: 10px;
+}
+
 .checkIcon:hover {
     cursor: pointer;
     background-color: green;
