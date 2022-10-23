@@ -1,6 +1,9 @@
 import './main.css'
 import { format } from 'date-fns'
 
+
+// displayAllTodosContainer();
+
 //Helper Functions
 
 import elementFactory from './helpers/factoryFunctions/elementFactory';
@@ -12,7 +15,9 @@ import createProjectListItem from './helpers/factoryFunctions/createProjectListI
 // Date Functions
 
 import {updateTodaysDate, formatDate} from './helpers/dates/dateHelpers';
-  
+
+
+import displayAllTodosContainer from './pages/displayAllTodosContainer';
 
 
 
@@ -59,6 +64,9 @@ console.log('just todo it!')
 //have some sort of calendar where you can see what todos are coming up
 
 // const newTodoBtn = document.querySelector('.newTodoButton')
+
+
+
 const newTodoWrapper = document.querySelector('.newTodoWrapper');
 
 
@@ -89,7 +97,7 @@ const allTodoPrioritys = document.querySelectorAll('.todoPriority')
 const addTodoWrapper = document.querySelector('.addTodoWrapper');
 const cancelTodoWrapper = document.querySelector('.cancelTodoWrapper');
 
-const displayTodos = document.querySelector('.displayTodos')
+// const displayTodos = document.querySelector('.displayTodos')
 const todoList = document.querySelector('.todoList')
 
 
@@ -104,6 +112,12 @@ const projectSelect = document.querySelector('#projectsFormSelect');
 const projectsList = document.querySelector('.projectsList')
 // const addProjectButton = document.querySelector('.addProjectButton')
 const showHideProject = document.querySelector('.showHideProjects')
+const addProjectButton = document.querySelector('.addProjectButton')
+
+addProjectButton.addEventListener('click', (e) => {
+  console.log('DELETE!!!')
+  clearPage();
+})
 
 const projectsContainer = document.querySelector('.projectsContainer')
 
@@ -112,11 +126,25 @@ const projectsContainer = document.querySelector('.projectsContainer')
 const homeIcon = document.querySelector('.homeIcon');
 const hamIcon = document.querySelector('.hamIcon')
 const expandIcon = document.querySelector('.expandIcon')
+
+homeIcon.addEventListener('click', (e) => {
+  clearPage();
+  displayAllTodosContainer();
+  allProjects.forEach((e) => {
+    createProjectListItem(e)
+  })
+  
+  if(allLocalStorageTodos !== null) {          //----------------displayAllLocal todos
+    displayAllTodos(allLocalStorageTodos)
+  }
+
+  addTodoIds();
+})
 // const addIcon = document.querySelector('.addIcon')
 
 // expandIcon.innerText = 'chevron_left'
 
-
+//console.log(displayTodos)
 console.log(projectSelect)
 
 function addProjectOption(project) {
@@ -128,6 +156,11 @@ function addProjectOption(project) {
 }
 
 let dateReturn = '2022 - 10 - 20'
+
+const mainElement = document.querySelector('main');
+
+
+//console.log(displayTodos)
 
 // LOCAL STORAGE ------------------------------------------------
 
@@ -142,7 +175,12 @@ let dateReturn = '2022 - 10 - 20'
 //   localStorage.setItem(, JSON.stringify(variable));
 // }
 
-updateTodaysDate(today) //---------------------------------------today ----------------------------------
+
+  
+ //updateTodaysDate(today)
+
+
+ //---------------------------------------today ----------------------------------
 
 //console.log(today)
 
@@ -297,9 +335,9 @@ function clearTodos() {
 //   projectsList.appendChild(projectLi)
 // }
 
-allProjects.forEach((e) => {
-  createProjectListItem(e)
-})
+// allProjects.forEach((e) => {
+//   createProjectListItem(e)
+// })
 
 function storeTodo (todo) {
 
@@ -327,9 +365,9 @@ const displayAllTodos = (todoArr) => {
 
 //addAllTodos(allTodos)
 
-if(allLocalStorageTodos !== null) {          //----------------displayAllLocal todos
-    displayAllTodos(allLocalStorageTodos)
-  }
+// if(allLocalStorageTodos !== null) {          //----------------displayAllLocal todos
+//     displayAllTodos(allLocalStorageTodos)
+//   }
 
 
 
@@ -347,6 +385,38 @@ function addTodoIds() {
 
 // todoListItems.forEach((e,i) => e.setAttribute('id', `${i}`))
 //createTodoListItem(workout)
+clearPage();
+
+displayAllTodosContainer();  
+const displayTodos = document.querySelector('.displayTodos')
+
+console.log(displayTodos)
+
+if(displayTodos !== null) {
+
+  allProjects.forEach((e) => {
+    createProjectListItem(e)
+  })
+  
+  if(allLocalStorageTodos !== null) {          //----------------displayAllLocal todos
+    displayAllTodos(allLocalStorageTodos)
+  }
+
+  addTodoIds();
+
+}
+
+function clearPage() {
+  while(mainElement.childElementCount > 1) {
+    mainElement.removeChild(mainElement.lastChild);
+  
+}
+}
+
+console.log(mainElement.childElementCount)
+
+
+
 
 
 //------------------- EVENT LISTENERS -----------------------------------------------------------------------
@@ -413,7 +483,7 @@ allProjects.forEach((project) => {
 //   console.log(e);
 // })
 
-addTodoIds();
+// addTodoIds();
 
 console.log('ALL TODOS',allLocalStorageTodos)
 
@@ -453,6 +523,8 @@ hamIcon.addEventListener('click', (e) => {
   // console.log('ham!!!!!!!!!');
   
 })
+
+
 
 
 

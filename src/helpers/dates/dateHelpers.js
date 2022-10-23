@@ -1,12 +1,13 @@
 import { format } from 'date-fns'
 
-let today = format(new Date(), 'E-do')
-const todaysDateDisplay = document.querySelector('.todaysDate')
-console.log(today)
+
+// console.log(today)
 
 //DATE and DATE FORMATING ---------------------------------------------
 
-function updateTodaysDate(today) {
+function updateTodaysDate() {
+  let today = format(new Date(), 'E-do')
+  const todaysDateDisplay = document.querySelector('.todaysDate')
   let todayArr = today.split('-')
   let todaysDate = `${todayArr[0]} ${todayArr[1]}`
   todaysDateDisplay.innerText = todaysDate

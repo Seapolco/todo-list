@@ -10,6 +10,8 @@ function elementFactory(type, attributes, ...children) {
         children.forEach((e) => {
             if(typeof e === 'string') {
                 element.appendChild(document.createTextNode(e))
+            } else {
+                element.appendChild(e)
             }
         })
     }
