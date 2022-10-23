@@ -142,7 +142,7 @@ let dateReturn = '2022 - 10 - 20'
 //   localStorage.setItem(, JSON.stringify(variable));
 // }
 
-updateTodaysDate(today)
+updateTodaysDate(today) //---------------------------------------today ----------------------------------
 
 //console.log(today)
 
@@ -327,9 +327,9 @@ const displayAllTodos = (todoArr) => {
 
 //addAllTodos(allTodos)
 
-if(allLocalStorageTodos !== null) {
-  displayAllTodos(allLocalStorageTodos)
-}
+if(allLocalStorageTodos !== null) {          //----------------displayAllLocal todos
+    displayAllTodos(allLocalStorageTodos)
+  }
 
 
 
@@ -353,10 +353,15 @@ function addTodoIds() {
 
 newTodoWrapper.addEventListener('click', (e) => {
   // console.log(dateSelect.value)
-
+  if(todoForm.style.display === 'none' && formContainer.style.display === 'none')  {
+    todoForm.style.display = 'grid'
+    formContainer.style.display = 'grid'
+  } else {
+    todoForm.style.display = 'none'
+    formContainer.style.display = 'none'
+  }
   // dateSelect.value = ''
-  todoForm.style.display = 'grid'
-  formContainer.style.display = 'grid'
+
   // displayTodos.style.display = 'none'
 })
 

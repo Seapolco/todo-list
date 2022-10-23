@@ -250,6 +250,7 @@ main {
 
 .formContainer {
     animation:  popup 30ms;
+    z-index:2;
     /* transition: 1s;
     transition-timing-function: linear;  */
     display: grid;
@@ -395,6 +396,7 @@ main {
 .displayTodos {
     display: grid;
     position: relative;
+    z-index:1;
     background-color: rgb(34, 33, 33);
     width: 40vw;
     height: fit-content;
