@@ -121,6 +121,15 @@ addProjectButton.addEventListener('click', (e) => {
 
 const projectsContainer = document.querySelector('.projectsContainer')
 
+
+console.log(projectsList)
+
+function clearProjectList() {
+  while(projectsList.lastChild) {
+    projectsList.removeChild(projectsList.lastChild)
+  }
+}
+
 // Icons =================
 
 const homeIcon = document.querySelector('.homeIcon');
@@ -130,6 +139,7 @@ const expandIcon = document.querySelector('.expandIcon')
 homeIcon.addEventListener('click', (e) => {
   clearPage();
   displayAllTodosContainer();
+  clearProjectList();
   allProjects.forEach((e) => {
     createProjectListItem(e)
   })
@@ -324,6 +334,7 @@ function clearForm() {
 }
 
 function clearTodos() {
+  const todoList = document.querySelector('.todoList')
   while (todoList.lastChild) {
     todoList.removeChild(todoList.lastChild)
   }
