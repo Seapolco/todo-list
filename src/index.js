@@ -221,16 +221,26 @@ function createTodoListItem(todo) {
 
   let tickIcon =elementFactory('span', {class: 'material-symbols-outlined tick'}, 'done');
 
+    checkIcon.addEventListener('click', (e) => {
+      let index = checkIcon.closest('li').id;
+      console.log(allLocalStorageTodos)
 
+      allLocalStorageTodos.splice(index, 1);
+
+      localStorage.setItem('allTodos', JSON.stringify(allLocalStorageTodos))
+      clearTodos();
+      displayAllTodos(allLocalStorageTodos)
+  
+    })
 
 
   checkIcon.addEventListener('mouseenter', (e) => {
-    console.log('tickmouseeneter', e.relatedTarget)
+    
       console.log('CHECKED!!!!!!!!!!!!')
       checkIcon.appendChild(tickIcon)
   })
   checkIcon.addEventListener('mouseout', (e) => {
-    console.log('tickmouseout', e.relatedTarget.className)
+  
     if(e.relatedTarget.className === 'todoListItem') {
       checkIcon.removeChild(checkIcon.lastChild);
     }
@@ -298,11 +308,15 @@ function storeTodo (todo) {
     localStorage.setItem('allTodos', JSON.stringify(allLocalStorageTodos));
 }
 
+function removeTodo(index) {
 
-const storeAllTodos = (todoArr) => {
-  localStorage.removeItem('allTodos');
-  localStorage.setItem('allTodos', JSON.stringify(todoArr));
 }
+
+
+// const storeAllTodos = (todoArr) => {
+//   localStorage.removeItem('allTodos');
+//   localStorage.setItem('allTodos', JSON.stringify(todoArr));
+// }
 console.log(allLocalStorageTodos)
 
 const displayAllTodos = (todoArr) => {
