@@ -105,6 +105,8 @@ const projectsList = document.querySelector('.projectsList')
 // const addProjectButton = document.querySelector('.addProjectButton')
 const showHideProject = document.querySelector('.showHideProjects')
 
+const projectsContainer = document.querySelector('.projectsContainer')
+
 // Icons =================
 
 const homeIcon = document.querySelector('.homeIcon');
@@ -421,8 +423,12 @@ homeIcon.addEventListener('click', (e) => {
 hamIcon.addEventListener('click', (e) => {
   // console.log(sidebar.style.visibility);
   if(sidebar.style.visibility === 'visible') {
+    
+    sidebar.setAttribute('class','sidebar');
     sidebar.style.visibility = 'hidden';
   } else {
+    sidebar.setAttribute('class', 'sidebar open')
+    
     sidebar.style.visibility = 'visible';
   }
   // console.log('ham!!!!!!!!!');
