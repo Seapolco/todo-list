@@ -505,11 +505,19 @@ console.log('ALL TODOS',allLocalStorageTodos)
 showHideProject.addEventListener('click', (e) => {
   // console.log('expand!!!!')
   e.preventDefault();
-  if(projectsList.style.display === 'none') {
-    projectsList.style.display = 'grid';
+
+  if(projectsList.style.opacity === '0.5') {
+    // projectsList.style.opacity = 'grid'
     expandIcon.innerText = 'expand_more'
+    projectsList.style.opacity = '1';
+   // projectsList.style.visibility = 'visible';
+    projectsList.classList.add('showProjectList')
   } else {
-    projectsList.style.display = 'none'
+    projectsList.classList.remove('showProjectList')
+    projectsList.style.opacity = '0.5'
+    //projectsList.style.visibility = 'hidden';
+
+    //projectsList.style.display = 'none';
     expandIcon.innerText = 'chevron_left'
   }
   
