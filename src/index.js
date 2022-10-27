@@ -4,6 +4,9 @@ import { format } from 'date-fns'
 
 // displayAllTodosContainer();
 
+// STYLING  
+// do some polishing
+
 //Helper Functions
 
 import elementFactory from './helpers/factoryFunctions/elementFactory';
