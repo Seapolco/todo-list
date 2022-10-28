@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Home Icon, Menu Icon, expandDown icon, add icon, done icon -->
+    <!-- Home Icon, Menu Icon, expandDown icon, add icon, done icon, flag, projectlist -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>Todo App</title>
   </head>
   <body>
@@ -75,7 +78,9 @@
               <input type="date" id="dateSelect" format="dd-MMM-yyyy"/>
             </div>
             <div class="prioritySelectWrapper">
-              <label for="prioritySelect">Priority</label>
+              <label for="prioritySelect"><span class="material-symbols-outlined">
+                flag
+                </span></label>
               <select name="priority" id="prioritySelect">
                 <option class="low" value="Low">Low</option>
                 <option class="medium" value="Medium">Medium</option>
@@ -84,7 +89,9 @@
             </div>
           </div>
           <div class="projectsFormWrapper">
-              <label for="projectsFormSelect">Project</label>
+              <label for="projectsFormSelect"><span class="material-symbols-outlined">
+                list_alt
+                </span></label>
               <select name="projects" id="projectsFormSelect"></select>
           </div>
           <div class="todoFormButtonWrapper">
