@@ -16,6 +16,8 @@ import projectElementFactory from './helpers/factoryFunctions/projectElementFact
 import createProjectListItem from './helpers/factoryFunctions/createProjectListItem';
 
 import navBar from './pages/navbar';
+import sideBar from './pages/sidebar';
+import todoForm from './pages/todoFormContainer';
 
 // Date Functions
 
@@ -26,6 +28,9 @@ import displayAllTodosContainer from './helpers/displayAllTodosContainer';
 
 
 navBar();
+sideBar();
+todoForm();
+
 
 console.log('just todo it!')
 

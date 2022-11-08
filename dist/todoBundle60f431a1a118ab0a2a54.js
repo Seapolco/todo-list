@@ -354,6 +354,244 @@ var navBar = function navigationBarComponent() {
 
 /***/ }),
 
+/***/ "./src/pages/sidebar.js":
+/*!******************************!*\
+  !*** ./src/pages/sidebar.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/factoryFunctions/elementFactory */ "./src/helpers/factoryFunctions/elementFactory.js");
+//import { add } from 'date-fns';
+
+var sideBar = function sideBarComponent() {
+  var sidebar = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'sidebar',
+    style: "visibility: hidden"
+  });
+  var projectsContainer = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('section', {
+    "class": "projectsContainer"
+  });
+  var projectsHeaderContainer = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": "projectsHeaderContainer"
+  });
+  var projectsHeader = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('header', {
+    "class": "projectsHeader"
+  }, "Projects");
+  var projectButtonsContainer = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": "projectButtonsContainer"
+  });
+  var addProjectButton = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('button', {
+    "class": "addProjectButton"
+  });
+  var addIcon = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('span', {
+    "class": "material-symbols-outlined addIcon"
+  }, "add");
+  var showHideProjects = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('button', {
+    "class": "showHideProjects"
+  });
+  var expandIcon = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('span', {
+    "class": "material-symbols-outlined expandIcon"
+  }, "chevron_left");
+  var projectsListContainer = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": "projectsListContainer"
+  });
+  var projectsList = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('ul', {
+    "class": "projectsList",
+    style: "opacity : 0.5"
+  });
+  sidebar.appendChild(projectsContainer);
+  projectsContainer.appendChild(projectsHeaderContainer);
+  projectsHeaderContainer.appendChild(projectsHeader);
+  projectsHeaderContainer.appendChild(projectButtonsContainer);
+  projectButtonsContainer.appendChild(addProjectButton);
+  addProjectButton.appendChild(addIcon);
+  projectButtonsContainer.appendChild(showHideProjects);
+  showHideProjects.appendChild(expandIcon);
+  projectsContainer.appendChild(projectsListContainer);
+  projectsListContainer.appendChild(projectsList);
+  document.body.appendChild(sidebar);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sideBar);
+
+/***/ }),
+
+/***/ "./src/pages/todoFormContainer.js":
+/*!****************************************!*\
+  !*** ./src/pages/todoFormContainer.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/factoryFunctions/elementFactory */ "./src/helpers/factoryFunctions/elementFactory.js");
+
+var todoForm = function todoFormComponent() {
+  //, style : 'display: none'
+
+  var formContainer = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'formContainer'
+  });
+  var todoForm = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('form', {
+    "class": 'todoForm'
+  });
+  var titleDescriptionWrapper = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'titleDescriptionWrapper'
+  });
+  var title = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'title'
+  });
+  var titleInput = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('input', {
+    id: 'titleDescriptionWrapper',
+    type: 'text',
+    placeholder: 'Task'
+  });
+  var description = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'description'
+  });
+  var descriptionInput = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('input', {
+    id: 'descriptionInput',
+    name: 'description',
+    placeholder: 'Description'
+  });
+  var datePriorityWrapper = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'datePriorityWrapper'
+  });
+  var date = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'date'
+  });
+  var dateSelect = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('input', {
+    id: 'dateSelect',
+    type: 'date',
+    format: "dd-MMM-yyyy"
+  });
+  var prioritySelectWrappper = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'prioritySelectWrapper'
+  });
+  var prioritySelectLabel = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('label', {
+    "for": 'prioritySelect'
+  });
+  var flagIcon = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('span', {
+    "class": "material-symbols-outlined"
+  }, "flag");
+  var prioritySelect = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('select', {
+    id: "prioritySelect"
+  });
+  var optionLow = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('option', {
+    "class": "low",
+    value: 'Low'
+  }, "Low");
+  var optionMedium = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('option', {
+    "class": "medium",
+    value: 'Medium'
+  }, "Medium");
+  var optionHigh = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('option', {
+    "class": "high",
+    value: 'High'
+  }, "High");
+  var projectsFormWrapper = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": "priojectsFormWrapper"
+  });
+  var projectsFormLabel = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('label', {
+    "for": "priojectsFormSelect"
+  });
+  var listIcon = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('span', {
+    "class": "material-symbols-outlined"
+  }, "list_alt");
+  var todoFormButtonWrapper = ('div', {
+    "class": "todoFormButtonWrapper"
+  });
+  var cancelTodoWrapper = ('div', {
+    "class": "cancelTodoWrapper"
+  });
+  var cancelTodoButton = ('button', {
+    "class": "cancelTodoButton"
+  }, "Cancel");
+  var addTodoWrapper = ('div', {
+    "class": "addTodoWrapper"
+  });
+  var addTodoButton = ('button', {
+    "class": "addTodoButton"
+  }, "Add");
+  formContainer.appendChild(todoForm);
+  todoForm.appendChild(titleDescriptionWrapper);
+  titleDescriptionWrapper.appendChild(title);
+  title.appendChild(titleInput);
+  titleDescriptionWrapper.appendChild(description);
+  description.appendChild(descriptionInput);
+  todoForm.appendChild(datePriorityWrapper);
+  datePriorityWrapper.appendChild(date);
+  date.appendChild(dateSelect);
+  datePriorityWrapper.appendChild(PrioritySelectWrappper);
+  prioritySelectWrappper.appendChild(prioritySelectLabel);
+  prioritySelectLabel.appendChild(flagIcon);
+  prioritySelectWrappper.appendChild(prioritySelect);
+  prioritySelect.appendChild(optionLow);
+  prioritySelect.appendChild(optionMedium);
+  prioritySelect.appendChild(optionHigh);
+  todoForm.appendChild(projectsFormWrapper);
+  projectsFormWrapper.appendChild(projectsFormLabel);
+  projectsFormLabel.appendChild(listIcon);
+  todoForm.appendChild(todoFormButtonWrapper);
+  todoFormButtonWrapper.appendChild(cancelTodoWrapper);
+  cancelTodoWrapper.appendChild(cancelTodoButton);
+  todoFormButtonWrapper.appendChild(addTodoWrapper);
+  addTodoWrapper.appendChild(addTodoButton);
+  document.body.appendChild(formContainer);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (todoForm);
+{/* <div class="formContainer" style="display:none;">
+        <form class="todoForm" style="display:none;">
+          <div class="titleDescriptionWrapper">
+            <div class="title">
+              <input id="titleInput" type="text" placeholder="Task" />
+            </div>
+            <div class="description">
+              <input
+                id="descriptionInput"
+                name="description"
+                placeholder="Description"
+              ></input>
+            </div>
+          </div>
+          <div class="datePriorityWrapper">
+            <div class="date">
+              <input type="date" id="dateSelect" format="dd-MMM-yyyy"/>
+            </div>
+            <div class="prioritySelectWrapper">
+              <label for="prioritySelect"><span class="material-symbols-outlined">
+                flag
+                </span></label>
+              <select name="priority" id="prioritySelect">
+                <option class="low" value="Low">Low</option>
+                <option class="medium" value="Medium">Medium</option>
+                <option class="high" value="High">High</option>
+              </select>
+            </div>
+          </div>
+          <div class="projectsFormWrapper">
+              <label for="projectsFormSelect"><span class="material-symbols-outlined">
+                list_alt
+                </span></label>
+              <select name="projects" id="projectsFormSelect"></select>
+          </div>
+          <div class="todoFormButtonWrapper">
+            <div class="cancelTodoWrapper"><button class="cancelTodoButton">Cancel</button></div>
+            <div class="addTodoWrapper"><button class="addTodoButton">Add</button></div>
+          </div>
+            
+            
+          </div>
+        </form>
+      </div> */}
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/main.css":
 /*!************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/main.css ***!
@@ -3947,14 +4185,16 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/format/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/format/index.js");
 /* harmony import */ var _helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/factoryFunctions/elementFactory */ "./src/helpers/factoryFunctions/elementFactory.js");
 /* harmony import */ var _helpers_factoryFunctions_todoElementFactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers/factoryFunctions/todoElementFactory */ "./src/helpers/factoryFunctions/todoElementFactory.js");
 /* harmony import */ var _helpers_factoryFunctions_projectElementFactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/factoryFunctions/projectElementFactory */ "./src/helpers/factoryFunctions/projectElementFactory.js");
 /* harmony import */ var _helpers_factoryFunctions_createProjectListItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./helpers/factoryFunctions/createProjectListItem */ "./src/helpers/factoryFunctions/createProjectListItem.js");
 /* harmony import */ var _pages_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/navbar */ "./src/pages/navbar.js");
-/* harmony import */ var _helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers/dates/dateHelpers */ "./src/helpers/dates/dateHelpers.js");
-/* harmony import */ var _helpers_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./helpers/displayAllTodosContainer */ "./src/helpers/displayAllTodosContainer.js");
+/* harmony import */ var _pages_sidebar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/sidebar */ "./src/pages/sidebar.js");
+/* harmony import */ var _pages_todoFormContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/todoFormContainer */ "./src/pages/todoFormContainer.js");
+/* harmony import */ var _helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./helpers/dates/dateHelpers */ "./src/helpers/dates/dateHelpers.js");
+/* harmony import */ var _helpers_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./helpers/displayAllTodosContainer */ "./src/helpers/displayAllTodosContainer.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -3973,13 +4213,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
 // Date Functions
 
 
 
-
-// navBar();
-
+(0,_pages_navbar__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_pages_sidebar__WEBPACK_IMPORTED_MODULE_6__["default"])();
+(0,_pages_todoFormContainer__WEBPACK_IMPORTED_MODULE_7__["default"])();
 console.log('just todo it!');
 
 // TO DO -------------------------------------------------------------------------------
@@ -4033,7 +4275,7 @@ console.log('just todo it!');
 
 //Date
 
-var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_8__["default"])(new Date(), 'E-do');
+var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_10__["default"])(new Date(), 'E-do');
 
 // const sidebar = document.querySelector('.sidebar'); ----
 
@@ -4087,7 +4329,7 @@ function clearProjectList() {
 
 homeIcon.addEventListener('click', function (e) {
   clearPage();
-  (0,_helpers_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  (0,_helpers_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_9__["default"])();
   clearProjectList();
   allProjects.forEach(function (e) {
     (0,_helpers_factoryFunctions_createProjectListItem__WEBPACK_IMPORTED_MODULE_4__["default"])(e);
@@ -4310,7 +4552,7 @@ function addTodoIds() {
 // todoListItems.forEach((e,i) => e.setAttribute('id', `${i}`))
 //createTodoListItem(workout)
 clearPage();
-(0,_helpers_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_7__["default"])();
+(0,_helpers_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_9__["default"])();
 var displayTodos = document.querySelector('.displayTodos');
 console.log(displayTodos);
 if (displayTodos !== null) {
@@ -4334,11 +4576,11 @@ console.log(mainElement.childElementCount);
 
 newTodoWrapper.addEventListener('click', function (e) {
   // console.log(dateSelect.value)
-  if (todoForm.style.display === 'none' && formContainer.style.display === 'none') {
-    todoForm.style.display = 'grid';
+  if (_pages_todoFormContainer__WEBPACK_IMPORTED_MODULE_7__["default"].style.display === 'none' && formContainer.style.display === 'none') {
+    _pages_todoFormContainer__WEBPACK_IMPORTED_MODULE_7__["default"].style.display = 'grid';
     formContainer.style.display = 'grid';
   } else {
-    todoForm.style.display = 'none';
+    _pages_todoFormContainer__WEBPACK_IMPORTED_MODULE_7__["default"].style.display = 'none';
     formContainer.style.display = 'none';
   }
   // dateSelect.value = ''
@@ -4350,7 +4592,7 @@ cancelTodoWrapper.addEventListener('click', function (e) {
   e.preventDefault();
   // console.log('cancel')
   clearForm();
-  todoForm.style.display = 'none';
+  _pages_todoFormContainer__WEBPACK_IMPORTED_MODULE_7__["default"].style.display = 'none';
   formContainer.style.display = 'none';
 });
 addTodoWrapper.addEventListener('click', function (e) {
@@ -4358,7 +4600,7 @@ addTodoWrapper.addEventListener('click', function (e) {
   var title = titleInput.value;
   var description = descrInput.value;
   var priority = prioritySelect.value;
-  var date = (0,_helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_6__.formatDate)(dateSelect.value);
+  var date = (0,_helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_8__.formatDate)(dateSelect.value);
   var project = projectSelect.value;
 
   //let storedTodos = JSON.parse(localStorage.getItem('allTodos'));
@@ -4377,7 +4619,7 @@ addTodoWrapper.addEventListener('click', function (e) {
   var allLocalStorageTodos = JSON.parse(localStorage.getItem('allTodos'));
   console.log('ALL TODOS', allLocalStorageTodos);
   displayAllTodos(allLocalStorageTodos);
-  todoForm.style.display = 'none';
+  _pages_todoFormContainer__WEBPACK_IMPORTED_MODULE_7__["default"].style.display = 'none';
   formContainer.style.display = 'none';
   displayTodos.style.display = 'grid';
 });
@@ -4467,4 +4709,4 @@ hamIcon.addEventListener('click', function (e) {
 
 /******/ })()
 ;
-//# sourceMappingURL=todoBundle8612cdf4e6910d94b4d8.js.map
+//# sourceMappingURL=todoBundle60f431a1a118ab0a2a54.js.map
