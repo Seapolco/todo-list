@@ -15,9 +15,12 @@ import projectElementFactory from './helpers/factoryFunctions/projectElementFact
 // import createTodoListItem from './helpers/factoryFunctions/createTodoListItem';
 import createProjectListItem from './helpers/factoryFunctions/createProjectListItem';
 
+import dom from './helpers/dom';
+
 import navBar from './pages/navbar';
 import sideBar from './pages/sidebar';
 import todoForm from './pages/todoFormContainer';
+// import displayTodosComponent from './pages/displayTodos';
 
 // Date Functions
 
@@ -30,6 +33,8 @@ import displayAllTodosContainer from './helpers/displayAllTodosContainer';
 navBar();
 sideBar();
 todoForm();
+displayAllTodosContainer()
+// displayTodosComponent();
 
 
 console.log('just todo it!')
