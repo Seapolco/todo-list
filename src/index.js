@@ -72,7 +72,6 @@ console.log('just todo it!')
 
 const newTodoWrapper = document.querySelector('.newTodoWrapper');
 
-
 const todoForm = document.querySelector('.todoForm')
 const titleInput = document.querySelector('#titleInput')
 const descrInput = document.querySelector('#descriptionInput')
@@ -97,8 +96,8 @@ const allTodoPrioritys = document.querySelectorAll('.todoPriority')
 // const addTodoBtn = document.querySelector('.addTodoButton')
 // const cancelTodoButton = document.querySelector('.cancelTodoButton')
 
-const addTodoWrapper = document.querySelector('.addTodoWrapper');
-const cancelTodoWrapper = document.querySelector('.cancelTodoWrapper');
+const addTodoWrapper = document.querySelector('.addTodoWrapper');  
+const cancelTodoWrapper = document.querySelector('.cancelTodoWrapper'); 
 
 // const displayTodos = document.querySelector('.displayTodos')
 const todoList = document.querySelector('.todoList')
