@@ -15,14 +15,17 @@ import projectElementFactory from './helpers/factoryFunctions/projectElementFact
 // import createTodoListItem from './helpers/factoryFunctions/createTodoListItem';
 import createProjectListItem from './helpers/factoryFunctions/createProjectListItem';
 
+import navBar from './pages/navbar';
+
 // Date Functions
 
 import {updateTodaysDate, formatDate} from './helpers/dates/dateHelpers';
 
 
-import displayAllTodosContainer from './pages/displayAllTodosContainer';
+import displayAllTodosContainer from './helpers/displayAllTodosContainer';
 
 
+navBar();
 
 console.log('just todo it!')
 
@@ -70,18 +73,18 @@ console.log('just todo it!')
 
 
 
-const newTodoWrapper = document.querySelector('.newTodoWrapper');
+// const newTodoWrapper = document.querySelector('.newTodoWrapper'); ----
 
-const todoForm = document.querySelector('.todoForm')
-const titleInput = document.querySelector('#titleInput')
-const descrInput = document.querySelector('#descriptionInput')
-const prioritySelect = document.querySelector('#prioritySelect')
+// const todoForm = document.querySelector('.todoForm')----
+// const titleInput = document.querySelector('#titleInput')---
+// const descrInput = document.querySelector('#descriptionInput')---
+// const prioritySelect = document.querySelector('#prioritySelect')---
 
 //Date
 
 let today = format(new Date(), 'E-do')
 
-const sidebar = document.querySelector('.sidebar');
+// const sidebar = document.querySelector('.sidebar'); ----
 
 // Priority options
 
@@ -89,39 +92,38 @@ const sidebar = document.querySelector('.sidebar');
   // const mediumPriority = document.querySelector('.medium');
   // const highPriority = document.querySelector('.high');
 
-const allTodoPrioritys = document.querySelectorAll('.todoPriority')
+// const allTodoPrioritys = document.querySelectorAll('.todoPriority') ----
 
 
 
 // const addTodoBtn = document.querySelector('.addTodoButton')
 // const cancelTodoButton = document.querySelector('.cancelTodoButton')
 
-const addTodoWrapper = document.querySelector('.addTodoWrapper');  
-const cancelTodoWrapper = document.querySelector('.cancelTodoWrapper'); 
+// const addTodoWrapper = document.querySelector('.addTodoWrapper');   ---
+// const cancelTodoWrapper = document.querySelector('.cancelTodoWrapper');  ---
 
 // const displayTodos = document.querySelector('.displayTodos')
-const todoList = document.querySelector('.todoList')
+
+// const todoList = document.querySelector('.todoList')----
 
 
 
-const formContainer = document.querySelector('.formContainer')
-
-const dateSelect = document.querySelector('#dateSelect')
-const projectSelect = document.querySelector('#projectsFormSelect');
+// const formContainer = document.querySelector('.formContainer')---
+// const dateSelect = document.querySelector('#dateSelect')---
+// const projectSelect = document.querySelector('#projectsFormSelect');----
 
 //Projects sidbar
 
-const projectsList = document.querySelector('.projectsList')
-// const addProjectButton = document.querySelector('.addProjectButton')
-const showHideProject = document.querySelector('.showHideProjects')
-const addProjectButton = document.querySelector('.addProjectButton')
+// const projectsList = document.querySelector('.projectsList') ---
+// const showHideProject = document.querySelector('.showHideProjects') --
+// const addProjectButton = document.querySelector('.addProjectButton') ---
 
 addProjectButton.addEventListener('click', (e) => {
   console.log('DELETE!!!')
   clearPage();
 })
 
-const projectsContainer = document.querySelector('.projectsContainer')
+// const projectsContainer = document.querySelector('.projectsContainer') ----
 
 
 console.log(projectsList)
@@ -134,9 +136,9 @@ function clearProjectList() {
 
 // Icons =================
 
-const homeIcon = document.querySelector('.homeIcon');
-const hamIcon = document.querySelector('.hamIcon')
-const expandIcon = document.querySelector('.expandIcon')
+// const homeIcon = document.querySelector('.homeIcon'); ---
+// const hamIcon = document.querySelector('.hamIcon') ----
+// const expandIcon = document.querySelector('.expandIcon') ----
 
 homeIcon.addEventListener('click', (e) => {
   clearPage();

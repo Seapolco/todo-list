@@ -41,6 +41,122 @@ function formatDate(date) {
 
 /***/ }),
 
+/***/ "./src/helpers/displayAllTodosContainer.js":
+/*!*************************************************!*\
+  !*** ./src/helpers/displayAllTodosContainer.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./factoryFunctions/elementFactory */ "./src/helpers/factoryFunctions/elementFactory.js");
+/* harmony import */ var _dates_dateHelpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dates/dateHelpers */ "./src/helpers/dates/dateHelpers.js");
+
+
+
+
+//import todoElementFactory from '../helpers/factoryFunctions/todoElementFactory';
+
+// let today = format(new Date(), 'E-do')
+// const todaysDateDisplay = document.querySelector('.todaysDate')
+
+function displayAllTodosContainer() {
+  var mainElement = document.querySelector('main');
+  var displayTodosContainer = (0,_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'displayTodos'
+  }, (0,_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'todayDateContainer'
+  }, (0,_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('header', {
+    "class": 'today'
+  }, 'Today'), (0,_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('header', {
+    "class": 'todaysDate'
+  })), (0,_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('section', {
+    "class": "todoListContainer"
+  }, (0,_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('ul', {
+    "class": 'todoList'
+  })));
+  mainElement.appendChild(displayTodosContainer);
+  (0,_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_1__.updateTodaysDate)();
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayAllTodosContainer);
+
+//  <div class="displayTodos">
+//   <div class="todayDateContainer">
+//     <header class="today">Today</header>
+//     <header class="todaysDate"></header>
+//   </div>
+//   <section class="todoListContainer">
+//     <ul class="todoList"></ul>
+//   </section>
+//  </div>
+
+//-------------- whats needed
+
+// if(allLocalStorageTodos !== null) {          //----------------displayAllLocal todos
+//     displayAllTodos(allLocalStorageTodos)
+//   }
+
+// const displayAllTodos = (todoArr) => {
+//     todoArr.forEach((e) => {
+//       createTodoListItem(e)
+//     })
+//   }
+
+// function createTodoListItem(todo) {
+
+//     const todoList = document.querySelector('.todoList')
+
+//     let todoLi = todoElementFactory(todo, 'li', { class: 'todoListItem' })
+//     let checkIcon = todoElementFactory(todo, 'div', { class: 'checkIcon' })
+//     let todoTitle = todoElementFactory(todo, 'p', { class: 'todoTitle' }, 'title')
+//     let todoDescription = todoElementFactory(
+//       todo,
+//       'p',
+//       { class: 'todoDescription' },
+//       'description'
+//     )
+//     let todoPriority = todoElementFactory(
+//       todo,
+//       'p',
+//       { class: 'todoPriority', class: `${todo.priority.split(': ')[1]}` },
+//       'priority'
+//     )
+//     let todoDate = todoElementFactory(todo, 'p', { class: 'todoDate' }, 'date')
+//     let todoProject = todoElementFactory(todo, 'p', {class: 'todoProject'}, 'project')
+
+//     // checkIcon.innerHTML = 'Icon'
+
+//     let tickIcon =elementFactory('span', {class: 'material-symbols-outlined tick'}, 'done');
+
+//       checkIcon.addEventListener('click', (e) => {
+//         let index = checkIcon.closest('li').id;
+//         console.log(allLocalStorageTodos)
+
+//         allLocalStorageTodos.splice(index, 1);
+
+//         localStorage.setItem('allTodos', JSON.stringify(allLocalStorageTodos))
+//         clearTodos();
+//         displayAllTodos(allLocalStorageTodos)
+
+//       })
+
+//     checkIcon.addEventListener('mouseenter', (e) => {
+
+//         console.log('CHECKED!!!!!!!!!!!!')
+//         checkIcon.appendChild(tickIcon)
+//     })
+//     checkIcon.addEventListener('mouseout', (e) => {
+
+//       if(e.relatedTarget.className === 'todoListItem') {
+//         checkIcon.removeChild(checkIcon.lastChild);
+//       }
+
+//     })
+
+/***/ }),
+
 /***/ "./src/helpers/factoryFunctions/createProjectListItem.js":
 /*!***************************************************************!*\
   !*** ./src/helpers/factoryFunctions/createProjectListItem.js ***!
@@ -161,10 +277,10 @@ function todoElementFactory(todo, type, attributes) {
 
 /***/ }),
 
-/***/ "./src/pages/displayAllTodosContainer.js":
-/*!***********************************************!*\
-  !*** ./src/pages/displayAllTodosContainer.js ***!
-  \***********************************************/
+/***/ "./src/pages/navbar.js":
+/*!*****************************!*\
+  !*** ./src/pages/navbar.js ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -172,108 +288,69 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/factoryFunctions/elementFactory */ "./src/helpers/factoryFunctions/elementFactory.js");
-/* harmony import */ var _helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helpers/dates/dateHelpers */ "./src/helpers/dates/dateHelpers.js");
+/* harmony import */ var _assets_images_seaCreature_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images/seaCreature.png */ "./src/assets/images/seaCreature.png");
+/* harmony import */ var _assets_images_slothsshrug_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/images/slothsshrug.png */ "./src/assets/images/slothsshrug.png");
 
 
 
-
-//import todoElementFactory from '../helpers/factoryFunctions/todoElementFactory';
-
-// let today = format(new Date(), 'E-do')
-// const todaysDateDisplay = document.querySelector('.todaysDate')
-
-function displayAllTodosContainer() {
-  var mainElement = document.querySelector('main');
-  var displayTodosContainer = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
-    "class": 'displayTodos'
+var navBar = function navigationBarComponent() {
+  var nav = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('nav');
+  var navStart = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'navStart'
   }, (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
-    "class": 'todayDateContainer'
-  }, (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('header', {
-    "class": 'today'
-  }, 'Today'), (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('header', {
-    "class": 'todaysDate'
-  })), (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('section', {
-    "class": "todoListContainer"
-  }, (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('ul', {
-    "class": 'todoList'
-  })));
-  mainElement.appendChild(displayTodosContainer);
-  (0,_helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_1__.updateTodaysDate)();
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayAllTodosContainer);
-
-//  <div class="displayTodos">
-//   <div class="todayDateContainer">
-//     <header class="today">Today</header>
-//     <header class="todaysDate"></header>
-//   </div>
-//   <section class="todoListContainer">
-//     <ul class="todoList"></ul>
-//   </section>
-//  </div>
-
-//-------------- whats needed
-
-// if(allLocalStorageTodos !== null) {          //----------------displayAllLocal todos
-//     displayAllTodos(allLocalStorageTodos)
-//   }
-
-// const displayAllTodos = (todoArr) => {
-//     todoArr.forEach((e) => {
-//       createTodoListItem(e)
-//     })
-//   }
-
-// function createTodoListItem(todo) {
-
-//     const todoList = document.querySelector('.todoList')
-
-//     let todoLi = todoElementFactory(todo, 'li', { class: 'todoListItem' })
-//     let checkIcon = todoElementFactory(todo, 'div', { class: 'checkIcon' })
-//     let todoTitle = todoElementFactory(todo, 'p', { class: 'todoTitle' }, 'title')
-//     let todoDescription = todoElementFactory(
-//       todo,
-//       'p',
-//       { class: 'todoDescription' },
-//       'description'
-//     )
-//     let todoPriority = todoElementFactory(
-//       todo,
-//       'p',
-//       { class: 'todoPriority', class: `${todo.priority.split(': ')[1]}` },
-//       'priority'
-//     )
-//     let todoDate = todoElementFactory(todo, 'p', { class: 'todoDate' }, 'date')
-//     let todoProject = todoElementFactory(todo, 'p', {class: 'todoProject'}, 'project')
-
-//     // checkIcon.innerHTML = 'Icon'
-
-//     let tickIcon =elementFactory('span', {class: 'material-symbols-outlined tick'}, 'done');
-
-//       checkIcon.addEventListener('click', (e) => {
-//         let index = checkIcon.closest('li').id;
-//         console.log(allLocalStorageTodos)
-
-//         allLocalStorageTodos.splice(index, 1);
-
-//         localStorage.setItem('allTodos', JSON.stringify(allLocalStorageTodos))
-//         clearTodos();
-//         displayAllTodos(allLocalStorageTodos)
-
-//       })
-
-//     checkIcon.addEventListener('mouseenter', (e) => {
-
-//         console.log('CHECKED!!!!!!!!!!!!')
-//         checkIcon.appendChild(tickIcon)
-//     })
-//     checkIcon.addEventListener('mouseout', (e) => {
-
-//       if(e.relatedTarget.className === 'todoListItem') {
-//         checkIcon.removeChild(checkIcon.lastChild);
-//       }
-
-//     })
+    "class": 'hamIconWrapper'
+  }, (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('span', {
+    "class": "material-symbols-outlined hamIcon"
+  }, "menu")), (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'homeIconWrapper'
+  }, (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('span', {
+    "class": "material-symbols-outlined homeIcon"
+  }, "home")));
+  var logoWrapper = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'logoWrapper'
+  }, (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('img', {
+    "class": "logo",
+    src: _assets_images_slothsshrug_png__WEBPACK_IMPORTED_MODULE_2__
+  }));
+  var appName = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('h1', {}, 'MUSTODOIT');
+  var navEnd = (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'navEnd'
+  }, (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
+    "class": 'neverTodoWrapper'
+  }, (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('button', {
+    "class": "newTodoButton"
+  }, "+")), (0,_helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('img', {
+    "class": "userIcon",
+    src: _assets_images_seaCreature_png__WEBPACK_IMPORTED_MODULE_1__
+  }));
+  nav.appendChild(navStart);
+  nav.appendChild(logoWrapper);
+  nav.appendChild(appName);
+  nav.appendChild(navEnd);
+  document.body.appendChild(nav);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navBar);
+{/* <nav>
+      <div class="navStart">
+        <div class="hamIconWrapper"><span class="material-symbols-outlined hamIcon">
+          menu
+          </span></div>
+        <div class="homeIconWrapper"><span class="material-symbols-outlined homeIcon">
+          home
+          </span></div>
+      </div>
+      <div class="logoWrapper">
+        <img class="logo" src="./assets/images/slothsshrug.png" alt="" />
+      </div>
+      <h1>MUSTODOIT</h1>
+      <div class="navEnd">
+        <div class="newTodoWrapper">
+          <button class="newTodoButton">+</button>
+        </div>
+        
+        <img class="userIcon" src="./assets/images/seaCreature.png" alt="" />
+      </div>
+    </nav> */}
 
 /***/ }),
 
@@ -298,7 +375,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap);"]);
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    box-sizing: border-box;\n    margin: 0;\n    font-family: 'Roboto'\n}\n\nhtml {\n    height: 100%;\n}\n\nbody {\n    display: grid;\n    position: relative;\n    place-items:center; \n    /* height: 100%; */\n    grid-template-rows: 70px 1fr;\n    grid-template-columns: 230px 1fr;\n    background-color: rgb(34, 33, 33);\n    min-height: 100%;\n    max-height: fit-content;\n}\n\nnav {\n    position: relative;\n    display: grid;\n    grid-row: 1/2;\n    grid-column: 1/3;\n    background-color: black;\n    width: 100%;\n    align-items: center;  \n    padding-left: 20px;\n    grid-template-columns: 70px 200px  1fr 200px;\n    border-bottom: solid rgb(53, 52, 52) 2px; \n}\n\n.navStart {\n    display:flex;\n    flex-direction: row;\n    padding-top: 20px;\n    /* gap: 10px; */\n}\n\n\n\n.hamIcon, .homeIcon {\n    padding: 4px;\n    user-select: none;\n}\n\n.hamIcon:hover, .homeIcon:hover {\n    border-radius: 4px;\n    cursor: pointer;\n    background-color: rgb(62, 68, 75);\n}\n\n.navStart div {\n    color:white;\n}\n\n\n.logo {\n    position: relative;\n    width: auto;\n    height: 65px;\n    top: 7px; \n}\n\nh1 {\n    /* -webkit-text-stroke: .5px white; */\n    color:rgb(219, 219, 219);\n    grid-column: 3/4;\n    font-family: 'Roboto Condensed';\n    font-weight:lighter;\n}\n\n.navEnd {\n    display:grid;\n    align-items: center;\n    grid-template-columns: 1fr 1fr;\n    grid-column: 4/5;\n}\n\n\n.newTodoButton {\n    display: grid;\n    align-content:center;\n    width: 30px;\n    height: 30px;\n    color: rgb(42, 190, 190);\n    border: rgb(219, 219, 219) 2px solid;\n    background-color: black;\n    border-radius: 3px;\n}\n\n.newTodoButton:hover {\n    cursor:pointer;\n    transform: scale(0.95);\n}\n\n.newTodoButton:active {\n    cursor:pointer;\n    transform: scale(0.8);\n}\n\n.userIcon {\n    align-self: center;\n    height: 50px;\n    width: 50px;\n    border-radius: 50%;\n    border: solid rgb(42, 190, 190) 2px;\n}\n\n\n\n/* .sidebar {\n    display: grid;\n    visibility: visible;\n    position: relative;\n    left:0;\n    top:0;\n    grid-column: 1/2;\n    grid-row: 2/4;\n    background-color: rgb(45, 204, 204);\n    height: 100%;\n    width: 100%;\n    border-right: solid rgb(32, 119, 119) 2px;\n    padding: 50px 10px 0px 10px;\n    /* animation: 3s infinite alternate slidein;\n    transition: visibility 1s linear 1s, animation 1s; \n    transition: visibility 0.5s , width 0.5s;\n    \n\n} */\n\n.sidebar {\n    display: grid;\n    visibility: hiddden;\n    position: absolute;\n    grid-column: 1/2;\n    grid-row: 2/4;\n    background-color: rgb(45, 204, 204);\n    height: 100%;\n    width: 100%;\n    border-right: solid rgb(32, 119, 119) 2px;\n    padding: 50px 10px 0px 10px;\n    transition: all 0.2s;\n    /* transform: translate3d(-100%, 0, 0); */\n    transform: translateX(-100%)\n}\n\n.open  {\n    visibility: visible;\n    transition: transform 0.2s;\n    /* transform: translate3d(0, 0, 0); */\n    transform: translateX(0)\n}\n\n\n\n.projectsHeaderContainer {\n    display: grid;\n    position: relative;\n    grid-template-columns: 1fr 1fr;\n    background-color: black;\n    border-radius: 4px;\n    padding: 4px;\n    z-index:2;\n    \n}\n\n.projectsHeader {\n    position:relative;\n    color: rgb(219, 219, 219);\n    font-size: 1.2rem;\n    font-weight: 600;\n    grid-column: 1/2;\n    padding-left: 5px;\n \n}\n\n.projectButtonsContainer {\n    position: relative;\n    display:flex;\n    flex-direction: row;\n    grid-column: 2/3;\n    justify-content: end;\n    /* gap: 5px; */\n}\n\n.addIcon, .expandIcon {\n\n    color: rgb(45, 204, 204);\n    /* height: 10px;\n    width: 10px; */\n\n}\n\n.addProjectButton, .showHideProjects {\n    display: grid;\n    place-items:center;\n    cursor: pointer;    \n    background-color: black;\n    /* border: solid rgb(219, 219, 219) 2px; */\n    border-radius: 4px;\n}\n\n.addProjectButton:hover, .showHideProjects:hover {\n    background-color: rgb(62, 68, 75);\n}\n\n.projectsList {\n    position: relative;\n    z-index:1;\n    /* display: none; */\n    visibility: hidden;\n    transform: translateY(-40px);\n    font-size: 0.9rem;\n    margin-top: 5px;\n    list-style-type: none;      \n    border-radius: 4px;\n    padding: 5px;\n    color: rgb(219 219 219);\n    transition: all 0.25s linear;\n    /* transform :translateY(100%) ;  */\n\n}\n\n.showProjectList {\n    \n    color: pink;\n   visibility: visible;\n   transform: translateY(0);\n    transition: transform 0.25s;\n    \n}\n\n.project-li {\n    display: flex;\n    flex-direction:row;\n    align-items: center;\n    gap: 10px;\n    margin: 3px 0px 3px 0px;\n    padding: 4px;\n    background-color: rgb(8, 8, 8);\n    border-radius: 4px;\n}\n\n.project-li div {\n    height: 12px;\n    width: 12px;\n    border-radius: 6px;\n    background-color: white;\n}\n\n\nmain {\n    padding: 30px;\n    display: grid;\n    position: relative;\n    justify-items: center;\n    grid-row: 2/4;\n    grid-column: 2/3;\n    height:100%;\n    width: 100%;\n    \n}\n\n.formContainer {\n    animation:  popup 30ms;\n    z-index:2;\n    /* transition: 1s;\n    transition-timing-function: linear;  */\n    display: grid;\n    position:absolute; \n    top: 60px; \n    display:none;\n    min-width: 30%;\n    min-height: 20%;\n    /* justify-content: center; */\n    background-color: rgb(34, 33, 33);\n    border: solid slategrey 2px;\n    border-radius: 20px;\n    padding: 10px;\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\n}\n\n\n\n /* @keyframes popup {\n    0%{\n      transform: scale(0.4);\n      filter: blur(10px);\n    }\n    50%{\n      transform: scale(0.4);\n       filter: blur(10px); \n    }\n    60%{\n      transform: scale(0.4); \n       filter: blur(10px);\n    }\n    70%{\n      transform: scale(0.6); \n       filter: blur(10px); \n    }\n     80%{\n      transform: scale(0.8); \n      filter: blur(5px); \n    }\n    100%{\n        transform: scale(1); \n      }\n  }  */\n\n.todoForm {\n    display: none;\n    position: relative;\n    grid-template-rows: 2fr 1fr .5fr;\n    grid-template-columns: 1fr 1fr;\n    padding: 10px;\n    \n}\n\n\n.titleDescriptionWrapper {\n    grid-row: 1/2;\n    grid-column: 1/3;\n    \n}\n\n#titleInput {\n  padding-bottom: 10px;\n}\n\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\n    background-color: rgb(34, 33, 33);\n    color: white;\n    border: none;\n}\n\n#titleInput:focus, #descriptionInput:focus {\n    outline: none;\n}\n\n\n#dateSelect::-webkit-calendar-picker-indicator {\n    filter: invert(1);  \n}\n\n.datePriorityWrapper {\n    display:flex;\n    grid-column: 1/3;\n    justify-content: space-between;\n    grid-row: 2/3;\n}\n\n/* .title, .description, .priority, .date{\n    display: flex;\n    flex-direction: column;\n} */\n\n.todoFormButtonWrapper {\n    display:grid;\n    position: relative;\n    grid-template-columns: 1fr 1fr;\n    /* align-items: center;\n    justify-content: end;\n    gap:7px; */\n    grid-row:3/4;\n    grid-column: 2/3;\n}\n\n.addTodoButton {\n    color: whitesmoke;\n    border: solid 2px aqua;\n    background-color: black;\n    border-radius: 5px;\n    grid-column: 2/3;\n}\n\n.cancelTodoButton {\n    color: whitesmoke;\n    background-color: black;\n    border: solid 2px firebrick;\n    border-radius: 5px;\n\n}\n\n.addTodoWrapper, .cancelTodoWrapper {\n    position:absolute;\n}\n\n.addTodoWrapper {\n    grid-column: 2/3;\n}\n\n.cancelTodoButton,.addTodoButton {\n    font-weight: 300;\n    /* width: 20%; */\n} \n.cancelTodoButton:hover ,.addTodoButton:hover {\n    transform: scale(0.98);\n    cursor: pointer;\n}  \n.cancelTodoButton:active ,.addTodoButton:active {\n    transform: scale(0.9);\n    cursor: pointer;\n} \n\n\n\n\n.displayTodos {\n    display: grid;\n    position: relative;\n    z-index:1;\n    background-color: rgb(34, 33, 33);\n    width: 40vw;\n    height: fit-content;\n    /* border:solid black 4px; */\n    grid-template-rows: 60px 1fr;\n}\n\n.todayDateContainer {\n    \n    display: grid;\n    align-items:center;\n    grid-template-columns: 1fr 2fr 4fr;\n}\n\n.today {\n    color:white;\n    font-size: 1.75rem;\n    font-weight: bold;\n    display:grid;\n    justify-content: end;\n    align-items: center;\n    /* border:solid black 4px */\n}\n\n.todaysDate {\n    color:rgb(107, 107, 119);\n    display:grid;\n    padding-left: 10px;\n    /* border:solid black 4px; */\n    justify-content: start;\n    align-items: center;\n}\n\n.todoListContainer {\n    /* border:solid black 4px; */\n    height: 100%;\n    padding: 20px;\n}\n\n.todoList {\n    position:relative;\n    font-size: 1rem;\n    color:white;\n    list-style-type: none;\n    border-top: solid slategrey 1px;\n}\n\n.todoListItem{ \n    position: relative;\n    display: grid;\n    grid-template-columns: 50px 1fr;\n    padding: 5px;\n    /* border-top:solid black 2px; */\n    border-bottom:solid slategrey 1px;\n\n}\n\n.todoProject {\n    grid-column: 2/3;\n}\n\n.checkIcon {\n    user-select: none;\n    display: grid;\n    top: 25px;\n    left: 10px;\n    position: relative;\n    place-items:center;\n    align-items: center;\n    grid-column: 1/2;\n    border: solid aqua 2px;\n    background-color: rgba(0, 0, 0, 0);\n    height: 15px;\n    width: 15px;\n    border-radius: 50%;\n    /* z-index:2 */\n}\n\n.tick {\n    user-select: none;\n    position:absolute;\n    /* z-index:1; */\n    left:1.25px;\n    font-size: 9px;\n}\n\n.checkIcon:hover {\n    cursor: pointer;\n    background-color: green;\n}\n\n\n.checkIcon:active {\n    cursor: pointer;\n    background-color: green;\n    transform: scale(0.8);\n}\n\n.todoListItem p  {\n    grid-column: 2/3;\n}\n\n.High {\n    color:red;\n}\n.Medium {\n    color: orange;\n}\n.Low {\n    color:cornflowerblue;   \n}\n\n/*.todoTitle, .todoDescription, .todoPriority, .priority .todoDate {\n    grid-column: 2/3;\n    /* disable above for vertical stretch \n}*/\n\n\n.prioritySelectWrapper > label {\n    padding-right: 5px;\n    color: whitesmoke;\n}\n\n.todoDate{\n    color: greenyellow;\n}\n\n.todoTitle {\n    font-size: 1.1rem;\n}\n\n.todoDescription {\n    color: rgb(107, 107, 119);  \n    font-size: .9rem;\n}\n\n.todoProject {\n    font-size: .9rem;\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":";AAIA;IACI,sBAAsB;IACtB,SAAS;IACT;AACJ;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;IAClB,4BAA4B;IAC5B,gCAAgC;IAChC,iCAAiC;IACjC,gBAAgB;IAChB,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,WAAW;IACX,mBAAmB;IACnB,kBAAkB;IAClB,4CAA4C;IAC5C,wCAAwC;AAC5C;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,iBAAiB;IACjB,eAAe;AACnB;;;;AAIA;IACI,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,eAAe;IACf,iCAAiC;AACrC;;AAEA;IACI,WAAW;AACf;;;AAGA;IACI,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,QAAQ;AACZ;;AAEA;IACI,qCAAqC;IACrC,wBAAwB;IACxB,gBAAgB;IAChB,+BAA+B;IAC/B,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,8BAA8B;IAC9B,gBAAgB;AACpB;;;AAGA;IACI,aAAa;IACb,oBAAoB;IACpB,WAAW;IACX,YAAY;IACZ,wBAAwB;IACxB,oCAAoC;IACpC,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,cAAc;IACd,sBAAsB;AAC1B;;AAEA;IACI,cAAc;IACd,qBAAqB;AACzB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,mCAAmC;AACvC;;;;AAIA;;;;;;;;;;;;;;;;;;GAkBG;;AAEH;IACI,aAAa;IACb,mBAAmB;IACnB,kBAAkB;IAClB,gBAAgB;IAChB,aAAa;IACb,mCAAmC;IACnC,YAAY;IACZ,WAAW;IACX,yCAAyC;IACzC,2BAA2B;IAC3B,oBAAoB;IACpB,yCAAyC;IACzC;AACJ;;AAEA;IACI,mBAAmB;IACnB,0BAA0B;IAC1B,qCAAqC;IACrC;AACJ;;;;AAIA;IACI,aAAa;IACb,kBAAkB;IAClB,8BAA8B;IAC9B,uBAAuB;IACvB,kBAAkB;IAClB,YAAY;IACZ,SAAS;;AAEb;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,iBAAiB;IACjB,gBAAgB;IAChB,gBAAgB;IAChB,iBAAiB;;AAErB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,mBAAmB;IACnB,gBAAgB;IAChB,oBAAoB;IACpB,cAAc;AAClB;;AAEA;;IAEI,wBAAwB;IACxB;kBACc;;AAElB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,eAAe;IACf,uBAAuB;IACvB,0CAA0C;IAC1C,kBAAkB;AACtB;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,mBAAmB;IACnB,kBAAkB;IAClB,4BAA4B;IAC5B,iBAAiB;IACjB,eAAe;IACf,qBAAqB;IACrB,kBAAkB;IAClB,YAAY;IACZ,uBAAuB;IACvB,4BAA4B;IAC5B,mCAAmC;;AAEvC;;AAEA;;IAEI,WAAW;GACZ,mBAAmB;GACnB,wBAAwB;IACvB,2BAA2B;;AAE/B;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,mBAAmB;IACnB,SAAS;IACT,uBAAuB;IACvB,YAAY;IACZ,8BAA8B;IAC9B,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,uBAAuB;AAC3B;;;AAGA;IACI,aAAa;IACb,aAAa;IACb,kBAAkB;IAClB,qBAAqB;IACrB,aAAa;IACb,gBAAgB;IAChB,WAAW;IACX,WAAW;;AAEf;;AAEA;IACI,sBAAsB;IACtB,SAAS;IACT;0CACsC;IACtC,aAAa;IACb,iBAAiB;IACjB,SAAS;IACT,YAAY;IACZ,cAAc;IACd,eAAe;IACf,6BAA6B;IAC7B,iCAAiC;IACjC,2BAA2B;IAC3B,mBAAmB;IACnB,aAAa;IACb,6CAA6C;AACjD;;;;CAIC;;;;;;;;;;;;;;;;;;;;;;;;MAwBK;;AAEN;IACI,aAAa;IACb,kBAAkB;IAClB,gCAAgC;IAChC,8BAA8B;IAC9B,aAAa;;AAEjB;;;AAGA;IACI,aAAa;IACb,gBAAgB;;AAEpB;;AAEA;EACE,oBAAoB;AACtB;;AAEA;IACI,iCAAiC;IACjC,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;;AAGA;IACI,iBAAiB;AACrB;;AAEA;IACI,YAAY;IACZ,gBAAgB;IAChB,8BAA8B;IAC9B,aAAa;AACjB;;AAEA;;;GAGG;;AAEH;IACI,YAAY;IACZ,kBAAkB;IAClB,8BAA8B;IAC9B;;cAEU;IACV,YAAY;IACZ,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,sBAAsB;IACtB,uBAAuB;IACvB,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,uBAAuB;IACvB,2BAA2B;IAC3B,kBAAkB;;AAEtB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,gBAAgB;IAChB,gBAAgB;AACpB;AACA;IACI,sBAAsB;IACtB,eAAe;AACnB;AACA;IACI,qBAAqB;IACrB,eAAe;AACnB;;;;;AAKA;IACI,aAAa;IACb,kBAAkB;IAClB,SAAS;IACT,iCAAiC;IACjC,WAAW;IACX,mBAAmB;IACnB,4BAA4B;IAC5B,4BAA4B;AAChC;;AAEA;;IAEI,aAAa;IACb,kBAAkB;IAClB,kCAAkC;AACtC;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,iBAAiB;IACjB,YAAY;IACZ,oBAAoB;IACpB,mBAAmB;IACnB,2BAA2B;AAC/B;;AAEA;IACI,wBAAwB;IACxB,YAAY;IACZ,kBAAkB;IAClB,4BAA4B;IAC5B,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,4BAA4B;IAC5B,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,iBAAiB;IACjB,eAAe;IACf,WAAW;IACX,qBAAqB;IACrB,+BAA+B;AACnC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,+BAA+B;IAC/B,YAAY;IACZ,gCAAgC;IAChC,iCAAiC;;AAErC;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,SAAS;IACT,UAAU;IACV,kBAAkB;IAClB,kBAAkB;IAClB,mBAAmB;IACnB,gBAAgB;IAChB,sBAAsB;IACtB,kCAAkC;IAClC,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,cAAc;AAClB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,eAAe;IACf,WAAW;IACX,cAAc;AAClB;;AAEA;IACI,eAAe;IACf,uBAAuB;AAC3B;;;AAGA;IACI,eAAe;IACf,uBAAuB;IACvB,qBAAqB;AACzB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,SAAS;AACb;AACA;IACI,aAAa;AACjB;AACA;IACI,oBAAoB;AACxB;;AAEA;;;EAGE;;;AAGF;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,yBAAyB;IACzB,gBAAgB;AACpB;;AAEA;IACI,gBAAgB;AACpB","sourcesContent":["\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    font-family: 'Roboto'\n}\n\nhtml {\n    height: 100%;\n}\n\nbody {\n    display: grid;\n    position: relative;\n    place-items:center; \n    /* height: 100%; */\n    grid-template-rows: 70px 1fr;\n    grid-template-columns: 230px 1fr;\n    background-color: rgb(34, 33, 33);\n    min-height: 100%;\n    max-height: fit-content;\n}\n\nnav {\n    position: relative;\n    display: grid;\n    grid-row: 1/2;\n    grid-column: 1/3;\n    background-color: black;\n    width: 100%;\n    align-items: center;  \n    padding-left: 20px;\n    grid-template-columns: 70px 200px  1fr 200px;\n    border-bottom: solid rgb(53, 52, 52) 2px; \n}\n\n.navStart {\n    display:flex;\n    flex-direction: row;\n    padding-top: 20px;\n    /* gap: 10px; */\n}\n\n\n\n.hamIcon, .homeIcon {\n    padding: 4px;\n    user-select: none;\n}\n\n.hamIcon:hover, .homeIcon:hover {\n    border-radius: 4px;\n    cursor: pointer;\n    background-color: rgb(62, 68, 75);\n}\n\n.navStart div {\n    color:white;\n}\n\n\n.logo {\n    position: relative;\n    width: auto;\n    height: 65px;\n    top: 7px; \n}\n\nh1 {\n    /* -webkit-text-stroke: .5px white; */\n    color:rgb(219, 219, 219);\n    grid-column: 3/4;\n    font-family: 'Roboto Condensed';\n    font-weight:lighter;\n}\n\n.navEnd {\n    display:grid;\n    align-items: center;\n    grid-template-columns: 1fr 1fr;\n    grid-column: 4/5;\n}\n\n\n.newTodoButton {\n    display: grid;\n    align-content:center;\n    width: 30px;\n    height: 30px;\n    color: rgb(42, 190, 190);\n    border: rgb(219, 219, 219) 2px solid;\n    background-color: black;\n    border-radius: 3px;\n}\n\n.newTodoButton:hover {\n    cursor:pointer;\n    transform: scale(0.95);\n}\n\n.newTodoButton:active {\n    cursor:pointer;\n    transform: scale(0.8);\n}\n\n.userIcon {\n    align-self: center;\n    height: 50px;\n    width: 50px;\n    border-radius: 50%;\n    border: solid rgb(42, 190, 190) 2px;\n}\n\n\n\n/* .sidebar {\n    display: grid;\n    visibility: visible;\n    position: relative;\n    left:0;\n    top:0;\n    grid-column: 1/2;\n    grid-row: 2/4;\n    background-color: rgb(45, 204, 204);\n    height: 100%;\n    width: 100%;\n    border-right: solid rgb(32, 119, 119) 2px;\n    padding: 50px 10px 0px 10px;\n    /* animation: 3s infinite alternate slidein;\n    transition: visibility 1s linear 1s, animation 1s; \n    transition: visibility 0.5s , width 0.5s;\n    \n\n} */\n\n.sidebar {\n    display: grid;\n    visibility: hiddden;\n    position: absolute;\n    grid-column: 1/2;\n    grid-row: 2/4;\n    background-color: rgb(45, 204, 204);\n    height: 100%;\n    width: 100%;\n    border-right: solid rgb(32, 119, 119) 2px;\n    padding: 50px 10px 0px 10px;\n    transition: all 0.2s;\n    /* transform: translate3d(-100%, 0, 0); */\n    transform: translateX(-100%)\n}\n\n.open  {\n    visibility: visible;\n    transition: transform 0.2s;\n    /* transform: translate3d(0, 0, 0); */\n    transform: translateX(0)\n}\n\n\n\n.projectsHeaderContainer {\n    display: grid;\n    position: relative;\n    grid-template-columns: 1fr 1fr;\n    background-color: black;\n    border-radius: 4px;\n    padding: 4px;\n    z-index:2;\n    \n}\n\n.projectsHeader {\n    position:relative;\n    color: rgb(219, 219, 219);\n    font-size: 1.2rem;\n    font-weight: 600;\n    grid-column: 1/2;\n    padding-left: 5px;\n \n}\n\n.projectButtonsContainer {\n    position: relative;\n    display:flex;\n    flex-direction: row;\n    grid-column: 2/3;\n    justify-content: end;\n    /* gap: 5px; */\n}\n\n.addIcon, .expandIcon {\n\n    color: rgb(45, 204, 204);\n    /* height: 10px;\n    width: 10px; */\n\n}\n\n.addProjectButton, .showHideProjects {\n    display: grid;\n    place-items:center;\n    cursor: pointer;    \n    background-color: black;\n    /* border: solid rgb(219, 219, 219) 2px; */\n    border-radius: 4px;\n}\n\n.addProjectButton:hover, .showHideProjects:hover {\n    background-color: rgb(62, 68, 75);\n}\n\n.projectsList {\n    position: relative;\n    z-index:1;\n    /* display: none; */\n    visibility: hidden;\n    transform: translateY(-40px);\n    font-size: 0.9rem;\n    margin-top: 5px;\n    list-style-type: none;      \n    border-radius: 4px;\n    padding: 5px;\n    color: rgb(219 219 219);\n    transition: all 0.25s linear;\n    /* transform :translateY(100%) ;  */\n\n}\n\n.showProjectList {\n    \n    color: pink;\n   visibility: visible;\n   transform: translateY(0);\n    transition: transform 0.25s;\n    \n}\n\n.project-li {\n    display: flex;\n    flex-direction:row;\n    align-items: center;\n    gap: 10px;\n    margin: 3px 0px 3px 0px;\n    padding: 4px;\n    background-color: rgb(8, 8, 8);\n    border-radius: 4px;\n}\n\n.project-li div {\n    height: 12px;\n    width: 12px;\n    border-radius: 6px;\n    background-color: white;\n}\n\n\nmain {\n    padding: 30px;\n    display: grid;\n    position: relative;\n    justify-items: center;\n    grid-row: 2/4;\n    grid-column: 2/3;\n    height:100%;\n    width: 100%;\n    \n}\n\n.formContainer {\n    animation:  popup 30ms;\n    z-index:2;\n    /* transition: 1s;\n    transition-timing-function: linear;  */\n    display: grid;\n    position:absolute; \n    top: 60px; \n    display:none;\n    min-width: 30%;\n    min-height: 20%;\n    /* justify-content: center; */\n    background-color: rgb(34, 33, 33);\n    border: solid slategrey 2px;\n    border-radius: 20px;\n    padding: 10px;\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\n}\n\n\n\n /* @keyframes popup {\n    0%{\n      transform: scale(0.4);\n      filter: blur(10px);\n    }\n    50%{\n      transform: scale(0.4);\n       filter: blur(10px); \n    }\n    60%{\n      transform: scale(0.4); \n       filter: blur(10px);\n    }\n    70%{\n      transform: scale(0.6); \n       filter: blur(10px); \n    }\n     80%{\n      transform: scale(0.8); \n      filter: blur(5px); \n    }\n    100%{\n        transform: scale(1); \n      }\n  }  */\n\n.todoForm {\n    display: none;\n    position: relative;\n    grid-template-rows: 2fr 1fr .5fr;\n    grid-template-columns: 1fr 1fr;\n    padding: 10px;\n    \n}\n\n\n.titleDescriptionWrapper {\n    grid-row: 1/2;\n    grid-column: 1/3;\n    \n}\n\n#titleInput {\n  padding-bottom: 10px;\n}\n\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\n    background-color: rgb(34, 33, 33);\n    color: white;\n    border: none;\n}\n\n#titleInput:focus, #descriptionInput:focus {\n    outline: none;\n}\n\n\n#dateSelect::-webkit-calendar-picker-indicator {\n    filter: invert(1);  \n}\n\n.datePriorityWrapper {\n    display:flex;\n    grid-column: 1/3;\n    justify-content: space-between;\n    grid-row: 2/3;\n}\n\n/* .title, .description, .priority, .date{\n    display: flex;\n    flex-direction: column;\n} */\n\n.todoFormButtonWrapper {\n    display:grid;\n    position: relative;\n    grid-template-columns: 1fr 1fr;\n    /* align-items: center;\n    justify-content: end;\n    gap:7px; */\n    grid-row:3/4;\n    grid-column: 2/3;\n}\n\n.addTodoButton {\n    color: whitesmoke;\n    border: solid 2px aqua;\n    background-color: black;\n    border-radius: 5px;\n    grid-column: 2/3;\n}\n\n.cancelTodoButton {\n    color: whitesmoke;\n    background-color: black;\n    border: solid 2px firebrick;\n    border-radius: 5px;\n\n}\n\n.addTodoWrapper, .cancelTodoWrapper {\n    position:absolute;\n}\n\n.addTodoWrapper {\n    grid-column: 2/3;\n}\n\n.cancelTodoButton,.addTodoButton {\n    font-weight: 300;\n    /* width: 20%; */\n} \n.cancelTodoButton:hover ,.addTodoButton:hover {\n    transform: scale(0.98);\n    cursor: pointer;\n}  \n.cancelTodoButton:active ,.addTodoButton:active {\n    transform: scale(0.9);\n    cursor: pointer;\n} \n\n\n\n\n.displayTodos {\n    display: grid;\n    position: relative;\n    z-index:1;\n    background-color: rgb(34, 33, 33);\n    width: 40vw;\n    height: fit-content;\n    /* border:solid black 4px; */\n    grid-template-rows: 60px 1fr;\n}\n\n.todayDateContainer {\n    \n    display: grid;\n    align-items:center;\n    grid-template-columns: 1fr 2fr 4fr;\n}\n\n.today {\n    color:white;\n    font-size: 1.75rem;\n    font-weight: bold;\n    display:grid;\n    justify-content: end;\n    align-items: center;\n    /* border:solid black 4px */\n}\n\n.todaysDate {\n    color:rgb(107, 107, 119);\n    display:grid;\n    padding-left: 10px;\n    /* border:solid black 4px; */\n    justify-content: start;\n    align-items: center;\n}\n\n.todoListContainer {\n    /* border:solid black 4px; */\n    height: 100%;\n    padding: 20px;\n}\n\n.todoList {\n    position:relative;\n    font-size: 1rem;\n    color:white;\n    list-style-type: none;\n    border-top: solid slategrey 1px;\n}\n\n.todoListItem{ \n    position: relative;\n    display: grid;\n    grid-template-columns: 50px 1fr;\n    padding: 5px;\n    /* border-top:solid black 2px; */\n    border-bottom:solid slategrey 1px;\n\n}\n\n.todoProject {\n    grid-column: 2/3;\n}\n\n.checkIcon {\n    user-select: none;\n    display: grid;\n    top: 25px;\n    left: 10px;\n    position: relative;\n    place-items:center;\n    align-items: center;\n    grid-column: 1/2;\n    border: solid aqua 2px;\n    background-color: rgba(0, 0, 0, 0);\n    height: 15px;\n    width: 15px;\n    border-radius: 50%;\n    /* z-index:2 */\n}\n\n.tick {\n    user-select: none;\n    position:absolute;\n    /* z-index:1; */\n    left:1.25px;\n    font-size: 9px;\n}\n\n.checkIcon:hover {\n    cursor: pointer;\n    background-color: green;\n}\n\n\n.checkIcon:active {\n    cursor: pointer;\n    background-color: green;\n    transform: scale(0.8);\n}\n\n.todoListItem p  {\n    grid-column: 2/3;\n}\n\n.High {\n    color:red;\n}\n.Medium {\n    color: orange;\n}\n.Low {\n    color:cornflowerblue;   \n}\n\n/*.todoTitle, .todoDescription, .todoPriority, .priority .todoDate {\n    grid-column: 2/3;\n    /* disable above for vertical stretch \n}*/\n\n\n.prioritySelectWrapper > label {\n    padding-right: 5px;\n    color: whitesmoke;\n}\n\n.todoDate{\n    color: greenyellow;\n}\n\n.todoTitle {\n    font-size: 1.1rem;\n}\n\n.todoDescription {\n    color: rgb(107, 107, 119);  \n    font-size: .9rem;\n}\n\n.todoProject {\n    font-size: .9rem;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    box-sizing: border-box;\n    margin: 0;\n    font-family: 'Roboto'\n}\n\nhtml {\n    height: 100%;\n}\n\nbody {\n    display: grid;\n    position: relative;\n    place-items:center; \n    /* height: 100%; */\n    grid-template-rows: 70px 1fr;\n    grid-template-columns: 200px 1fr;\n    background-color: rgb(34, 33, 33);\n    min-height: 100%;\n    max-height: fit-content;\n}\n\nnav {\n    position: relative;\n    display: grid;\n    grid-row: 1/2;\n    grid-column: 1/3;\n    background-color: black;\n    width: 100%;\n    align-items: center;  \n    padding-left: 20px;\n    grid-template-columns: 70px 200px  1fr 200px;\n    border-bottom: solid rgb(53, 52, 52) 2px; \n}\n\n.navStart {\n    display:flex;\n    flex-direction: row;\n    padding-top: 20px;\n    /* gap: 10px; */\n}\n\n\n\n.hamIcon, .homeIcon {\n    padding: 4px;\n    user-select: none;\n}\n\n.hamIcon:hover, .homeIcon:hover {\n    border-radius: 4px;\n    cursor: pointer;\n    background-color: rgb(62, 68, 75);\n}\n\n.navStart div {\n    color:white;\n}\n\n\n.logo {\n    position: relative;\n    width: auto;\n    height: 65px;\n    top: 7px; \n}\n\nh1 {\n    /* -webkit-text-stroke: .5px white; */\n    color:rgb(219, 219, 219);\n    grid-column: 3/4;\n    font-family: 'Roboto Condensed';\n    font-weight:lighter;\n}\n\n.navEnd {\n    display:grid;\n    align-items: center;\n    grid-template-columns: 1fr 1fr;\n    grid-column: 4/5;\n}\n\n\n.newTodoButton {\n    display: grid;\n    align-content:center;\n    width: 30px;\n    height: 30px;\n    color: rgb(42, 190, 190);\n    border: rgb(219, 219, 219) 2px solid;\n    background-color: black;\n    border-radius: 3px;\n}\n\n.newTodoButton:hover {\n    cursor:pointer;\n    transform: scale(0.95);\n}\n\n.newTodoButton:active {\n    cursor:pointer;\n    transform: scale(0.8);\n}\n\n.userIcon {\n    align-self: center;\n    height: 50px;\n    width: 50px;\n    border-radius: 50%;\n    border: solid rgb(42, 190, 190) 2px;\n}\n\n\n\n/* .sidebar {\n    display: grid;\n    visibility: visible;\n    position: relative;\n    left:0;\n    top:0;\n    grid-column: 1/2;\n    grid-row: 2/4;\n    background-color: rgb(45, 204, 204);\n    height: 100%;\n    width: 100%;\n    border-right: solid rgb(32, 119, 119) 2px;\n    padding: 50px 10px 0px 10px;\n    /* animation: 3s infinite alternate slidein;\n    transition: visibility 1s linear 1s, animation 1s; \n    transition: visibility 0.5s , width 0.5s;\n    \n\n} */\n\n.sidebar {\n    display: grid;\n    visibility: hiddden;\n    position: absolute;\n    grid-column: 1/2;\n    grid-row: 2/4;\n    background-color: rgb(45, 204, 204);\n    height: 100%;\n    width: 100%;\n    border-right: solid rgb(32, 119, 119) 2px;\n    padding: 50px 10px 0px 10px;\n    transition: all 0.2s;\n    /* transform: translate3d(-100%, 0, 0); */\n    transform: translateX(-100%)\n}\n\n.open  {\n    visibility: visible;\n    transition: transform 0.2s;\n    /* transform: translate3d(0, 0, 0); */\n    transform: translateX(0)\n}\n\n\n\n.projectsHeaderContainer {\n    display: grid;\n    position: relative;\n    grid-template-columns: 1fr 1fr;\n    background-color: black;\n    border-radius: 4px;\n    padding: 4px;\n    z-index:2;\n    \n}\n\n.projectsHeader {\n    position:relative;\n    color: rgb(219, 219, 219);\n    font-size: 1.2rem;\n    font-weight: 600;\n    grid-column: 1/2;\n    padding-left: 5px;\n \n}\n\n.projectButtonsContainer {\n    position: relative;\n    display:flex;\n    flex-direction: row;\n    grid-column: 2/3;\n    justify-content: end;\n    /* gap: 5px; */\n}\n\n.addIcon, .expandIcon {\n\n    color: rgb(45, 204, 204);\n    /* height: 10px;\n    width: 10px; */\n\n}\n\n.addProjectButton, .showHideProjects {\n    display: grid;\n    place-items:center;\n    cursor: pointer;    \n    background-color: black;\n    /* border: solid rgb(219, 219, 219) 2px; */\n    border-radius: 4px;\n}\n\n.addProjectButton:hover, .showHideProjects:hover {\n    background-color: rgb(62, 68, 75);\n}\n\n.projectsList {\n    position: relative;\n    z-index:1;\n    /* display: none; */\n    visibility: hidden;\n    transform: translateY(-40px);\n    font-size: 0.9rem;\n    margin-top: 5px;\n    list-style-type: none;      \n    border-radius: 4px;\n    padding: 5px;\n    color: rgb(219 219 219);\n    transition: all 0.25s linear;\n    /* transform :translateY(100%) ;  */\n\n}\n\n.showProjectList {\n    \n    color: pink;\n   visibility: visible;\n   transform: translateY(0);\n    transition: transform 0.25s;\n    \n}\n\n.project-li {\n    display: flex;\n    flex-direction:row;\n    align-items: center;\n    gap: 10px;\n    margin: 3px 0px 3px 0px;\n    padding: 4px;\n    background-color: rgb(8, 8, 8);\n    border-radius: 4px;\n}\n\n.project-li div {\n    height: 12px;\n    width: 12px;\n    border-radius: 6px;\n    background-color: white;\n}\n\n\nmain {\n    padding: 30px;\n    display: grid;\n    position: relative;\n    justify-items: center;\n    grid-row: 2/4;\n    grid-column: 2/3;\n    height:100%;\n    width: 100%;\n    \n}\n\n.formContainer {\n    animation:  popup 30ms;\n    z-index:2;\n    /* transition: 1s;\n    transition-timing-function: linear;  */\n    display: grid;\n    position:absolute; \n    top: 60px; \n    display:none;\n    min-width: 30%;\n    min-height: 20%;\n    /* justify-content: center; */\n    background-color: rgb(34, 33, 33);\n    border: solid slategrey 2px;\n    border-radius: 20px;\n    padding: 10px;\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\n}\n\n\n\n /* @keyframes popup {\n    0%{\n      transform: scale(0.4);\n      filter: blur(10px);\n    }\n    50%{\n      transform: scale(0.4);\n       filter: blur(10px); \n    }\n    60%{\n      transform: scale(0.4); \n       filter: blur(10px);\n    }\n    70%{\n      transform: scale(0.6); \n       filter: blur(10px); \n    }\n     80%{\n      transform: scale(0.8); \n      filter: blur(5px); \n    }\n    100%{\n        transform: scale(1); \n      }\n  }  */\n\n.todoForm {\n    display: none;\n    position: relative;\n    grid-template-rows: 2fr 1fr .5fr;\n    grid-template-columns: 1fr 1fr;\n    padding: 10px;\n    \n}\n\n\n.titleDescriptionWrapper {\n    grid-row: 1/2;\n    grid-column: 1/3;\n    \n}\n\n#titleInput {\n  padding-bottom: 10px;\n}\n\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\n    background-color: rgb(34, 33, 33);\n    color: white;\n    border: none;\n}\n\n#titleInput:focus, #descriptionInput:focus {\n    outline: none;\n}\n\n\n#dateSelect::-webkit-calendar-picker-indicator {\n    filter: invert(1);  \n}\n\n.datePriorityWrapper {\n    display:flex;\n    grid-column: 1/3;\n    justify-content: space-between;\n    grid-row: 2/3;\n}\n\n/* .title, .description, .priority, .date{\n    display: flex;\n    flex-direction: column;\n} */\n\n.todoFormButtonWrapper {\n    display:grid;\n    position: relative;\n    grid-template-columns: 1fr 1fr;\n    /* align-items: center;\n    justify-content: end;\n    gap:7px; */\n    grid-row:3/4;\n    grid-column: 2/3;\n}\n\n.addTodoButton {\n    color: whitesmoke;\n    border: solid 2px aqua;\n    background-color: black;\n    border-radius: 5px;\n    grid-column: 2/3;\n}\n\n.cancelTodoButton {\n    color: whitesmoke;\n    background-color: black;\n    border: solid 2px firebrick;\n    border-radius: 5px;\n\n}\n\n.addTodoWrapper, .cancelTodoWrapper {\n    position:absolute;\n}\n\n.addTodoWrapper {\n    grid-column: 2/3;\n}\n\n.cancelTodoButton,.addTodoButton {\n    font-weight: 300;\n    /* width: 20%; */\n} \n.cancelTodoButton:hover ,.addTodoButton:hover {\n    transform: scale(0.98);\n    cursor: pointer;\n}  \n.cancelTodoButton:active ,.addTodoButton:active {\n    transform: scale(0.9);\n    cursor: pointer;\n} \n\n\n\n\n.displayTodos {\n    display: grid;\n    position: relative;\n    z-index:1;\n    background-color: rgb(34, 33, 33);\n    width: 40vw;\n    height: fit-content;\n    /* border:solid black 4px; */\n    grid-template-rows: 60px 1fr;\n}\n\n.todayDateContainer {\n    \n    display: grid;\n    align-items:center;\n    grid-template-columns: 1fr 2fr 4fr;\n}\n\n.today {\n    color:white;\n    font-size: 1.75rem;\n    font-weight: bold;\n    display:grid;\n    justify-content: end;\n    align-items: center;\n    /* border:solid black 4px */\n}\n\n.todaysDate {\n    color:rgb(107, 107, 119);\n    display:grid;\n    padding-left: 10px;\n    /* border:solid black 4px; */\n    justify-content: start;\n    align-items: center;\n}\n\n.todoListContainer {\n    /* border:solid black 4px; */\n    height: 100%;\n    padding: 20px;\n}\n\n.todoList {\n    position:relative;\n    font-size: 1rem;\n    color:white;\n    list-style-type: none;\n    border-top: solid slategrey 1px;\n}\n\n.todoListItem{ \n    position: relative;\n    display: grid;\n    grid-template-columns: 50px 1fr;\n    padding: 5px;\n    /* border-top:solid black 2px; */\n    border-bottom:solid slategrey 1px;\n\n}\n\n.todoProject {\n    grid-column: 2/3;\n}\n\n.checkIcon {\n    user-select: none;\n    display: grid;\n    top: 25px;\n    left: 10px;\n    position: relative;\n    place-items:center;\n    align-items: center;\n    grid-column: 1/2;\n    border: solid aqua 2px;\n    background-color: rgba(0, 0, 0, 0);\n    height: 15px;\n    width: 15px;\n    border-radius: 50%;\n    /* z-index:2 */\n}\n\n.tick {\n    user-select: none;\n    position:absolute;\n    /* z-index:1; */\n    left:1.25px;\n    font-size: 9px;\n}\n\n.checkIcon:hover {\n    cursor: pointer;\n    background-color: green;\n}\n\n\n.checkIcon:active {\n    cursor: pointer;\n    background-color: green;\n    transform: scale(0.8);\n}\n\n.todoListItem p  {\n    grid-column: 2/3;\n}\n\n.High {\n    color:red;\n}\n.Medium {\n    color: orange;\n}\n.Low {\n    color:cornflowerblue;   \n}\n\n/*.todoTitle, .todoDescription, .todoPriority, .priority .todoDate {\n    grid-column: 2/3;\n    /* disable above for vertical stretch \n}*/\n\n\n.prioritySelectWrapper > label {\n    padding-right: 5px;\n    color: whitesmoke;\n}\n\n.todoDate{\n    color: greenyellow;\n}\n\n.todoTitle {\n    font-size: 1.1rem;\n}\n\n.todoDescription {\n    color: rgb(107, 107, 119);  \n    font-size: .9rem;\n}\n\n.todoProject {\n    font-size: .9rem;\n}", "",{"version":3,"sources":["webpack://./src/main.css"],"names":[],"mappings":";AAIA;IACI,sBAAsB;IACtB,SAAS;IACT;AACJ;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;IAClB,4BAA4B;IAC5B,gCAAgC;IAChC,iCAAiC;IACjC,gBAAgB;IAChB,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,WAAW;IACX,mBAAmB;IACnB,kBAAkB;IAClB,4CAA4C;IAC5C,wCAAwC;AAC5C;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,iBAAiB;IACjB,eAAe;AACnB;;;;AAIA;IACI,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,eAAe;IACf,iCAAiC;AACrC;;AAEA;IACI,WAAW;AACf;;;AAGA;IACI,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,QAAQ;AACZ;;AAEA;IACI,qCAAqC;IACrC,wBAAwB;IACxB,gBAAgB;IAChB,+BAA+B;IAC/B,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,8BAA8B;IAC9B,gBAAgB;AACpB;;;AAGA;IACI,aAAa;IACb,oBAAoB;IACpB,WAAW;IACX,YAAY;IACZ,wBAAwB;IACxB,oCAAoC;IACpC,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,cAAc;IACd,sBAAsB;AAC1B;;AAEA;IACI,cAAc;IACd,qBAAqB;AACzB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,mCAAmC;AACvC;;;;AAIA;;;;;;;;;;;;;;;;;;GAkBG;;AAEH;IACI,aAAa;IACb,mBAAmB;IACnB,kBAAkB;IAClB,gBAAgB;IAChB,aAAa;IACb,mCAAmC;IACnC,YAAY;IACZ,WAAW;IACX,yCAAyC;IACzC,2BAA2B;IAC3B,oBAAoB;IACpB,yCAAyC;IACzC;AACJ;;AAEA;IACI,mBAAmB;IACnB,0BAA0B;IAC1B,qCAAqC;IACrC;AACJ;;;;AAIA;IACI,aAAa;IACb,kBAAkB;IAClB,8BAA8B;IAC9B,uBAAuB;IACvB,kBAAkB;IAClB,YAAY;IACZ,SAAS;;AAEb;;AAEA;IACI,iBAAiB;IACjB,yBAAyB;IACzB,iBAAiB;IACjB,gBAAgB;IAChB,gBAAgB;IAChB,iBAAiB;;AAErB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,mBAAmB;IACnB,gBAAgB;IAChB,oBAAoB;IACpB,cAAc;AAClB;;AAEA;;IAEI,wBAAwB;IACxB;kBACc;;AAElB;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,eAAe;IACf,uBAAuB;IACvB,0CAA0C;IAC1C,kBAAkB;AACtB;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,mBAAmB;IACnB,kBAAkB;IAClB,4BAA4B;IAC5B,iBAAiB;IACjB,eAAe;IACf,qBAAqB;IACrB,kBAAkB;IAClB,YAAY;IACZ,uBAAuB;IACvB,4BAA4B;IAC5B,mCAAmC;;AAEvC;;AAEA;;IAEI,WAAW;GACZ,mBAAmB;GACnB,wBAAwB;IACvB,2BAA2B;;AAE/B;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,mBAAmB;IACnB,SAAS;IACT,uBAAuB;IACvB,YAAY;IACZ,8BAA8B;IAC9B,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,uBAAuB;AAC3B;;;AAGA;IACI,aAAa;IACb,aAAa;IACb,kBAAkB;IAClB,qBAAqB;IACrB,aAAa;IACb,gBAAgB;IAChB,WAAW;IACX,WAAW;;AAEf;;AAEA;IACI,sBAAsB;IACtB,SAAS;IACT;0CACsC;IACtC,aAAa;IACb,iBAAiB;IACjB,SAAS;IACT,YAAY;IACZ,cAAc;IACd,eAAe;IACf,6BAA6B;IAC7B,iCAAiC;IACjC,2BAA2B;IAC3B,mBAAmB;IACnB,aAAa;IACb,6CAA6C;AACjD;;;;CAIC;;;;;;;;;;;;;;;;;;;;;;;;MAwBK;;AAEN;IACI,aAAa;IACb,kBAAkB;IAClB,gCAAgC;IAChC,8BAA8B;IAC9B,aAAa;;AAEjB;;;AAGA;IACI,aAAa;IACb,gBAAgB;;AAEpB;;AAEA;EACE,oBAAoB;AACtB;;AAEA;IACI,iCAAiC;IACjC,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;;AAGA;IACI,iBAAiB;AACrB;;AAEA;IACI,YAAY;IACZ,gBAAgB;IAChB,8BAA8B;IAC9B,aAAa;AACjB;;AAEA;;;GAGG;;AAEH;IACI,YAAY;IACZ,kBAAkB;IAClB,8BAA8B;IAC9B;;cAEU;IACV,YAAY;IACZ,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,sBAAsB;IACtB,uBAAuB;IACvB,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,uBAAuB;IACvB,2BAA2B;IAC3B,kBAAkB;;AAEtB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,gBAAgB;IAChB,gBAAgB;AACpB;AACA;IACI,sBAAsB;IACtB,eAAe;AACnB;AACA;IACI,qBAAqB;IACrB,eAAe;AACnB;;;;;AAKA;IACI,aAAa;IACb,kBAAkB;IAClB,SAAS;IACT,iCAAiC;IACjC,WAAW;IACX,mBAAmB;IACnB,4BAA4B;IAC5B,4BAA4B;AAChC;;AAEA;;IAEI,aAAa;IACb,kBAAkB;IAClB,kCAAkC;AACtC;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,iBAAiB;IACjB,YAAY;IACZ,oBAAoB;IACpB,mBAAmB;IACnB,2BAA2B;AAC/B;;AAEA;IACI,wBAAwB;IACxB,YAAY;IACZ,kBAAkB;IAClB,4BAA4B;IAC5B,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,4BAA4B;IAC5B,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,iBAAiB;IACjB,eAAe;IACf,WAAW;IACX,qBAAqB;IACrB,+BAA+B;AACnC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,+BAA+B;IAC/B,YAAY;IACZ,gCAAgC;IAChC,iCAAiC;;AAErC;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,SAAS;IACT,UAAU;IACV,kBAAkB;IAClB,kBAAkB;IAClB,mBAAmB;IACnB,gBAAgB;IAChB,sBAAsB;IACtB,kCAAkC;IAClC,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,cAAc;AAClB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,eAAe;IACf,WAAW;IACX,cAAc;AAClB;;AAEA;IACI,eAAe;IACf,uBAAuB;AAC3B;;;AAGA;IACI,eAAe;IACf,uBAAuB;IACvB,qBAAqB;AACzB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,SAAS;AACb;AACA;IACI,aAAa;AACjB;AACA;IACI,oBAAoB;AACxB;;AAEA;;;EAGE;;;AAGF;IACI,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,yBAAyB;IACzB,gBAAgB;AACpB;;AAEA;IACI,gBAAgB;AACpB","sourcesContent":["\n@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    font-family: 'Roboto'\n}\n\nhtml {\n    height: 100%;\n}\n\nbody {\n    display: grid;\n    position: relative;\n    place-items:center; \n    /* height: 100%; */\n    grid-template-rows: 70px 1fr;\n    grid-template-columns: 200px 1fr;\n    background-color: rgb(34, 33, 33);\n    min-height: 100%;\n    max-height: fit-content;\n}\n\nnav {\n    position: relative;\n    display: grid;\n    grid-row: 1/2;\n    grid-column: 1/3;\n    background-color: black;\n    width: 100%;\n    align-items: center;  \n    padding-left: 20px;\n    grid-template-columns: 70px 200px  1fr 200px;\n    border-bottom: solid rgb(53, 52, 52) 2px; \n}\n\n.navStart {\n    display:flex;\n    flex-direction: row;\n    padding-top: 20px;\n    /* gap: 10px; */\n}\n\n\n\n.hamIcon, .homeIcon {\n    padding: 4px;\n    user-select: none;\n}\n\n.hamIcon:hover, .homeIcon:hover {\n    border-radius: 4px;\n    cursor: pointer;\n    background-color: rgb(62, 68, 75);\n}\n\n.navStart div {\n    color:white;\n}\n\n\n.logo {\n    position: relative;\n    width: auto;\n    height: 65px;\n    top: 7px; \n}\n\nh1 {\n    /* -webkit-text-stroke: .5px white; */\n    color:rgb(219, 219, 219);\n    grid-column: 3/4;\n    font-family: 'Roboto Condensed';\n    font-weight:lighter;\n}\n\n.navEnd {\n    display:grid;\n    align-items: center;\n    grid-template-columns: 1fr 1fr;\n    grid-column: 4/5;\n}\n\n\n.newTodoButton {\n    display: grid;\n    align-content:center;\n    width: 30px;\n    height: 30px;\n    color: rgb(42, 190, 190);\n    border: rgb(219, 219, 219) 2px solid;\n    background-color: black;\n    border-radius: 3px;\n}\n\n.newTodoButton:hover {\n    cursor:pointer;\n    transform: scale(0.95);\n}\n\n.newTodoButton:active {\n    cursor:pointer;\n    transform: scale(0.8);\n}\n\n.userIcon {\n    align-self: center;\n    height: 50px;\n    width: 50px;\n    border-radius: 50%;\n    border: solid rgb(42, 190, 190) 2px;\n}\n\n\n\n/* .sidebar {\n    display: grid;\n    visibility: visible;\n    position: relative;\n    left:0;\n    top:0;\n    grid-column: 1/2;\n    grid-row: 2/4;\n    background-color: rgb(45, 204, 204);\n    height: 100%;\n    width: 100%;\n    border-right: solid rgb(32, 119, 119) 2px;\n    padding: 50px 10px 0px 10px;\n    /* animation: 3s infinite alternate slidein;\n    transition: visibility 1s linear 1s, animation 1s; \n    transition: visibility 0.5s , width 0.5s;\n    \n\n} */\n\n.sidebar {\n    display: grid;\n    visibility: hiddden;\n    position: absolute;\n    grid-column: 1/2;\n    grid-row: 2/4;\n    background-color: rgb(45, 204, 204);\n    height: 100%;\n    width: 100%;\n    border-right: solid rgb(32, 119, 119) 2px;\n    padding: 50px 10px 0px 10px;\n    transition: all 0.2s;\n    /* transform: translate3d(-100%, 0, 0); */\n    transform: translateX(-100%)\n}\n\n.open  {\n    visibility: visible;\n    transition: transform 0.2s;\n    /* transform: translate3d(0, 0, 0); */\n    transform: translateX(0)\n}\n\n\n\n.projectsHeaderContainer {\n    display: grid;\n    position: relative;\n    grid-template-columns: 1fr 1fr;\n    background-color: black;\n    border-radius: 4px;\n    padding: 4px;\n    z-index:2;\n    \n}\n\n.projectsHeader {\n    position:relative;\n    color: rgb(219, 219, 219);\n    font-size: 1.2rem;\n    font-weight: 600;\n    grid-column: 1/2;\n    padding-left: 5px;\n \n}\n\n.projectButtonsContainer {\n    position: relative;\n    display:flex;\n    flex-direction: row;\n    grid-column: 2/3;\n    justify-content: end;\n    /* gap: 5px; */\n}\n\n.addIcon, .expandIcon {\n\n    color: rgb(45, 204, 204);\n    /* height: 10px;\n    width: 10px; */\n\n}\n\n.addProjectButton, .showHideProjects {\n    display: grid;\n    place-items:center;\n    cursor: pointer;    \n    background-color: black;\n    /* border: solid rgb(219, 219, 219) 2px; */\n    border-radius: 4px;\n}\n\n.addProjectButton:hover, .showHideProjects:hover {\n    background-color: rgb(62, 68, 75);\n}\n\n.projectsList {\n    position: relative;\n    z-index:1;\n    /* display: none; */\n    visibility: hidden;\n    transform: translateY(-40px);\n    font-size: 0.9rem;\n    margin-top: 5px;\n    list-style-type: none;      \n    border-radius: 4px;\n    padding: 5px;\n    color: rgb(219 219 219);\n    transition: all 0.25s linear;\n    /* transform :translateY(100%) ;  */\n\n}\n\n.showProjectList {\n    \n    color: pink;\n   visibility: visible;\n   transform: translateY(0);\n    transition: transform 0.25s;\n    \n}\n\n.project-li {\n    display: flex;\n    flex-direction:row;\n    align-items: center;\n    gap: 10px;\n    margin: 3px 0px 3px 0px;\n    padding: 4px;\n    background-color: rgb(8, 8, 8);\n    border-radius: 4px;\n}\n\n.project-li div {\n    height: 12px;\n    width: 12px;\n    border-radius: 6px;\n    background-color: white;\n}\n\n\nmain {\n    padding: 30px;\n    display: grid;\n    position: relative;\n    justify-items: center;\n    grid-row: 2/4;\n    grid-column: 2/3;\n    height:100%;\n    width: 100%;\n    \n}\n\n.formContainer {\n    animation:  popup 30ms;\n    z-index:2;\n    /* transition: 1s;\n    transition-timing-function: linear;  */\n    display: grid;\n    position:absolute; \n    top: 60px; \n    display:none;\n    min-width: 30%;\n    min-height: 20%;\n    /* justify-content: center; */\n    background-color: rgb(34, 33, 33);\n    border: solid slategrey 2px;\n    border-radius: 20px;\n    padding: 10px;\n    box-shadow: 0px 0px 20px 20px rgb(20, 20, 20);\n}\n\n\n\n /* @keyframes popup {\n    0%{\n      transform: scale(0.4);\n      filter: blur(10px);\n    }\n    50%{\n      transform: scale(0.4);\n       filter: blur(10px); \n    }\n    60%{\n      transform: scale(0.4); \n       filter: blur(10px);\n    }\n    70%{\n      transform: scale(0.6); \n       filter: blur(10px); \n    }\n     80%{\n      transform: scale(0.8); \n      filter: blur(5px); \n    }\n    100%{\n        transform: scale(1); \n      }\n  }  */\n\n.todoForm {\n    display: none;\n    position: relative;\n    grid-template-rows: 2fr 1fr .5fr;\n    grid-template-columns: 1fr 1fr;\n    padding: 10px;\n    \n}\n\n\n.titleDescriptionWrapper {\n    grid-row: 1/2;\n    grid-column: 1/3;\n    \n}\n\n#titleInput {\n  padding-bottom: 10px;\n}\n\n#titleInput, #descriptionInput, #prioritySelect, #dateSelect {\n    background-color: rgb(34, 33, 33);\n    color: white;\n    border: none;\n}\n\n#titleInput:focus, #descriptionInput:focus {\n    outline: none;\n}\n\n\n#dateSelect::-webkit-calendar-picker-indicator {\n    filter: invert(1);  \n}\n\n.datePriorityWrapper {\n    display:flex;\n    grid-column: 1/3;\n    justify-content: space-between;\n    grid-row: 2/3;\n}\n\n/* .title, .description, .priority, .date{\n    display: flex;\n    flex-direction: column;\n} */\n\n.todoFormButtonWrapper {\n    display:grid;\n    position: relative;\n    grid-template-columns: 1fr 1fr;\n    /* align-items: center;\n    justify-content: end;\n    gap:7px; */\n    grid-row:3/4;\n    grid-column: 2/3;\n}\n\n.addTodoButton {\n    color: whitesmoke;\n    border: solid 2px aqua;\n    background-color: black;\n    border-radius: 5px;\n    grid-column: 2/3;\n}\n\n.cancelTodoButton {\n    color: whitesmoke;\n    background-color: black;\n    border: solid 2px firebrick;\n    border-radius: 5px;\n\n}\n\n.addTodoWrapper, .cancelTodoWrapper {\n    position:absolute;\n}\n\n.addTodoWrapper {\n    grid-column: 2/3;\n}\n\n.cancelTodoButton,.addTodoButton {\n    font-weight: 300;\n    /* width: 20%; */\n} \n.cancelTodoButton:hover ,.addTodoButton:hover {\n    transform: scale(0.98);\n    cursor: pointer;\n}  \n.cancelTodoButton:active ,.addTodoButton:active {\n    transform: scale(0.9);\n    cursor: pointer;\n} \n\n\n\n\n.displayTodos {\n    display: grid;\n    position: relative;\n    z-index:1;\n    background-color: rgb(34, 33, 33);\n    width: 40vw;\n    height: fit-content;\n    /* border:solid black 4px; */\n    grid-template-rows: 60px 1fr;\n}\n\n.todayDateContainer {\n    \n    display: grid;\n    align-items:center;\n    grid-template-columns: 1fr 2fr 4fr;\n}\n\n.today {\n    color:white;\n    font-size: 1.75rem;\n    font-weight: bold;\n    display:grid;\n    justify-content: end;\n    align-items: center;\n    /* border:solid black 4px */\n}\n\n.todaysDate {\n    color:rgb(107, 107, 119);\n    display:grid;\n    padding-left: 10px;\n    /* border:solid black 4px; */\n    justify-content: start;\n    align-items: center;\n}\n\n.todoListContainer {\n    /* border:solid black 4px; */\n    height: 100%;\n    padding: 20px;\n}\n\n.todoList {\n    position:relative;\n    font-size: 1rem;\n    color:white;\n    list-style-type: none;\n    border-top: solid slategrey 1px;\n}\n\n.todoListItem{ \n    position: relative;\n    display: grid;\n    grid-template-columns: 50px 1fr;\n    padding: 5px;\n    /* border-top:solid black 2px; */\n    border-bottom:solid slategrey 1px;\n\n}\n\n.todoProject {\n    grid-column: 2/3;\n}\n\n.checkIcon {\n    user-select: none;\n    display: grid;\n    top: 25px;\n    left: 10px;\n    position: relative;\n    place-items:center;\n    align-items: center;\n    grid-column: 1/2;\n    border: solid aqua 2px;\n    background-color: rgba(0, 0, 0, 0);\n    height: 15px;\n    width: 15px;\n    border-radius: 50%;\n    /* z-index:2 */\n}\n\n.tick {\n    user-select: none;\n    position:absolute;\n    /* z-index:1; */\n    left:1.25px;\n    font-size: 9px;\n}\n\n.checkIcon:hover {\n    cursor: pointer;\n    background-color: green;\n}\n\n\n.checkIcon:active {\n    cursor: pointer;\n    background-color: green;\n    transform: scale(0.8);\n}\n\n.todoListItem p  {\n    grid-column: 2/3;\n}\n\n.High {\n    color:red;\n}\n.Medium {\n    color: orange;\n}\n.Low {\n    color:cornflowerblue;   \n}\n\n/*.todoTitle, .todoDescription, .todoPriority, .priority .todoDate {\n    grid-column: 2/3;\n    /* disable above for vertical stretch \n}*/\n\n\n.prioritySelectWrapper > label {\n    padding-right: 5px;\n    color: whitesmoke;\n}\n\n.todoDate{\n    color: greenyellow;\n}\n\n.todoTitle {\n    font-size: 1.1rem;\n}\n\n.todoDescription {\n    color: rgb(107, 107, 119);  \n    font-size: .9rem;\n}\n\n.todoProject {\n    font-size: .9rem;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3735,6 +3812,26 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/assets/images/seaCreature.png":
+/*!*******************************************!*\
+  !*** ./src/assets/images/seaCreature.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "seaCreature.png";
+
+/***/ }),
+
+/***/ "./src/assets/images/slothsshrug.png":
+/*!*******************************************!*\
+  !*** ./src/assets/images/slothsshrug.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "slothsshrug.png";
+
 /***/ })
 
 /******/ 	});
@@ -3788,6 +3885,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -3804,6 +3913,26 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -3818,13 +3947,14 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/format/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/format/index.js");
 /* harmony import */ var _helpers_factoryFunctions_elementFactory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/factoryFunctions/elementFactory */ "./src/helpers/factoryFunctions/elementFactory.js");
 /* harmony import */ var _helpers_factoryFunctions_todoElementFactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers/factoryFunctions/todoElementFactory */ "./src/helpers/factoryFunctions/todoElementFactory.js");
 /* harmony import */ var _helpers_factoryFunctions_projectElementFactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/factoryFunctions/projectElementFactory */ "./src/helpers/factoryFunctions/projectElementFactory.js");
 /* harmony import */ var _helpers_factoryFunctions_createProjectListItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./helpers/factoryFunctions/createProjectListItem */ "./src/helpers/factoryFunctions/createProjectListItem.js");
-/* harmony import */ var _helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers/dates/dateHelpers */ "./src/helpers/dates/dateHelpers.js");
-/* harmony import */ var _pages_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/displayAllTodosContainer */ "./src/pages/displayAllTodosContainer.js");
+/* harmony import */ var _pages_navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/navbar */ "./src/pages/navbar.js");
+/* harmony import */ var _helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers/dates/dateHelpers */ "./src/helpers/dates/dateHelpers.js");
+/* harmony import */ var _helpers_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./helpers/displayAllTodosContainer */ "./src/helpers/displayAllTodosContainer.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -3842,9 +3972,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 // import createTodoListItem from './helpers/factoryFunctions/createTodoListItem';
 
 
+
 // Date Functions
 
 
+
+
+// navBar();
 
 console.log('just todo it!');
 
@@ -3890,16 +4024,18 @@ console.log('just todo it!');
 
 // const newTodoBtn = document.querySelector('.newTodoButton')
 
-var newTodoWrapper = document.querySelector('.newTodoWrapper');
-var todoForm = document.querySelector('.todoForm');
-var titleInput = document.querySelector('#titleInput');
-var descrInput = document.querySelector('#descriptionInput');
-var prioritySelect = document.querySelector('#prioritySelect');
+// const newTodoWrapper = document.querySelector('.newTodoWrapper'); ----
+
+// const todoForm = document.querySelector('.todoForm')----
+// const titleInput = document.querySelector('#titleInput')---
+// const descrInput = document.querySelector('#descriptionInput')---
+// const prioritySelect = document.querySelector('#prioritySelect')---
 
 //Date
 
-var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_7__["default"])(new Date(), 'E-do');
-var sidebar = document.querySelector('.sidebar');
+var today = (0,date_fns__WEBPACK_IMPORTED_MODULE_8__["default"])(new Date(), 'E-do');
+
+// const sidebar = document.querySelector('.sidebar'); ----
 
 // Priority options
 
@@ -3907,31 +4043,35 @@ var sidebar = document.querySelector('.sidebar');
 // const mediumPriority = document.querySelector('.medium');
 // const highPriority = document.querySelector('.high');
 
-var allTodoPrioritys = document.querySelectorAll('.todoPriority');
+// const allTodoPrioritys = document.querySelectorAll('.todoPriority') ----
 
 // const addTodoBtn = document.querySelector('.addTodoButton')
 // const cancelTodoButton = document.querySelector('.cancelTodoButton')
 
-var addTodoWrapper = document.querySelector('.addTodoWrapper');
-var cancelTodoWrapper = document.querySelector('.cancelTodoWrapper');
+// const addTodoWrapper = document.querySelector('.addTodoWrapper');   ---
+// const cancelTodoWrapper = document.querySelector('.cancelTodoWrapper');  ---
 
 // const displayTodos = document.querySelector('.displayTodos')
-var todoList = document.querySelector('.todoList');
-var formContainer = document.querySelector('.formContainer');
-var dateSelect = document.querySelector('#dateSelect');
-var projectSelect = document.querySelector('#projectsFormSelect');
+
+// const todoList = document.querySelector('.todoList')----
+
+// const formContainer = document.querySelector('.formContainer')---
+// const dateSelect = document.querySelector('#dateSelect')---
+// const projectSelect = document.querySelector('#projectsFormSelect');----
 
 //Projects sidbar
 
-var projectsList = document.querySelector('.projectsList');
-// const addProjectButton = document.querySelector('.addProjectButton')
-var showHideProject = document.querySelector('.showHideProjects');
-var addProjectButton = document.querySelector('.addProjectButton');
+// const projectsList = document.querySelector('.projectsList') ---
+// const showHideProject = document.querySelector('.showHideProjects') --
+// const addProjectButton = document.querySelector('.addProjectButton') ---
+
 addProjectButton.addEventListener('click', function (e) {
   console.log('DELETE!!!');
   clearPage();
 });
-var projectsContainer = document.querySelector('.projectsContainer');
+
+// const projectsContainer = document.querySelector('.projectsContainer') ----
+
 console.log(projectsList);
 function clearProjectList() {
   while (projectsList.lastChild) {
@@ -3941,12 +4081,13 @@ function clearProjectList() {
 
 // Icons =================
 
-var homeIcon = document.querySelector('.homeIcon');
-var hamIcon = document.querySelector('.hamIcon');
-var expandIcon = document.querySelector('.expandIcon');
+// const homeIcon = document.querySelector('.homeIcon'); ---
+// const hamIcon = document.querySelector('.hamIcon') ----
+// const expandIcon = document.querySelector('.expandIcon') ----
+
 homeIcon.addEventListener('click', function (e) {
   clearPage();
-  (0,_pages_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  (0,_helpers_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_7__["default"])();
   clearProjectList();
   allProjects.forEach(function (e) {
     (0,_helpers_factoryFunctions_createProjectListItem__WEBPACK_IMPORTED_MODULE_4__["default"])(e);
@@ -4169,7 +4310,7 @@ function addTodoIds() {
 // todoListItems.forEach((e,i) => e.setAttribute('id', `${i}`))
 //createTodoListItem(workout)
 clearPage();
-(0,_pages_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_6__["default"])();
+(0,_helpers_displayAllTodosContainer__WEBPACK_IMPORTED_MODULE_7__["default"])();
 var displayTodos = document.querySelector('.displayTodos');
 console.log(displayTodos);
 if (displayTodos !== null) {
@@ -4217,7 +4358,7 @@ addTodoWrapper.addEventListener('click', function (e) {
   var title = titleInput.value;
   var description = descrInput.value;
   var priority = prioritySelect.value;
-  var date = (0,_helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_5__.formatDate)(dateSelect.value);
+  var date = (0,_helpers_dates_dateHelpers__WEBPACK_IMPORTED_MODULE_6__.formatDate)(dateSelect.value);
   var project = projectSelect.value;
 
   //let storedTodos = JSON.parse(localStorage.getItem('allTodos'));
@@ -4326,4 +4467,4 @@ hamIcon.addEventListener('click', function (e) {
 
 /******/ })()
 ;
-//# sourceMappingURL=todoBundlee12ad172aa2b1e7f943c.js.map
+//# sourceMappingURL=todoBundle8612cdf4e6910d94b4d8.js.map
