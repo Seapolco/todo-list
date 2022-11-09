@@ -1,7 +1,7 @@
 import { format } from 'date-fns'
 
-import elementFactory from './factoryFunctions/elementFactory';
-import {updateTodaysDate, formatDate} from './dates/dateHelpers';
+import elementFactory from '../helpers/factoryFunctions/elementFactory';
+import {updateTodaysDate, formatDate} from '../helpers/dates/dateHelpers';
 
 //import todoElementFactory from '../helpers/factoryFunctions/todoElementFactory';
 

@@ -1,14 +1,6 @@
 import './main.css'
 import { format } from 'date-fns'
 
-
-// displayAllTodosContainer();
-
-// STYLING  
-// do some polishing
-
-//Helper Functions
-
 import elementFactory from './helpers/factoryFunctions/elementFactory';
 import todoElementFactory from './helpers/factoryFunctions/todoElementFactory';
 import projectElementFactory from './helpers/factoryFunctions/projectElementFactory';
@@ -27,113 +19,30 @@ import todoForm from './pages/todoFormContainer';
 import {updateTodaysDate, formatDate} from './helpers/dates/dateHelpers';
 
 
-import displayAllTodosContainer from './helpers/displayAllTodosContainer';
+import displayAllTodosContainer from './pages/displayAllTodosContainer';
 
 
 navBar();
 sideBar();
 todoForm();
 displayAllTodosContainer()
-// displayTodosComponent();
+
 
 
 console.log('just todo it!')
 
-// TO DO -------------------------------------------------------------------------------
 
-//refactor
-// pages folder for page modules
-//modules for helper functions
-//genberally clear out the index page
-
-//General
-
-// DELETE TODOS!!!!!!
-
-// show hide sidebar button
-
-//homepage button
-
-// create factory function for generating to-do
-//      title, description, date, priority, (notes & checklist)
-
-// Add projects (object or array)
-
-// add project option to addTodoForm!!!
-//select drop down populated with the list items of project list
-
-// show projects in sidebar
-
-// add project page
-// dynmically create html for pages
-//load homepage on load and load project page when required -- see restaurant app.
-//add fs storage
-
-// DATE AND TIME
-
-// add more complex date functionality
-// make the date red only if it is todays date
-// maybe change color from orange to green depending on impending it is
-//add some overdue functionality
-//otherwise make the date green.
-
-//have some sort of calendar where you can see what todos are coming up
-
-// const newTodoBtn = document.querySelector('.newTodoButton')
-
-
-
-// const newTodoWrapper = document.querySelector('.newTodoWrapper'); ----
-
-// const todoForm = document.querySelector('.todoForm')----
-// const titleInput = document.querySelector('#titleInput')---
-// const descrInput = document.querySelector('#descriptionInput')---
-// const prioritySelect = document.querySelector('#prioritySelect')---
-
-//Date
 
 let today = format(new Date(), 'E-do')
 
-// const sidebar = document.querySelector('.sidebar'); ----
 
-// Priority options
-
-  // const lowPriority = document.querySelector('.low');
-  // const mediumPriority = document.querySelector('.medium');
-  // const highPriority = document.querySelector('.high');
-
-// const allTodoPrioritys = document.querySelectorAll('.todoPriority') ----
-
-
-
-// const addTodoBtn = document.querySelector('.addTodoButton')
-// const cancelTodoButton = document.querySelector('.cancelTodoButton')
-
-// const addTodoWrapper = document.querySelector('.addTodoWrapper');   ---
-// const cancelTodoWrapper = document.querySelector('.cancelTodoWrapper');  ---
-
-// const displayTodos = document.querySelector('.displayTodos')
-
-// const todoList = document.querySelector('.todoList')----
-
-
-
-// const formContainer = document.querySelector('.formContainer')---
-// const dateSelect = document.querySelector('#dateSelect')---
-// const projectSelect = document.querySelector('#projectsFormSelect');----
-
-//Projects sidbar
-
-// const projectsList = document.querySelector('.projectsList') ---
-// const showHideProject = document.querySelector('.showHideProjects') --
-// const addProjectButton = document.querySelector('.addProjectButton') ---
 
 addProjectButton.addEventListener('click', (e) => {
   console.log('DELETE!!!')
   clearPage();
 })
 
-// const projectsContainer = document.querySelector('.projectsContainer') ----
+
 
 
 console.log(projectsList)
@@ -144,11 +53,7 @@ function clearProjectList() {
   }
 }
 
-// Icons =================
 
-// const homeIcon = document.querySelector('.homeIcon'); ---
-// const hamIcon = document.querySelector('.hamIcon') ----
-// const expandIcon = document.querySelector('.expandIcon') ----
 
 homeIcon.addEventListener('click', (e) => {
   clearPage();
@@ -164,11 +69,7 @@ homeIcon.addEventListener('click', (e) => {
 
   addTodoIds();
 })
-// const addIcon = document.querySelector('.addIcon')
 
-// expandIcon.innerText = 'chevron_left'
-
-//console.log(displayTodos)
 console.log(projectSelect)
 
 function addProjectOption(project) {
@@ -183,36 +84,6 @@ let dateReturn = '2022 - 10 - 20'
 
 const mainElement = document.querySelector('main');
 
-
-//console.log(displayTodos)
-
-// LOCAL STORAGE ------------------------------------------------
-
-//Variable to string coverter
-
-// function variableToString(varKey) {
-//   return Object.keys(varKey)[0]
-// }
-
-// function storeToLocalStorage(variable) {
-
-//   localStorage.setItem(, JSON.stringify(variable));
-// }
-
-
-  
- //updateTodaysDate(today)
-
-
- //---------------------------------------today ----------------------------------
-
-//console.log(today)
-
-// console.log(todoList)
-
-// console.log(todoForm)
-
-// Arrays ===========================================
 
 const allTodos = []
 const allProjects = []
@@ -309,9 +180,7 @@ function createTodoListItem(todo) {
     
   })
 
-//     <span class="material-symbols-outlined">
-// done
-// </span>
+
 
   todoLi.appendChild(checkIcon)
   todoLi.appendChild(todoTitle)
@@ -336,10 +205,7 @@ readBooks.tasks.push({
 addProject(getFit)
 addProject(readBooks)
 
-// allProjects.forEach((e) => {
-//   console.log(e)
-//   console.log(...e.tasks)
-// })
+
 
 function clearForm() {
   titleInput.value = ''
@@ -354,15 +220,6 @@ function clearTodos() {
   }
 }
 
-
-// function createProjectListItem(project) {
-//   let projectLi = projectElementFactory(project, { class: 'project-li' })
-//   projectsList.appendChild(projectLi)
-// }
-
-// allProjects.forEach((e) => {
-//   createProjectListItem(e)
-// })
 
 function storeTodo (todo) {
 
@@ -388,17 +245,6 @@ const displayAllTodos = (todoArr) => {
   })
 }
 
-//addAllTodos(allTodos)
-
-// if(allLocalStorageTodos !== null) {          //----------------displayAllLocal todos
-//     displayAllTodos(allLocalStorageTodos)
-//   }
-
-
-
-// console.log(allTodos)
-
-//add id's to todoListItems
 
 function addTodoIds() {
   const todoListItems = document.querySelectorAll('.todoListItem');
@@ -408,8 +254,6 @@ function addTodoIds() {
   })
 }
 
-// todoListItems.forEach((e,i) => e.setAttribute('id', `${i}`))
-//createTodoListItem(workout)
 clearPage();
 
 displayAllTodosContainer();  
@@ -556,42 +400,3 @@ hamIcon.addEventListener('click', (e) => {
   // console.log('ham!!!!!!!!!');
   
 })
-
-
-
-
-
-// export default createTodoListItem
-
-// localStorage.setItem('allTodos', JSON.stringify(allTodos))
-
-// let localTodos = JSON.parse(localStorage.getItem('allTodos'))
-// console.log('local', localTodos)
-
-// localStorage.removeItem('allTodos');
-// console.log(workout.title)
-//console.log(...allTodos)
-
-//create function for adding creating to-do element
-
-//function to remove todo
-
-//function to edit todo
-
-// function for poopulating page with all the todos
-
-// project functionality
-
-// date-fns
-
-// styling
-
-//
-
-{
-  /* <li class="todoListItem">
-<div class="checkIcon">Icon</div>
-<p class="todoTitle">Title</p>
-<p class="todoDescription">Description</p>
-<p class="todoPriority">Priority</p> */
-}
